@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		034C832089EE0588F09487E5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9220AA07D54D752FC179581E /* libPods.a */; };
 		73041C101B05E4630064267C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73041C0F1B05E4630064267C /* main.m */; };
 		73041C131B05E4630064267C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73041C121B05E4630064267C /* AppDelegate.m */; };
-		73041C161B05E4630064267C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73041C151B05E4630064267C /* ViewController.m */; };
-		73041C191B05E4630064267C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73041C171B05E4630064267C /* Main.storyboard */; };
 		73041C1B1B05E4630064267C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73041C1A1B05E4630064267C /* Images.xcassets */; };
 		73041C1E1B05E4630064267C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73041C1C1B05E4630064267C /* LaunchScreen.xib */; };
 		73041C2A1B05E4630064267C /* KinderGarten_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 73041C291B05E4630064267C /* KinderGarten_iOSTests.m */; };
@@ -32,14 +31,14 @@
 		73041C0F1B05E4630064267C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		73041C111B05E4630064267C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		73041C121B05E4630064267C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		73041C141B05E4630064267C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		73041C151B05E4630064267C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		73041C181B05E4630064267C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		73041C1A1B05E4630064267C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		73041C1D1B05E4630064267C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		73041C231B05E4630064267C /* KinderGarten_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KinderGarten_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73041C281B05E4630064267C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73041C291B05E4630064267C /* KinderGarten_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KinderGarten_iOSTests.m; sourceTree = "<group>"; };
+		9220AA07D54D752FC179581E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9726F1D47A571AEA326BD4CF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D6A2D55BDD0E608885BAC3A9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				034C832089EE0588F09487E5 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +60,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3086A1E0091B4D1D197AAE4B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9726F1D47A571AEA326BD4CF /* Pods.debug.xcconfig */,
+				D6A2D55BDD0E608885BAC3A9 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3B994CF7101D1390A0C33B76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9220AA07D54D752FC179581E /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		73041C011B05E4630064267C = {
 			isa = PBXGroup;
 			children = (
 				73041C0C1B05E4630064267C /* KinderGarten_iOS */,
 				73041C261B05E4630064267C /* KinderGarten_iOSTests */,
 				73041C0B1B05E4630064267C /* Products */,
+				3086A1E0091B4D1D197AAE4B /* Pods */,
+				3B994CF7101D1390A0C33B76 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,25 +100,11 @@
 		73041C0C1B05E4630064267C /* KinderGarten_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				73041C111B05E4630064267C /* AppDelegate.h */,
-				73041C121B05E4630064267C /* AppDelegate.m */,
-				73041C141B05E4630064267C /* ViewController.h */,
-				73041C151B05E4630064267C /* ViewController.m */,
-				73041C171B05E4630064267C /* Main.storyboard */,
-				73041C1A1B05E4630064267C /* Images.xcassets */,
-				73041C1C1B05E4630064267C /* LaunchScreen.xib */,
-				73041C0D1B05E4630064267C /* Supporting Files */,
+				73041C341B05E48A0064267C /* Common */,
+				73041C351B05E4930064267C /* Resources */,
+				73041C331B05E4800064267C /* Controllers */,
 			);
 			path = KinderGarten_iOS;
-			sourceTree = "<group>";
-		};
-		73041C0D1B05E4630064267C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				73041C0E1B05E4630064267C /* Info.plist */,
-				73041C0F1B05E4630064267C /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		73041C261B05E4630064267C /* KinderGarten_iOSTests */ = {
@@ -119,6 +124,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		73041C331B05E4800064267C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		73041C341B05E48A0064267C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				73041C111B05E4630064267C /* AppDelegate.h */,
+				73041C121B05E4630064267C /* AppDelegate.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		73041C351B05E4930064267C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				73041C0F1B05E4630064267C /* main.m */,
+				73041C0E1B05E4630064267C /* Info.plist */,
+				73041C1A1B05E4630064267C /* Images.xcassets */,
+				73041C1C1B05E4630064267C /* LaunchScreen.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 73041C2D1B05E4630064267C /* Build configuration list for PBXNativeTarget "KinderGarten_iOS" */;
 			buildPhases = (
+				2CD4D0AB18F0AFDC405F2F1D /* Check Pods Manifest.lock */,
 				73041C061B05E4630064267C /* Sources */,
 				73041C071B05E4630064267C /* Frameworks */,
 				73041C081B05E4630064267C /* Resources */,
+				0A4BD87CAB35454D0E011C6A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,7 +233,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73041C191B05E4630064267C /* Main.storyboard in Resources */,
 				73041C1E1B05E4630064267C /* LaunchScreen.xib in Resources */,
 				73041C1B1B05E4630064267C /* Images.xcassets in Resources */,
 			);
@@ -214,12 +247,44 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A4BD87CAB35454D0E011C6A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2CD4D0AB18F0AFDC405F2F1D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		73041C061B05E4630064267C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73041C161B05E4630064267C /* ViewController.m in Sources */,
 				73041C131B05E4630064267C /* AppDelegate.m in Sources */,
 				73041C101B05E4630064267C /* main.m in Sources */,
 			);
@@ -244,14 +309,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		73041C171B05E4630064267C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				73041C181B05E4630064267C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		73041C1C1B05E4630064267C /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -345,6 +402,7 @@
 		};
 		73041C2E1B05E4630064267C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9726F1D47A571AEA326BD4CF /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KinderGarten_iOS/Info.plist;
@@ -355,6 +413,7 @@
 		};
 		73041C2F1B05E4630064267C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6A2D55BDD0E608885BAC3A9 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KinderGarten_iOS/Info.plist;
@@ -416,6 +475,7 @@
 				73041C2F1B05E4630064267C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		73041C301B05E4630064267C /* Build configuration list for PBXNativeTarget "KinderGarten_iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +484,7 @@
 				73041C321B05E4630064267C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
