@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "SuperNavgationController.h"
+
+#import "LoginController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +19,25 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+
+    /*****************TestArea************/
+    LoginController *loginCtrl=[[LoginController alloc]init];
+    
+    /*****************TestArea************/
+    
+    //Make a new window and set root view is supernavCrtl.
+    SuperNavgationController *navCtrl=[[SuperNavgationController alloc]initWithRootViewController:loginCtrl];
+    
+    
+    self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    [self.window setRootViewController:navCtrl];
+    [self.window makeKeyAndVisible];
+
+    [application setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    
+    
     return YES;
 }
 

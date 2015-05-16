@@ -13,6 +13,14 @@
 		73041C1B1B05E4630064267C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73041C1A1B05E4630064267C /* Images.xcassets */; };
 		73041C1E1B05E4630064267C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73041C1C1B05E4630064267C /* LaunchScreen.xib */; };
 		73041C2A1B05E4630064267C /* KinderGarten_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 73041C291B05E4630064267C /* KinderGarten_iOSTests.m */; };
+		737202071B05EA0000F9EE56 /* SuperNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737202061B05EA0000F9EE56 /* SuperNavgationController.m */; };
+		7372020B1B05EB2C00F9EE56 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7372020A1B05EB2C00F9EE56 /* LoginController.m */; };
+		737202141B06379800F9EE56 /* LineTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 737202131B06379800F9EE56 /* LineTextView.m */; };
+		7372021A1B06D35900F9EE56 /* NetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 737202191B06D35900F9EE56 /* NetWorking.m */; };
+		7372021D1B06DCE000F9EE56 /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7372021C1B06DCE000F9EE56 /* ForgetPasswordViewController.m */; };
+		737202221B06DE9700F9EE56 /* SetNewPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737202211B06DE9700F9EE56 /* SetNewPasswordController.m */; };
+		737202261B06E1A900F9EE56 /* LineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 737202251B06E1A900F9EE56 /* LineLabel.m */; };
+		737202281B06F39600F9EE56 /* TestUseXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 737202271B06F39600F9EE56 /* TestUseXib.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +44,23 @@
 		73041C231B05E4630064267C /* KinderGarten_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KinderGarten_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73041C281B05E4630064267C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73041C291B05E4630064267C /* KinderGarten_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KinderGarten_iOSTests.m; sourceTree = "<group>"; };
+		737202051B05EA0000F9EE56 /* SuperNavgationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuperNavgationController.h; path = Controllers/SuperNavgationController/SuperNavgationController.h; sourceTree = "<group>"; };
+		737202061B05EA0000F9EE56 /* SuperNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuperNavgationController.m; path = Controllers/SuperNavgationController/SuperNavgationController.m; sourceTree = "<group>"; };
+		737202091B05EB2C00F9EE56 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginController.h; path = Controllers/LoginController/LoginController.h; sourceTree = "<group>"; };
+		7372020A1B05EB2C00F9EE56 /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginController.m; path = Controllers/LoginController/LoginController.m; sourceTree = "<group>"; };
+		737202111B05F0C900F9EE56 /* ColorDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorDefine.h; sourceTree = "<group>"; };
+		737202121B06379800F9EE56 /* LineTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineTextView.h; path = Views/LineTextView/LineTextView.h; sourceTree = "<group>"; };
+		737202131B06379800F9EE56 /* LineTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineTextView.m; path = Views/LineTextView/LineTextView.m; sourceTree = "<group>"; };
+		737202161B0646F400F9EE56 /* NetWorking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetWorking.h; sourceTree = "<group>"; };
+		737202171B064E3200F9EE56 /* General.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = General.h; sourceTree = "<group>"; };
+		737202191B06D35900F9EE56 /* NetWorking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorking.m; sourceTree = "<group>"; };
+		7372021B1B06DCE000F9EE56 /* ForgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ForgetPasswordViewController.h; path = Controllers/ForgetPasswordViewController/ForgetPasswordViewController.h; sourceTree = "<group>"; };
+		7372021C1B06DCE000F9EE56 /* ForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForgetPasswordViewController.m; path = Controllers/ForgetPasswordViewController/ForgetPasswordViewController.m; sourceTree = "<group>"; };
+		737202201B06DE9700F9EE56 /* SetNewPasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetNewPasswordController.h; path = Controllers/SetNewPasswordController/SetNewPasswordController.h; sourceTree = "<group>"; };
+		737202211B06DE9700F9EE56 /* SetNewPasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetNewPasswordController.m; path = Controllers/SetNewPasswordController/SetNewPasswordController.m; sourceTree = "<group>"; };
+		737202241B06E1A900F9EE56 /* LineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineLabel.h; path = Views/LineLabel/LineLabel.h; sourceTree = "<group>"; };
+		737202251B06E1A900F9EE56 /* LineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineLabel.m; path = Views/LineLabel/LineLabel.m; sourceTree = "<group>"; };
+		737202271B06F39600F9EE56 /* TestUseXib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestUseXib.xib; sourceTree = "<group>"; };
 		9220AA07D54D752FC179581E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9726F1D47A571AEA326BD4CF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D6A2D55BDD0E608885BAC3A9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +105,7 @@
 		73041C011B05E4630064267C = {
 			isa = PBXGroup;
 			children = (
+				737202271B06F39600F9EE56 /* TestUseXib.xib */,
 				73041C0C1B05E4630064267C /* KinderGarten_iOS */,
 				73041C261B05E4630064267C /* KinderGarten_iOSTests */,
 				73041C0B1B05E4630064267C /* Products */,
@@ -127,6 +153,8 @@
 		73041C331B05E4800064267C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				737202231B06DEA900F9EE56 /* AuthenticateControllers */,
+				737202081B05EA0400F9EE56 /* SuperNavgationController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -134,6 +162,10 @@
 		73041C341B05E48A0064267C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				737202161B0646F400F9EE56 /* NetWorking.h */,
+				737202191B06D35900F9EE56 /* NetWorking.m */,
+				737202111B05F0C900F9EE56 /* ColorDefine.h */,
+				737202171B064E3200F9EE56 /* General.h */,
 				73041C111B05E4630064267C /* AppDelegate.h */,
 				73041C121B05E4630064267C /* AppDelegate.m */,
 			);
@@ -149,6 +181,64 @@
 				73041C1C1B05E4630064267C /* LaunchScreen.xib */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		737202081B05EA0400F9EE56 /* SuperNavgationController */ = {
+			isa = PBXGroup;
+			children = (
+				737202051B05EA0000F9EE56 /* SuperNavgationController.h */,
+				737202061B05EA0000F9EE56 /* SuperNavgationController.m */,
+			);
+			name = SuperNavgationController;
+			sourceTree = "<group>";
+		};
+		7372020C1B05EB3200F9EE56 /* LoginController */ = {
+			isa = PBXGroup;
+			children = (
+				737202091B05EB2C00F9EE56 /* LoginController.h */,
+				7372020A1B05EB2C00F9EE56 /* LoginController.m */,
+			);
+			name = LoginController;
+			sourceTree = "<group>";
+		};
+		737202151B06379F00F9EE56 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				737202121B06379800F9EE56 /* LineTextView.h */,
+				737202131B06379800F9EE56 /* LineTextView.m */,
+				737202241B06E1A900F9EE56 /* LineLabel.h */,
+				737202251B06E1A900F9EE56 /* LineLabel.m */,
+			);
+			name = SubViews;
+			sourceTree = "<group>";
+		};
+		7372021E1B06DCE600F9EE56 /* ForgetPasswordViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7372021B1B06DCE000F9EE56 /* ForgetPasswordViewController.h */,
+				7372021C1B06DCE000F9EE56 /* ForgetPasswordViewController.m */,
+			);
+			name = ForgetPasswordViewController;
+			sourceTree = "<group>";
+		};
+		7372021F1B06DE7300F9EE56 /* SetNewPasswordController */ = {
+			isa = PBXGroup;
+			children = (
+				737202201B06DE9700F9EE56 /* SetNewPasswordController.h */,
+				737202211B06DE9700F9EE56 /* SetNewPasswordController.m */,
+			);
+			name = SetNewPasswordController;
+			sourceTree = "<group>";
+		};
+		737202231B06DEA900F9EE56 /* AuthenticateControllers */ = {
+			isa = PBXGroup;
+			children = (
+				737202151B06379F00F9EE56 /* SubViews */,
+				7372020C1B05EB3200F9EE56 /* LoginController */,
+				7372021E1B06DCE600F9EE56 /* ForgetPasswordViewController */,
+				7372021F1B06DE7300F9EE56 /* SetNewPasswordController */,
+			);
+			name = AuthenticateControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +323,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				737202281B06F39600F9EE56 /* TestUseXib.xib in Resources */,
 				73041C1E1B05E4630064267C /* LaunchScreen.xib in Resources */,
 				73041C1B1B05E4630064267C /* Images.xcassets in Resources */,
 			);
@@ -285,8 +376,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7372021A1B06D35900F9EE56 /* NetWorking.m in Sources */,
+				737202141B06379800F9EE56 /* LineTextView.m in Sources */,
+				737202221B06DE9700F9EE56 /* SetNewPasswordController.m in Sources */,
+				737202261B06E1A900F9EE56 /* LineLabel.m in Sources */,
 				73041C131B05E4630064267C /* AppDelegate.m in Sources */,
+				7372020B1B05EB2C00F9EE56 /* LoginController.m in Sources */,
 				73041C101B05E4630064267C /* main.m in Sources */,
+				7372021D1B06DCE000F9EE56 /* ForgetPasswordViewController.m in Sources */,
+				737202071B05EA0000F9EE56 /* SuperNavgationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +458,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -396,6 +495,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -410,6 +510,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Debug;
 		};
@@ -423,6 +524,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Release;
 		};
