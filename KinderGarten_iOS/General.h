@@ -16,3 +16,7 @@
 
 #define  REGULAR_EXPRESSION_MOBILE_PHONE @"^1\\d{10}"
 #define  REGULAR_EXPRESSION_PASSWORD    @"\\w{6,16}"
+
+
+#warning teacher is test.should be change to parent.
+static NSString *loginTypeValue=@"teacher";

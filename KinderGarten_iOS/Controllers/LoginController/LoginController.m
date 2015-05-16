@@ -11,6 +11,7 @@
 #import "NetWorking.h"
 #import "ColorDefine.h"
 #import "General.h"
+#import "MBProgressHUD.h"
 
 #import "LineTextView.h"
 #import "ForgetPasswordViewController.h"
@@ -36,11 +37,8 @@ static NSString *loginTypeKey=@"loginType";
 static NSString *accountKey=@"phone";
 static NSString *passwordKey=@"password";
 
-#warning teacher is test.should be change to parent.
-static NSString *loginTypeValue=@"teacher";
-
-
-
+static NSString *authenticatedFailString=@"用户名或密码错误";
+static NSString *badRequestString=@"请求格式错误";
 /*________________________________________________________*/
 
 #pragma mark PrivateProperties
@@ -169,14 +167,28 @@ static NSString *loginTypeValue=@"teacher";
     [manager setCommonlyUsedRequsetHeaderFiled];
     
     [manager POST:LOGIN_PATH parameters:postInfo success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
 #warning this area hasn't finished,beacause main controller hasn't write.
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        DLog(@"error,%@",error);
-        DLog(@"Error data is %@",[[NSString alloc]initWithData:operation.responseData encoding:NSUTF8StringEncoding]);
-        
+        NSInteger errorStatCode=operation.response.statusCode;
+        if(errorStatCode == AUTHENTICATED_FAIL){
+            [self showHUDWithString:authenticatedFailString showingTime:3.0];
+        }
+        else if(errorStatCode == BAD_REQUEST){
+            [self showHUDWithString:badRequestString showingTime:3.0];
+        }
+        else{
+            DLog(@"Unknow Error:%li\n%@\nErrorString is %@",errorStatCode,error,[[NSString alloc]initWithData:operation.responseData encoding:NSUTF8StringEncoding]);
+        }
     }];
     
-    
+}
+
+-(void)showHUDWithString:(NSString*)string showingTime:(NSTimeInterval)timeInterval{
+    MBProgressHUD *hud=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode=MBProgressHUDModeText;
+    hud.labelText=string;
+    [hud hide:YES afterDelay:timeInterval];
 }
 
 
