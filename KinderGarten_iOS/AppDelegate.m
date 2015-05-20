@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "SuperNavgationController.h"
 
-#import "LoginController.h"
+#import "MainController.h"
 
 @interface AppDelegate ()
 
@@ -20,14 +20,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-
-    /*****************TestArea************/
-    LoginController *loginCtrl=[[LoginController alloc]init];
-    
-    /*****************TestArea************/
-    
     //Make a new window and set root view is supernavCrtl.
-    SuperNavgationController *navCtrl=[[SuperNavgationController alloc]initWithRootViewController:loginCtrl];
+    MainController *mainCtrl=[[MainController alloc]init];
+    SuperNavgationController *navCtrl=[[SuperNavgationController alloc]initWithRootViewController:mainCtrl];
     
     
     self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
@@ -35,7 +30,6 @@
     [self.window makeKeyAndVisible];
 
     [application setStatusBarStyle:UIStatusBarStyleLightContent];
-    
     
     
     return YES;

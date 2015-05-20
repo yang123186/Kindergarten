@@ -7,8 +7,15 @@
 //
 
 #import "SetNewPasswordController.h"
+#import "LineTextView.h"
+#import "LineLabel.h"
+
 
 @interface SetNewPasswordController()
+@property (nonatomic,strong) LineLabel *titleLabel;
+@property (nonatomic,strong) LineTextView *freshPasswordText;
+@property (nonatomic,strong) LineTextView *repeatNewPasswordText;
+@property (nonatomic,strong) UIButton *commitButton;
 
 @end
 

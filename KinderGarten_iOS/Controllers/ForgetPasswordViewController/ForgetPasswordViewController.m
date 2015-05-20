@@ -60,6 +60,9 @@ static const NSInteger defaultCountingTime=10;
 @property (nonatomic,strong) UIButton *requestVerifyCodeButton;
 @property (nonatomic,strong) LineLabel *countingLabel;
 
+@property (nonatomic,strong) UIView *lineView;
+
+
 @property (nonatomic,strong) NSTimer *timer;
 
 @property (nonatomic,assign) NSInteger countTime;
@@ -104,6 +107,17 @@ static const NSInteger defaultCountingTime=10;
         make.height.equalTo(@ACCOUNT_TEXT_HEIGHT);
     }];
     
+    self.lineView=[[UIView alloc]init];
+    self.lineView.translatesAutoresizingMaskIntoConstraints=NO;
+    [self.view addSubview:self.lineView];
+    self.lineView.layer.backgroundColor=PINK_COLOR.CGColor;
+    [self.lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.accountText.mas_bottom);
+        make.height.equalTo(@0.3);
+        make.left.equalTo(self.view.mas_left);
+        make.right.equalTo(self.view.mas_right);
+    }];
+    
     self.verifyCodeText=[[LineTextView alloc]initWithHorizontalPadding:PADDING_HORIZONTAL];
     [self.verifyCodeText setRightPadding:REQUEST_VERIFY_BUTTON_WIDTH+REQUEST_VERIFY_BUTTON_RIGHT];
     self.verifyCodeText.placeholder=verifyCodeTextPlaceHolderText;
@@ -111,7 +125,7 @@ static const NSInteger defaultCountingTime=10;
     self.verifyCodeText.translatesAutoresizingMaskIntoConstraints=NO;
     [self.view addSubview:self.verifyCodeText];
     [self.verifyCodeText mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.accountText.mas_bottom).with.offset(VERIFY_TEXT_TOP);
+        make.top.equalTo(self.lineView.mas_bottom).with.offset(VERIFY_TEXT_TOP);
         make.left.equalTo(superView.mas_left).with.offset(VERIFY_TEXT_LEFT);
         make.right.equalTo(superView.mas_right).with.offset(VERIFY_TEXT_RIGHT);
         make.height.equalTo(@VERIFY_TEXT_HEIGHT);
@@ -170,6 +184,7 @@ static const NSInteger defaultCountingTime=10;
 
 
 -(void)requestVerifyCodeButtonDidTouched{
+    [self.requestVerifyCodeButton becomeFirstResponder];
     if([self checkPhoneNumberLegal]){
 #warning waiting for verifyCode rest api finish...
         /*TODO step:

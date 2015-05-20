@@ -7,6 +7,7 @@
 //
 
 #import "LoginController.h"
+#import "MainController.h"
 #import "Masonry.h"
 #import "NetWorking.h"
 #import "ColorDefine.h"
@@ -39,6 +40,11 @@ static NSString *passwordKey=@"password";
 
 static NSString *authenticatedFailString=@"用户名或密码错误";
 static NSString *badRequestString=@"请求格式错误";
+
+static NSString *accountPlaceHolder=@"请输入手机号";
+static NSString *passwordPlaceHolder=@"请输入密码";
+
+static NSString *title=@"登录";
 /*________________________________________________________*/
 
 #pragma mark PrivateProperties
@@ -48,6 +54,7 @@ static NSString *badRequestString=@"请求格式错误";
 @property   (nonatomic,strong)    LineTextView *passwordText;
 @property   (nonatomic,strong)    UIButton    *loginButton;
 @property   (nonatomic,strong)    UIButton    *forgetPasswordButton;
+@property   (nonatomic,strong)    UIView      *lineView;
 
 @end
 
@@ -69,13 +76,14 @@ static NSString *badRequestString=@"请求格式错误";
 
 -(void)viewDidLoad{
     [super viewDidLoad];
-    self.title=@"登陆";
+    self.title=title;
     self.view.layer.backgroundColor=BACKGROUND_GRAY.CGColor;
     UIView *superView=self.view;
     
     self.accountText=[[LineTextView alloc]init];
     self.accountText.translatesAutoresizingMaskIntoConstraints=NO;
     self.accountText.layer.backgroundColor=WHITE_COLOR.CGColor;
+    self.accountText.placeholder=accountPlaceHolder;
     [self.accountText setHorizontalPadding:TEXT_INSET_PADDING_HORIZONTAL];
     [self.view addSubview:self.accountText];
     [self.accountText mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -85,14 +93,26 @@ static NSString *badRequestString=@"请求格式错误";
         make.height.equalTo(@TEXT_HEIGHT);
     }];
     
+    self.lineView=[[UIView alloc]init];
+    self.lineView.translatesAutoresizingMaskIntoConstraints=NO;
+    [self.view addSubview:self.lineView];
+    self.lineView.layer.backgroundColor=PINK_COLOR.CGColor;
+    [self.lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.accountText.mas_bottom);
+        make.height.equalTo(@0.25);
+        make.left.equalTo(self.view.mas_left);
+        make.right.equalTo(self.view.mas_right);
+    }];
+    
     self.passwordText=[[LineTextView alloc]init];
     self.passwordText.translatesAutoresizingMaskIntoConstraints=NO;
     self.passwordText.layer.backgroundColor=WHITE_COLOR.CGColor;
+    self.passwordText.placeholder=passwordPlaceHolder;
     [self.passwordText setHorizontalPadding:TEXT_INSET_PADDING_HORIZONTAL];
     [self.passwordText setSecureTextEntry:YES];
     [self.view addSubview:self.passwordText];
     [self.passwordText mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.accountText.mas_bottom);
+        make.top.equalTo(self.lineView.mas_bottom);
         make.left.equalTo(superView.mas_left).with.offset(TEXT_PADDING_LEFT);
         make.right.equalTo(superView.mas_right).with.offset(-TEXT_PADDING_RIGHT);
         make.height.equalTo(@TEXT_HEIGHT);
@@ -101,7 +121,7 @@ static NSString *badRequestString=@"请求格式错误";
     self.loginButton=[[UIButton alloc]init];
     self.loginButton.translatesAutoresizingMaskIntoConstraints=NO;
     self.loginButton.layer.backgroundColor=PINK_COLOR.CGColor;
-    [self.loginButton setTitle:@"登陆" forState:UIControlStateNormal];
+    [self.loginButton setTitle:@"登录" forState:UIControlStateNormal];
     [self.loginButton addTarget:self action:@selector(loginButtonTouched) forControlEvents:UIControlEventTouchUpInside];
     [self.loginButton setTitleColor:WHITE_COLOR forState:UIControlStateNormal];
     [self.view addSubview:self.loginButton];
@@ -136,6 +156,8 @@ static NSString *badRequestString=@"请求格式错误";
 #pragma mark-Login Method Area
 
 -(void)loginButtonTouched{
+    [self.accountText resignFirstResponder];
+    [self.passwordText resignFirstResponder];
     if([self inputIsLegal]){
         [self loginWithAcoount:self.accountText.text rawPassword:self.passwordText.text];
     }
@@ -167,6 +189,7 @@ static NSString *badRequestString=@"请求格式错误";
     [manager setCommonlyUsedRequsetHeaderFiled];
     
     [manager POST:LOGIN_PATH parameters:postInfo success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self dismissViewControllerAnimated:YES completion:nil];
         
 #warning this area hasn't finished,beacause main controller hasn't write.
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -178,7 +201,7 @@ static NSString *badRequestString=@"请求格式错误";
             [self showHUDWithString:badRequestString showingTime:3.0];
         }
         else{
-            DLog(@"Unknow Error:%li\n%@\nErrorString is %@",errorStatCode,error,[[NSString alloc]initWithData:operation.responseData encoding:NSUTF8StringEncoding]);
+            DLog(@"Unknow Error:%li\n%@\nErrorString is %@",(long)errorStatCode,error,[[NSString alloc]initWithData:operation.responseData encoding:NSUTF8StringEncoding]);
         }
     }];
     

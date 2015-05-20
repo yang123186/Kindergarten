@@ -11,4 +11,13 @@
 @interface LoginController : UIViewController
 
 -(instancetype)init;
+
+/**
+ *  You can implement auto login by using this method.
+ *
+ *  @param account  The account
+ *  @param password The password,without MD5 encrypt
+ */
+-(void)loginWithAcoount:(NSString*)account rawPassword:(NSString*)password;
+
 @end

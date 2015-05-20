@@ -21,6 +21,13 @@
 		737202221B06DE9700F9EE56 /* SetNewPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737202211B06DE9700F9EE56 /* SetNewPasswordController.m */; };
 		737202261B06E1A900F9EE56 /* LineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 737202251B06E1A900F9EE56 /* LineLabel.m */; };
 		737202281B06F39600F9EE56 /* TestUseXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 737202271B06F39600F9EE56 /* TestUseXib.xib */; };
+		73943D701B0774BC00D41DA1 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73943D6F1B0774BC00D41DA1 /* MainController.m */; };
+		73A07DF91B0C812F007CF72F /* HomeModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07DF81B0C812F007CF72F /* HomeModal.m */; };
+		73A07DFD1B0C81A9007CF72F /* UserModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07DFC1B0C81A9007CF72F /* UserModal.m */; };
+		73A07E001B0C81DF007CF72F /* TopicModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07DFF1B0C81DF007CF72F /* TopicModal.m */; };
+		73A07E061B0C89CD007CF72F /* StudentsModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07E051B0C89CD007CF72F /* StudentsModal.m */; };
+		73A07E0F1B0C8F92007CF72F /* ClassLitemodal.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07E0E1B0C8F92007CF72F /* ClassLitemodal.m */; };
+		73A07E121B0C8FAE007CF72F /* RolesModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07E111B0C8FAE007CF72F /* RolesModal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +68,20 @@
 		737202241B06E1A900F9EE56 /* LineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineLabel.h; path = Views/LineLabel/LineLabel.h; sourceTree = "<group>"; };
 		737202251B06E1A900F9EE56 /* LineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineLabel.m; path = Views/LineLabel/LineLabel.m; sourceTree = "<group>"; };
 		737202271B06F39600F9EE56 /* TestUseXib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestUseXib.xib; sourceTree = "<group>"; };
+		73943D6E1B0774BC00D41DA1 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainController.h; path = Controllers/MainController/MainController.h; sourceTree = "<group>"; };
+		73943D6F1B0774BC00D41DA1 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainController.m; path = Controllers/MainController/MainController.m; sourceTree = "<group>"; };
+		73A07DF71B0C812F007CF72F /* HomeModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeModal.h; path = Modals/HomeModal.h; sourceTree = "<group>"; };
+		73A07DF81B0C812F007CF72F /* HomeModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeModal.m; path = Modals/HomeModal.m; sourceTree = "<group>"; };
+		73A07DFB1B0C81A9007CF72F /* UserModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModal.h; sourceTree = "<group>"; };
+		73A07DFC1B0C81A9007CF72F /* UserModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModal.m; sourceTree = "<group>"; };
+		73A07DFE1B0C81DF007CF72F /* TopicModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicModal.h; sourceTree = "<group>"; };
+		73A07DFF1B0C81DF007CF72F /* TopicModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicModal.m; sourceTree = "<group>"; };
+		73A07E041B0C89CD007CF72F /* StudentsModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentsModal.h; sourceTree = "<group>"; };
+		73A07E051B0C89CD007CF72F /* StudentsModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentsModal.m; sourceTree = "<group>"; };
+		73A07E0D1B0C8F92007CF72F /* ClassLitemodal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClassLitemodal.h; path = Modals/ClassliteModal/ClassLitemodal.h; sourceTree = "<group>"; };
+		73A07E0E1B0C8F92007CF72F /* ClassLitemodal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClassLitemodal.m; path = Modals/ClassliteModal/ClassLitemodal.m; sourceTree = "<group>"; };
+		73A07E101B0C8FAE007CF72F /* RolesModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RolesModal.h; path = Modals/RolesModal/RolesModal.h; sourceTree = "<group>"; };
+		73A07E111B0C8FAE007CF72F /* RolesModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RolesModal.m; path = Modals/RolesModal/RolesModal.m; sourceTree = "<group>"; };
 		9220AA07D54D752FC179581E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9726F1D47A571AEA326BD4CF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D6A2D55BDD0E608885BAC3A9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +147,7 @@
 		73041C0C1B05E4630064267C /* KinderGarten_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				73A07DFA1B0C8134007CF72F /* Modals */,
 				73041C341B05E48A0064267C /* Common */,
 				73041C351B05E4930064267C /* Resources */,
 				73041C331B05E4800064267C /* Controllers */,
@@ -153,6 +175,7 @@
 		73041C331B05E4800064267C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				73943D711B0774C000D41DA1 /* MainController */,
 				737202231B06DEA900F9EE56 /* AuthenticateControllers */,
 				737202081B05EA0400F9EE56 /* SuperNavgationController */,
 			);
@@ -239,6 +262,82 @@
 				7372021F1B06DE7300F9EE56 /* SetNewPasswordController */,
 			);
 			name = AuthenticateControllers;
+			sourceTree = "<group>";
+		};
+		73943D711B0774C000D41DA1 /* MainController */ = {
+			isa = PBXGroup;
+			children = (
+				73943D6E1B0774BC00D41DA1 /* MainController.h */,
+				73943D6F1B0774BC00D41DA1 /* MainController.m */,
+			);
+			name = MainController;
+			sourceTree = "<group>";
+		};
+		73A07DFA1B0C8134007CF72F /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				73A07E071B0C8E29007CF72F /* HomeModal */,
+			);
+			name = Modals;
+			sourceTree = "<group>";
+		};
+		73A07E071B0C8E29007CF72F /* HomeModal */ = {
+			isa = PBXGroup;
+			children = (
+				73A07E081B0C8E32007CF72F /* UserModal */,
+				73A07E091B0C8E43007CF72F /* TopicModal */,
+				73A07DF71B0C812F007CF72F /* HomeModal.h */,
+				73A07DF81B0C812F007CF72F /* HomeModal.m */,
+			);
+			name = HomeModal;
+			sourceTree = "<group>";
+		};
+		73A07E081B0C8E32007CF72F /* UserModal */ = {
+			isa = PBXGroup;
+			children = (
+				73A07E0C1B0C8F50007CF72F /* RolesModal */,
+				73A07E0B1B0C8F46007CF72F /* ClassLiteModal */,
+				73A07E0A1B0C8E5F007CF72F /* Studentsmodal */,
+				73A07DFB1B0C81A9007CF72F /* UserModal.h */,
+				73A07DFC1B0C81A9007CF72F /* UserModal.m */,
+			);
+			name = UserModal;
+			sourceTree = "<group>";
+		};
+		73A07E091B0C8E43007CF72F /* TopicModal */ = {
+			isa = PBXGroup;
+			children = (
+				73A07DFE1B0C81DF007CF72F /* TopicModal.h */,
+				73A07DFF1B0C81DF007CF72F /* TopicModal.m */,
+			);
+			name = TopicModal;
+			sourceTree = "<group>";
+		};
+		73A07E0A1B0C8E5F007CF72F /* Studentsmodal */ = {
+			isa = PBXGroup;
+			children = (
+				73A07E041B0C89CD007CF72F /* StudentsModal.h */,
+				73A07E051B0C89CD007CF72F /* StudentsModal.m */,
+			);
+			name = Studentsmodal;
+			sourceTree = "<group>";
+		};
+		73A07E0B1B0C8F46007CF72F /* ClassLiteModal */ = {
+			isa = PBXGroup;
+			children = (
+				73A07E0D1B0C8F92007CF72F /* ClassLitemodal.h */,
+				73A07E0E1B0C8F92007CF72F /* ClassLitemodal.m */,
+			);
+			name = ClassLiteModal;
+			sourceTree = "<group>";
+		};
+		73A07E0C1B0C8F50007CF72F /* RolesModal */ = {
+			isa = PBXGroup;
+			children = (
+				73A07E101B0C8FAE007CF72F /* RolesModal.h */,
+				73A07E111B0C8FAE007CF72F /* RolesModal.m */,
+			);
+			name = RolesModal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,13 +477,20 @@
 			files = (
 				7372021A1B06D35900F9EE56 /* NetWorking.m in Sources */,
 				737202141B06379800F9EE56 /* LineTextView.m in Sources */,
+				73A07DFD1B0C81A9007CF72F /* UserModal.m in Sources */,
+				73A07E061B0C89CD007CF72F /* StudentsModal.m in Sources */,
 				737202221B06DE9700F9EE56 /* SetNewPasswordController.m in Sources */,
 				737202261B06E1A900F9EE56 /* LineLabel.m in Sources */,
 				73041C131B05E4630064267C /* AppDelegate.m in Sources */,
+				73A07E001B0C81DF007CF72F /* TopicModal.m in Sources */,
 				7372020B1B05EB2C00F9EE56 /* LoginController.m in Sources */,
+				73A07E121B0C8FAE007CF72F /* RolesModal.m in Sources */,
 				73041C101B05E4630064267C /* main.m in Sources */,
 				7372021D1B06DCE000F9EE56 /* ForgetPasswordViewController.m in Sources */,
+				73943D701B0774BC00D41DA1 /* MainController.m in Sources */,
 				737202071B05EA0000F9EE56 /* SuperNavgationController.m in Sources */,
+				73A07DF91B0C812F007CF72F /* HomeModal.m in Sources */,
+				73A07E0F1B0C8F92007CF72F /* ClassLitemodal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
