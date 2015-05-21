@@ -45,6 +45,9 @@ static NSString *accountPlaceHolder=@"请输入手机号";
 static NSString *passwordPlaceHolder=@"请输入密码";
 
 static NSString *title=@"登录";
+
+static NSString *loginButtonTitle=@"登录";
+static NSString *forgetPasswordButtonTitle=@"忘记密码?";
 /*________________________________________________________*/
 
 #pragma mark PrivateProperties
@@ -121,7 +124,7 @@ static NSString *title=@"登录";
     self.loginButton=[[UIButton alloc]init];
     self.loginButton.translatesAutoresizingMaskIntoConstraints=NO;
     self.loginButton.layer.backgroundColor=PINK_COLOR.CGColor;
-    [self.loginButton setTitle:@"登录" forState:UIControlStateNormal];
+    [self.loginButton setTitle:loginButtonTitle forState:UIControlStateNormal];
     [self.loginButton addTarget:self action:@selector(loginButtonTouched) forControlEvents:UIControlEventTouchUpInside];
     [self.loginButton setTitleColor:WHITE_COLOR forState:UIControlStateNormal];
     [self.view addSubview:self.loginButton];
@@ -135,7 +138,7 @@ static NSString *title=@"登录";
     self.forgetPasswordButton=[[UIButton alloc]init];
     self.forgetPasswordButton.translatesAutoresizingMaskIntoConstraints=NO;
     self.forgetPasswordButton.layer.backgroundColor=[UIColor clearColor].CGColor;
-    [self.forgetPasswordButton setTitle:@"忘记密码?" forState:UIControlStateNormal];
+    [self.forgetPasswordButton setTitle:forgetPasswordButtonTitle forState:UIControlStateNormal];
     [self.forgetPasswordButton setTitleColor:PINK_COLOR forState:UIControlStateNormal];
     [self.forgetPasswordButton addTarget:self action:@selector(forgetPasswordButtonTouched) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.forgetPasswordButton];
@@ -170,7 +173,8 @@ static NSString *title=@"登录";
         DLog(@"phone can't pass");
         return NO;
     }
-    if(![regexPassword evaluateWithObject:self.passwordText.text]){
+#warning 验证密码模块现在因为测试，故意弄反，在正式上线前将判断取反
+    if([regexPassword evaluateWithObject:self.passwordText.text]){
         DLog(@"password can't pass");
         return NO;
     }

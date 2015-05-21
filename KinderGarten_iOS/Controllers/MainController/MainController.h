@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MainGroupView.h"
 
-@interface MainController : UIViewController
-
+@interface MainController : UIViewController<MainGroupViewDelegate>
+-(void)settingBarButtonTouched;
 @end

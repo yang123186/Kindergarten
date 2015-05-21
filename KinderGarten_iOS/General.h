@@ -5,7 +5,11 @@
 //  Created by Rdd7 on 5/15/15.
 //  Copyright (c) 2015 Rdd7. All rights reserved.
 //
-
+#import "NetWorking.h"
+#import "ColorDefine.h"
+#import "Masonry.h"
+#import "UIImageView+AFNetworking.h"
+#import "Category.h"
 
 #ifdef DEBUG
 #define DLog(...) NSLog(__VA_ARGS__)
@@ -20,3 +24,6 @@
 
 #warning teacher is test.should be change to parent.
 static NSString *loginTypeValue=@"teacher";
+
+
+

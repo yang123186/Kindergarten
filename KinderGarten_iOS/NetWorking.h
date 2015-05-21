@@ -17,6 +17,7 @@
 
 #define LOGIN_PATH                                                      PUREPATH(@"/auth/login")
 #define FORGET_PASSWORD_PATH                                            PUREPATH(@"/auth/forgetpassword")
+#define HOME_PATH                                                       PUREPATH(@"/home/get")
 
 #endif
 

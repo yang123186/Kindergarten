@@ -28,6 +28,13 @@
 		73A07E061B0C89CD007CF72F /* StudentsModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07E051B0C89CD007CF72F /* StudentsModal.m */; };
 		73A07E0F1B0C8F92007CF72F /* ClassLitemodal.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07E0E1B0C8F92007CF72F /* ClassLitemodal.m */; };
 		73A07E121B0C8FAE007CF72F /* RolesModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07E111B0C8FAE007CF72F /* RolesModal.m */; };
+		73A07E171B0C989E007CF72F /* MainGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07E161B0C989E007CF72F /* MainGroupView.m */; };
+		73A07E1B1B0C992A007CF72F /* MainGroupButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07E1A1B0C992A007CF72F /* MainGroupButton.m */; };
+		73A07E1F1B0CC118007CF72F /* MainViewConller.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07E1E1B0CC118007CF72F /* MainViewConller.m */; };
+		73A07E231B0CC905007CF72F /* MainTopicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07E221B0CC905007CF72F /* MainTopicView.m */; };
+		73A07E271B0D6476007CF72F /* MainIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07E261B0D6476007CF72F /* MainIconView.m */; };
+		73A07E2A1B0D692A007CF72F /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07E291B0D692A007CF72F /* Category.m */; };
+		73A07E2E1B0D6EDE007CF72F /* IconList.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07E2D1B0D6EDE007CF72F /* IconList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +89,21 @@
 		73A07E0E1B0C8F92007CF72F /* ClassLitemodal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClassLitemodal.m; path = Modals/ClassliteModal/ClassLitemodal.m; sourceTree = "<group>"; };
 		73A07E101B0C8FAE007CF72F /* RolesModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RolesModal.h; path = Modals/RolesModal/RolesModal.h; sourceTree = "<group>"; };
 		73A07E111B0C8FAE007CF72F /* RolesModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RolesModal.m; path = Modals/RolesModal/RolesModal.m; sourceTree = "<group>"; };
+		73A07E151B0C989E007CF72F /* MainGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainGroupView.h; path = Views/MainGroupView/MainGroupView.h; sourceTree = "<group>"; };
+		73A07E161B0C989E007CF72F /* MainGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainGroupView.m; path = Views/MainGroupView/MainGroupView.m; sourceTree = "<group>"; };
+		73A07E191B0C992A007CF72F /* MainGroupButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainGroupButton.h; path = Views/MainGroupButton/MainGroupButton.h; sourceTree = "<group>"; };
+		73A07E1A1B0C992A007CF72F /* MainGroupButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainGroupButton.m; path = Views/MainGroupButton/MainGroupButton.m; sourceTree = "<group>"; };
+		73A07E1C1B0CA03E007CF72F /* MainGroupButtonDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainGroupButtonDelegate.h; path = Views/MainGroupView/MainGroupButtonDelegate.h; sourceTree = "<group>"; };
+		73A07E1D1B0CC118007CF72F /* MainViewConller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewConller.h; path = Controllers/MainController/ViewController/MainViewConller.h; sourceTree = "<group>"; };
+		73A07E1E1B0CC118007CF72F /* MainViewConller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewConller.m; path = Controllers/MainController/ViewController/MainViewConller.m; sourceTree = "<group>"; };
+		73A07E211B0CC905007CF72F /* MainTopicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainTopicView.h; path = Views/MainTopicView/MainTopicView.h; sourceTree = "<group>"; };
+		73A07E221B0CC905007CF72F /* MainTopicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainTopicView.m; path = Views/MainTopicView/MainTopicView.m; sourceTree = "<group>"; };
+		73A07E251B0D6476007CF72F /* MainIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainIconView.h; path = Views/MainIconView/MainIconView.h; sourceTree = "<group>"; };
+		73A07E261B0D6476007CF72F /* MainIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainIconView.m; path = Views/MainIconView/MainIconView.m; sourceTree = "<group>"; };
+		73A07E281B0D692A007CF72F /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		73A07E291B0D692A007CF72F /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
+		73A07E2C1B0D6EDE007CF72F /* IconList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IconList.h; path = Views/MainIconView/IconList/IconList.h; sourceTree = "<group>"; };
+		73A07E2D1B0D6EDE007CF72F /* IconList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IconList.m; path = Views/MainIconView/IconList/IconList.m; sourceTree = "<group>"; };
 		9220AA07D54D752FC179581E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9726F1D47A571AEA326BD4CF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D6A2D55BDD0E608885BAC3A9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,10 +169,10 @@
 		73041C0C1B05E4630064267C /* KinderGarten_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				73041C331B05E4800064267C /* Controllers */,
 				73A07DFA1B0C8134007CF72F /* Modals */,
 				73041C341B05E48A0064267C /* Common */,
 				73041C351B05E4930064267C /* Resources */,
-				73041C331B05E4800064267C /* Controllers */,
 			);
 			path = KinderGarten_iOS;
 			sourceTree = "<group>";
@@ -189,6 +211,8 @@
 				737202191B06D35900F9EE56 /* NetWorking.m */,
 				737202111B05F0C900F9EE56 /* ColorDefine.h */,
 				737202171B064E3200F9EE56 /* General.h */,
+				73A07E281B0D692A007CF72F /* Category.h */,
+				73A07E291B0D692A007CF72F /* Category.m */,
 				73041C111B05E4630064267C /* AppDelegate.h */,
 				73041C121B05E4630064267C /* AppDelegate.m */,
 			);
@@ -267,6 +291,9 @@
 		73943D711B0774C000D41DA1 /* MainController */ = {
 			isa = PBXGroup;
 			children = (
+				73A07E131B0C9855007CF72F /* SubViews */,
+				73A07E1D1B0CC118007CF72F /* MainViewConller.h */,
+				73A07E1E1B0CC118007CF72F /* MainViewConller.m */,
 				73943D6E1B0774BC00D41DA1 /* MainController.h */,
 				73943D6F1B0774BC00D41DA1 /* MainController.m */,
 			);
@@ -338,6 +365,64 @@
 				73A07E111B0C8FAE007CF72F /* RolesModal.m */,
 			);
 			name = RolesModal;
+			sourceTree = "<group>";
+		};
+		73A07E131B0C9855007CF72F /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				73A07E241B0D5C78007CF72F /* MainIconView */,
+				73A07E201B0CC8BB007CF72F /* TodayTopicView */,
+				73A07E141B0C985F007CF72F /* Main_Group_View */,
+			);
+			name = SubViews;
+			sourceTree = "<group>";
+		};
+		73A07E141B0C985F007CF72F /* Main_Group_View */ = {
+			isa = PBXGroup;
+			children = (
+				73A07E181B0C98F8007CF72F /* MainGroupButton */,
+				73A07E1C1B0CA03E007CF72F /* MainGroupButtonDelegate.h */,
+				73A07E151B0C989E007CF72F /* MainGroupView.h */,
+				73A07E161B0C989E007CF72F /* MainGroupView.m */,
+			);
+			name = Main_Group_View;
+			sourceTree = "<group>";
+		};
+		73A07E181B0C98F8007CF72F /* MainGroupButton */ = {
+			isa = PBXGroup;
+			children = (
+				73A07E191B0C992A007CF72F /* MainGroupButton.h */,
+				73A07E1A1B0C992A007CF72F /* MainGroupButton.m */,
+			);
+			name = MainGroupButton;
+			sourceTree = "<group>";
+		};
+		73A07E201B0CC8BB007CF72F /* TodayTopicView */ = {
+			isa = PBXGroup;
+			children = (
+				73A07E211B0CC905007CF72F /* MainTopicView.h */,
+				73A07E221B0CC905007CF72F /* MainTopicView.m */,
+			);
+			name = TodayTopicView;
+			sourceTree = "<group>";
+		};
+		73A07E241B0D5C78007CF72F /* MainIconView */ = {
+			isa = PBXGroup;
+			children = (
+				73A07E2B1B0D6EB2007CF72F /* IconList */,
+				73A07E251B0D6476007CF72F /* MainIconView.h */,
+				73A07E261B0D6476007CF72F /* MainIconView.m */,
+			);
+			name = MainIconView;
+			sourceTree = "<group>";
+		};
+		73A07E2B1B0D6EB2007CF72F /* IconList */ = {
+			isa = PBXGroup;
+			children = (
+				73A07E2C1B0D6EDE007CF72F /* IconList.h */,
+				73A07E2D1B0D6EDE007CF72F /* IconList.m */,
+			);
+			name = IconList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,8 +561,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7372021A1B06D35900F9EE56 /* NetWorking.m in Sources */,
+				73A07E171B0C989E007CF72F /* MainGroupView.m in Sources */,
+				73A07E1B1B0C992A007CF72F /* MainGroupButton.m in Sources */,
+				73A07E2A1B0D692A007CF72F /* Category.m in Sources */,
 				737202141B06379800F9EE56 /* LineTextView.m in Sources */,
 				73A07DFD1B0C81A9007CF72F /* UserModal.m in Sources */,
+				73A07E231B0CC905007CF72F /* MainTopicView.m in Sources */,
+				73A07E1F1B0CC118007CF72F /* MainViewConller.m in Sources */,
+				73A07E271B0D6476007CF72F /* MainIconView.m in Sources */,
 				73A07E061B0C89CD007CF72F /* StudentsModal.m in Sources */,
 				737202221B06DE9700F9EE56 /* SetNewPasswordController.m in Sources */,
 				737202261B06E1A900F9EE56 /* LineLabel.m in Sources */,
@@ -490,6 +581,7 @@
 				73943D701B0774BC00D41DA1 /* MainController.m in Sources */,
 				737202071B05EA0000F9EE56 /* SuperNavgationController.m in Sources */,
 				73A07DF91B0C812F007CF72F /* HomeModal.m in Sources */,
+				73A07E2E1B0D6EDE007CF72F /* IconList.m in Sources */,
 				73A07E0F1B0C8F92007CF72F /* ClassLitemodal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
