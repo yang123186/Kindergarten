@@ -7,11 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GObserver.h"
+#import "UserModal.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (strong,nonatomic) GObserver *gObserver;
+
+@property (strong,nonatomic) UserModal *userModal;
+
++(instancetype)sharedAppDelegate;
 
 @end
 

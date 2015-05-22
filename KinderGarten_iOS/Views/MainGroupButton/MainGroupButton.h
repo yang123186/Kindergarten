@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+static const    CGFloat pictureLength=60.0f;
+
 @interface MainGroupButton : UIButton
 
 @property   (strong,nonatomic)  UIImageView *picture;

@@ -10,7 +10,6 @@
 #import "General.h"
 #import "MainGroupButton.h"
 
-static const    CGFloat paddingHorizontal=45.0f;
 static const    CGFloat paddingVertical=10.0f;
 
 static const    NSUInteger colNum=3;
@@ -19,6 +18,7 @@ static const    NSUInteger colNum=3;
 
 @property   (nonatomic,strong)  NSMutableArray  *buttons;
 @property   (nonatomic,assign,readonly) NSInteger  number;
+@property   (nonatomic,assign)  CGFloat paddingHorizontal;
 
 //@property   (nonatomic,assign,readonly) NSUInteger  restCol;
 //@property   (nonatomic,assign,readonly) NSUInteger  row;
@@ -45,6 +45,8 @@ static const    NSUInteger colNum=3;
 -(void)subViewsInitializeWithIcons:(NSArray*)icons titles:(NSArray*)titles{
     [self.buttons removeAllObjects];
     
+    self.paddingHorizontal=([UIScreen mainScreen].bounds.size.width-colNum*pictureLength)/(1+colNum);
+    
     for(NSUInteger itr=0;itr<self.number;++itr){
         
         NSUInteger row=itr/colNum,col=itr%colNum;
@@ -52,13 +54,15 @@ static const    NSUInteger colNum=3;
         MainGroupButton *button=[[MainGroupButton alloc]initWithImage:[icons objectAtIndex:itr] title:[titles objectAtIndex:itr]];
         [self.buttons addObject:button];
         button.translatesAutoresizingMaskIntoConstraints=NO;
+        button.tag=itr;
+        [button addTarget:self action:@selector(buttonDidTouched:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:button];
         
         if(col==0){
-            [self addConstraint:[NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeft multiplier:1.0f constant:paddingHorizontal]];
+            [self addConstraint:[NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeft multiplier:1.0f constant:self.paddingHorizontal]];
         }
         else{
-            [self addConstraint:[NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:[self.buttons objectAtIndex:itr-1] attribute:NSLayoutAttributeRight multiplier:1.0f constant:paddingHorizontal]];
+            [self addConstraint:[NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:[self.buttons objectAtIndex:itr-1] attribute:NSLayoutAttributeRight multiplier:1.0f constant:self.paddingHorizontal]];
         }
         if(row==0){
             [self addConstraint:[NSLayoutConstraint constraintWithItem:button attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0f constant:paddingVertical]];
@@ -78,6 +82,13 @@ static const    NSUInteger colNum=3;
 -(CGFloat)height{
     NSInteger rowNum=(self.number-1)/colNum+1;
     return paddingVertical*(rowNum+1)+[MainGroupButton requireHieght]*rowNum;
+}
+
+
+-(void)buttonDidTouched:(MainGroupButton*)sender{
+    if([self.delegate respondsToSelector:@selector(mainGroupView:buttonDidTouched:)]){
+        [self.delegate mainGroupView:self buttonDidTouched:sender];
+    }
 }
 
 @end

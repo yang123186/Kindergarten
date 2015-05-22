@@ -10,10 +10,6 @@
 
 
 
-@interface NSString(LineTextViewExtention)
--(NSString*)MD5Encrypt;
-@end
-
 
 @interface LineTextView : UITextField
 
@@ -33,31 +29,6 @@
  *  @return A LineTextView Instance
  */
 -(instancetype)init;
-
-
-/**
- *  Set the right inset padding
- *
- *  @param padding A CGFloat type number.
- */
--(void)setRightPadding:(CGFloat)padding;
-
-
-/**
- *  Set the left inset padding
- *
- *  @param padding A CGFloat type number.
- */
--(void)setLeftPadding:(CGFloat)padding;
-
-
-
-/**
- *  Set the left and right content padding with parameter @padding.
- *
- *  @param padding A CGFloat type number.
- */
--(void)setHorizontalPadding:(CGFloat)padding;
 
 
 /**

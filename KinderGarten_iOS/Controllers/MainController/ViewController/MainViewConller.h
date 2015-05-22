@@ -23,6 +23,8 @@
 /**
  *  subViews on rootView
  */
+@property   (nonatomic,strong)  UIScrollView        *scrollView;
+
 @property   (nonatomic,strong)  UIImageView         *topImageView;
 @property   (nonatomic,strong)  MainTopicView       *topicView;
 @property   (nonatomic,strong)  MainGroupView       *childGroupView;

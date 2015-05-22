@@ -31,9 +31,7 @@
     [btn setFrame:CGRectMake(0.0f, 0.0f, edgeLength, edgeLength)];
     [btn addTarget:self action:@selector(barIconDidTouched) forControlEvents:UIControlEventTouchUpInside];
     [btn setImage:image forState:UIControlStateNormal];
-    btn.layer.cornerRadius=edgeLength/2;
-    [btn.layer setMasksToBounds:YES];
-
+    [btn setCircleRadius:edgeLength/2];
     if(self=[super initWithCustomView:btn]){
         self.customButton = btn;
         self.customImage = image;
@@ -41,7 +39,7 @@
         self.delegate=delegate;
         
         /********TestArea********/
-        NSArray *a=[NSArray arrayWithObjects:[UIImage imageNamed:@"testimg"],[UIImage imageNamed:@"appbar.arrow.down.up.999999"],[UIImage imageNamed:@"20131220222849-1195882039"],[UIImage imageNamed:@"2D_code_ffffff"], nil];
+        NSArray *a=[NSArray arrayWithObjects:[UIImage imageNamed:@"xiaoye"],[UIImage imageNamed:@"xiaoye"],[UIImage imageNamed:@"xiaoye"],[UIImage imageNamed:@"xiaoye"], nil];
         /********TestArea********/
 
         self.iconList=[[IconList alloc]initWithSuperView:self Icons:a];

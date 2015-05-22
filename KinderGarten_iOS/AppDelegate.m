@@ -15,10 +15,24 @@
 
 @end
 
+static AppDelegate  *theAppdelegate;
+
 @implementation AppDelegate
+
++(instancetype)sharedAppDelegate{
+    return theAppdelegate;
+}
+
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    theAppdelegate=self;
+    
+    //CookiObserve
+    [[NSHTTPCookieStorage sharedHTTPCookieStorage] addObserver:self.gObserver forKeyPath:@"cookies" options:NSKeyValueObservingOptionNew context:nil];
+    
+    self.userModal=[[UserModal alloc]init];
+    
     
     //Make a new window and set root view is supernavCrtl.
     MainController *mainCtrl=[[MainController alloc]init];
@@ -41,6 +55,7 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
+    [[NSHTTPCookieStorage sharedHTTPCookieStorage] removeObserver:self.gObserver forKeyPath:@"cookies"];
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }

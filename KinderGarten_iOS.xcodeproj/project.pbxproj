@@ -13,6 +13,13 @@
 		73041C1B1B05E4630064267C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73041C1A1B05E4630064267C /* Images.xcassets */; };
 		73041C1E1B05E4630064267C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73041C1C1B05E4630064267C /* LaunchScreen.xib */; };
 		73041C2A1B05E4630064267C /* KinderGarten_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 73041C291B05E4630064267C /* KinderGarten_iOSTests.m */; };
+		7325ABF91B0EB808004D5FC3 /* UserSettingModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7325ABF81B0EB808004D5FC3 /* UserSettingModal.m */; };
+		7325ABFD1B0EC861004D5FC3 /* SystemMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7325ABFC1B0EC861004D5FC3 /* SystemMessageController.m */; };
+		7325AC011B0ED70A004D5FC3 /* PersonalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7325AC001B0ED70A004D5FC3 /* PersonalController.m */; };
+		7325AC041B0ED740004D5FC3 /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7325AC031B0ED740004D5FC3 /* PersonalViewController.m */; };
+		7325AC081B0ED85A004D5FC3 /* Screen.m in Sources */ = {isa = PBXBuildFile; fileRef = 7325AC071B0ED85A004D5FC3 /* Screen.m */; };
+		7325AC0C1B0EDF21004D5FC3 /* ParentContactModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7325AC0B1B0EDF21004D5FC3 /* ParentContactModal.m */; };
+		7325AC101B0F2DC3004D5FC3 /* HonorListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7325AC0F1B0F2DC3004D5FC3 /* HonorListController.m */; };
 		737202071B05EA0000F9EE56 /* SuperNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737202061B05EA0000F9EE56 /* SuperNavgationController.m */; };
 		7372020B1B05EB2C00F9EE56 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7372020A1B05EB2C00F9EE56 /* LoginController.m */; };
 		737202141B06379800F9EE56 /* LineTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 737202131B06379800F9EE56 /* LineTextView.m */; };
@@ -35,6 +42,14 @@
 		73A07E271B0D6476007CF72F /* MainIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07E261B0D6476007CF72F /* MainIconView.m */; };
 		73A07E2A1B0D692A007CF72F /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07E291B0D692A007CF72F /* Category.m */; };
 		73A07E2E1B0D6EDE007CF72F /* IconList.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07E2D1B0D6EDE007CF72F /* IconList.m */; };
+		73B378F71B0DC531004012B2 /* GObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B378F61B0DC531004012B2 /* GObserver.m */; };
+		73B378FB1B0DD39C004012B2 /* SettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B378FA1B0DD39C004012B2 /* SettingController.m */; };
+		73B378FE1B0DD49F004012B2 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B378FD1B0DD49F004012B2 /* SettingViewController.m */; };
+		73B379031B0DFF4C004012B2 /* ModifyPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B379021B0DFF4C004012B2 /* ModifyPasswordController.m */; };
+		73B379061B0E0009004012B2 /* ModifyPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B379051B0E0009004012B2 /* ModifyPasswordViewController.m */; };
+		73B3790A1B0E2BFD004012B2 /* PushNotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B379091B0E2BFD004012B2 /* PushNotificationController.m */; };
+		73B3790D1B0E2C1D004012B2 /* PushNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B3790C1B0E2C1D004012B2 /* PushNotificationViewController.m */; };
+		73B379111B0E2F2E004012B2 /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B379101B0E2F2E004012B2 /* SwitchCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +73,20 @@
 		73041C231B05E4630064267C /* KinderGarten_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KinderGarten_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73041C281B05E4630064267C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73041C291B05E4630064267C /* KinderGarten_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KinderGarten_iOSTests.m; sourceTree = "<group>"; };
+		7325ABF71B0EB808004D5FC3 /* UserSettingModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserSettingModal.h; path = Modals/UserSettingModal/UserSettingModal.h; sourceTree = "<group>"; };
+		7325ABF81B0EB808004D5FC3 /* UserSettingModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSettingModal.m; path = Modals/UserSettingModal/UserSettingModal.m; sourceTree = "<group>"; };
+		7325ABFB1B0EC861004D5FC3 /* SystemMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemMessageController.h; path = Controllers/SystemMessageController/SystemMessageController.h; sourceTree = "<group>"; };
+		7325ABFC1B0EC861004D5FC3 /* SystemMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SystemMessageController.m; path = Controllers/SystemMessageController/SystemMessageController.m; sourceTree = "<group>"; };
+		7325ABFF1B0ED70A004D5FC3 /* PersonalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonalController.h; path = Controllers/PersonalController/PersonalController.h; sourceTree = "<group>"; };
+		7325AC001B0ED70A004D5FC3 /* PersonalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonalController.m; path = Controllers/PersonalController/PersonalController.m; sourceTree = "<group>"; };
+		7325AC021B0ED740004D5FC3 /* PersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonalViewController.h; path = Controllers/PersonalController/ViewController/PersonalViewController.h; sourceTree = "<group>"; };
+		7325AC031B0ED740004D5FC3 /* PersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonalViewController.m; path = Controllers/PersonalController/ViewController/PersonalViewController.m; sourceTree = "<group>"; };
+		7325AC061B0ED85A004D5FC3 /* Screen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Screen.h; path = Generals/Screen.h; sourceTree = "<group>"; };
+		7325AC071B0ED85A004D5FC3 /* Screen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Screen.m; path = Generals/Screen.m; sourceTree = "<group>"; };
+		7325AC0A1B0EDF21004D5FC3 /* ParentContactModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ParentContactModal.h; path = Modals/ParentContactModal/ParentContactModal.h; sourceTree = "<group>"; };
+		7325AC0B1B0EDF21004D5FC3 /* ParentContactModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParentContactModal.m; path = Modals/ParentContactModal/ParentContactModal.m; sourceTree = "<group>"; };
+		7325AC0E1B0F2DC3004D5FC3 /* HonorListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HonorListController.h; path = Controllers/HonorListController/HonorListController.h; sourceTree = "<group>"; };
+		7325AC0F1B0F2DC3004D5FC3 /* HonorListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HonorListController.m; path = Controllers/HonorListController/HonorListController.m; sourceTree = "<group>"; };
 		737202051B05EA0000F9EE56 /* SuperNavgationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuperNavgationController.h; path = Controllers/SuperNavgationController/SuperNavgationController.h; sourceTree = "<group>"; };
 		737202061B05EA0000F9EE56 /* SuperNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuperNavgationController.m; path = Controllers/SuperNavgationController/SuperNavgationController.m; sourceTree = "<group>"; };
 		737202091B05EB2C00F9EE56 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginController.h; path = Controllers/LoginController/LoginController.h; sourceTree = "<group>"; };
@@ -104,6 +133,22 @@
 		73A07E291B0D692A007CF72F /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
 		73A07E2C1B0D6EDE007CF72F /* IconList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IconList.h; path = Views/MainIconView/IconList/IconList.h; sourceTree = "<group>"; };
 		73A07E2D1B0D6EDE007CF72F /* IconList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IconList.m; path = Views/MainIconView/IconList/IconList.m; sourceTree = "<group>"; };
+		73B378F51B0DC531004012B2 /* GObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GObserver.h; sourceTree = "<group>"; };
+		73B378F61B0DC531004012B2 /* GObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GObserver.m; sourceTree = "<group>"; };
+		73B378F91B0DD39C004012B2 /* SettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingController.h; path = Controllers/SettingcController/SettingController.h; sourceTree = "<group>"; };
+		73B378FA1B0DD39C004012B2 /* SettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingController.m; path = Controllers/SettingcController/SettingController.m; sourceTree = "<group>"; };
+		73B378FC1B0DD49F004012B2 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingViewController.h; path = Controllers/SettingcController/SettingViewController/SettingViewController.h; sourceTree = "<group>"; };
+		73B378FD1B0DD49F004012B2 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingViewController.m; path = Controllers/SettingcController/SettingViewController/SettingViewController.m; sourceTree = "<group>"; };
+		73B379011B0DFF4C004012B2 /* ModifyPasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModifyPasswordController.h; path = Controllers/ModifyPasswordController/ModifyPasswordController.h; sourceTree = "<group>"; };
+		73B379021B0DFF4C004012B2 /* ModifyPasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModifyPasswordController.m; path = Controllers/ModifyPasswordController/ModifyPasswordController.m; sourceTree = "<group>"; };
+		73B379041B0E0009004012B2 /* ModifyPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModifyPasswordViewController.h; path = Controllers/ModifyPasswordController/ModifyPasswordViewController/ModifyPasswordViewController.h; sourceTree = "<group>"; };
+		73B379051B0E0009004012B2 /* ModifyPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModifyPasswordViewController.m; path = Controllers/ModifyPasswordController/ModifyPasswordViewController/ModifyPasswordViewController.m; sourceTree = "<group>"; };
+		73B379081B0E2BFD004012B2 /* PushNotificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PushNotificationController.h; path = Controllers/PushNotificationController/PushNotificationController.h; sourceTree = "<group>"; };
+		73B379091B0E2BFD004012B2 /* PushNotificationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PushNotificationController.m; path = Controllers/PushNotificationController/PushNotificationController.m; sourceTree = "<group>"; };
+		73B3790B1B0E2C1D004012B2 /* PushNotificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PushNotificationViewController.h; path = Controllers/PushNotificationController/ViewController/PushNotificationViewController.h; sourceTree = "<group>"; };
+		73B3790C1B0E2C1D004012B2 /* PushNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PushNotificationViewController.m; path = Controllers/PushNotificationController/ViewController/PushNotificationViewController.m; sourceTree = "<group>"; };
+		73B3790F1B0E2F2E004012B2 /* SwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwitchCell.h; path = Views/SwitchCell/SwitchCell.h; sourceTree = "<group>"; };
+		73B379101B0E2F2E004012B2 /* SwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwitchCell.m; path = Views/SwitchCell/SwitchCell.m; sourceTree = "<group>"; };
 		9220AA07D54D752FC179581E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9726F1D47A571AEA326BD4CF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D6A2D55BDD0E608885BAC3A9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -169,8 +214,8 @@
 		73041C0C1B05E4630064267C /* KinderGarten_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				73041C331B05E4800064267C /* Controllers */,
 				73A07DFA1B0C8134007CF72F /* Modals */,
+				73041C331B05E4800064267C /* Controllers */,
 				73041C341B05E48A0064267C /* Common */,
 				73041C351B05E4930064267C /* Resources */,
 			);
@@ -197,6 +242,9 @@
 		73041C331B05E4800064267C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7325AC0D1B0F2D6C004D5FC3 /* HonorControllers */,
+				7325ABFE1B0ED6C7004D5FC3 /* PersonalController */,
+				73B378F81B0DD301004012B2 /* SettingController */,
 				73943D711B0774C000D41DA1 /* MainController */,
 				737202231B06DEA900F9EE56 /* AuthenticateControllers */,
 				737202081B05EA0400F9EE56 /* SuperNavgationController */,
@@ -207,14 +255,12 @@
 		73041C341B05E48A0064267C /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				737202161B0646F400F9EE56 /* NetWorking.h */,
-				737202191B06D35900F9EE56 /* NetWorking.m */,
-				737202111B05F0C900F9EE56 /* ColorDefine.h */,
+				7325AC051B0ED830004D5FC3 /* Generals */,
 				737202171B064E3200F9EE56 /* General.h */,
-				73A07E281B0D692A007CF72F /* Category.h */,
-				73A07E291B0D692A007CF72F /* Category.m */,
 				73041C111B05E4630064267C /* AppDelegate.h */,
 				73041C121B05E4630064267C /* AppDelegate.m */,
+				73B378F51B0DC531004012B2 /* GObserver.h */,
+				73B378F61B0DC531004012B2 /* GObserver.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -228,6 +274,67 @@
 				73041C1C1B05E4630064267C /* LaunchScreen.xib */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		7325ABF61B0EB7D6004D5FC3 /* SettingsModal */ = {
+			isa = PBXGroup;
+			children = (
+				7325ABF71B0EB808004D5FC3 /* UserSettingModal.h */,
+				7325ABF81B0EB808004D5FC3 /* UserSettingModal.m */,
+			);
+			name = SettingsModal;
+			sourceTree = "<group>";
+		};
+		7325ABFA1B0EC834004D5FC3 /* SystemMessageController */ = {
+			isa = PBXGroup;
+			children = (
+				7325ABFB1B0EC861004D5FC3 /* SystemMessageController.h */,
+				7325ABFC1B0EC861004D5FC3 /* SystemMessageController.m */,
+			);
+			name = SystemMessageController;
+			sourceTree = "<group>";
+		};
+		7325ABFE1B0ED6C7004D5FC3 /* PersonalController */ = {
+			isa = PBXGroup;
+			children = (
+				7325ABFF1B0ED70A004D5FC3 /* PersonalController.h */,
+				7325AC001B0ED70A004D5FC3 /* PersonalController.m */,
+				7325AC021B0ED740004D5FC3 /* PersonalViewController.h */,
+				7325AC031B0ED740004D5FC3 /* PersonalViewController.m */,
+			);
+			name = PersonalController;
+			sourceTree = "<group>";
+		};
+		7325AC051B0ED830004D5FC3 /* Generals */ = {
+			isa = PBXGroup;
+			children = (
+				737202111B05F0C900F9EE56 /* ColorDefine.h */,
+				73A07E281B0D692A007CF72F /* Category.h */,
+				73A07E291B0D692A007CF72F /* Category.m */,
+				737202161B0646F400F9EE56 /* NetWorking.h */,
+				737202191B06D35900F9EE56 /* NetWorking.m */,
+				7325AC061B0ED85A004D5FC3 /* Screen.h */,
+				7325AC071B0ED85A004D5FC3 /* Screen.m */,
+			);
+			name = Generals;
+			sourceTree = "<group>";
+		};
+		7325AC091B0EDEF2004D5FC3 /* ParentContactModal */ = {
+			isa = PBXGroup;
+			children = (
+				7325AC0A1B0EDF21004D5FC3 /* ParentContactModal.h */,
+				7325AC0B1B0EDF21004D5FC3 /* ParentContactModal.m */,
+			);
+			name = ParentContactModal;
+			sourceTree = "<group>";
+		};
+		7325AC0D1B0F2D6C004D5FC3 /* HonorControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7325AC0E1B0F2DC3004D5FC3 /* HonorListController.h */,
+				7325AC0F1B0F2DC3004D5FC3 /* HonorListController.m */,
+			);
+			name = HonorControllers;
 			sourceTree = "<group>";
 		};
 		737202081B05EA0400F9EE56 /* SuperNavgationController */ = {
@@ -322,6 +429,7 @@
 		73A07E081B0C8E32007CF72F /* UserModal */ = {
 			isa = PBXGroup;
 			children = (
+				7325ABF61B0EB7D6004D5FC3 /* SettingsModal */,
 				73A07E0C1B0C8F50007CF72F /* RolesModal */,
 				73A07E0B1B0C8F46007CF72F /* ClassLiteModal */,
 				73A07E0A1B0C8E5F007CF72F /* Studentsmodal */,
@@ -343,6 +451,7 @@
 		73A07E0A1B0C8E5F007CF72F /* Studentsmodal */ = {
 			isa = PBXGroup;
 			children = (
+				7325AC091B0EDEF2004D5FC3 /* ParentContactModal */,
 				73A07E041B0C89CD007CF72F /* StudentsModal.h */,
 				73A07E051B0C89CD007CF72F /* StudentsModal.m */,
 			);
@@ -423,6 +532,60 @@
 				73A07E2D1B0D6EDE007CF72F /* IconList.m */,
 			);
 			name = IconList;
+			sourceTree = "<group>";
+		};
+		73B378F81B0DD301004012B2 /* SettingController */ = {
+			isa = PBXGroup;
+			children = (
+				7325ABFA1B0EC834004D5FC3 /* SystemMessageController */,
+				73B379071B0E2BB4004012B2 /* PushNotificationController */,
+				73B379001B0DFF22004012B2 /* ModifyPassword */,
+				73B378FF1B0DFF15004012B2 /* SettingController */,
+			);
+			name = SettingController;
+			sourceTree = "<group>";
+		};
+		73B378FF1B0DFF15004012B2 /* SettingController */ = {
+			isa = PBXGroup;
+			children = (
+				73B378F91B0DD39C004012B2 /* SettingController.h */,
+				73B378FA1B0DD39C004012B2 /* SettingController.m */,
+				73B378FC1B0DD49F004012B2 /* SettingViewController.h */,
+				73B378FD1B0DD49F004012B2 /* SettingViewController.m */,
+			);
+			name = SettingController;
+			sourceTree = "<group>";
+		};
+		73B379001B0DFF22004012B2 /* ModifyPassword */ = {
+			isa = PBXGroup;
+			children = (
+				73B379011B0DFF4C004012B2 /* ModifyPasswordController.h */,
+				73B379021B0DFF4C004012B2 /* ModifyPasswordController.m */,
+				73B379041B0E0009004012B2 /* ModifyPasswordViewController.h */,
+				73B379051B0E0009004012B2 /* ModifyPasswordViewController.m */,
+			);
+			name = ModifyPassword;
+			sourceTree = "<group>";
+		};
+		73B379071B0E2BB4004012B2 /* PushNotificationController */ = {
+			isa = PBXGroup;
+			children = (
+				73B3790E1B0E2F0B004012B2 /* SwitchCell */,
+				73B379081B0E2BFD004012B2 /* PushNotificationController.h */,
+				73B379091B0E2BFD004012B2 /* PushNotificationController.m */,
+				73B3790B1B0E2C1D004012B2 /* PushNotificationViewController.h */,
+				73B3790C1B0E2C1D004012B2 /* PushNotificationViewController.m */,
+			);
+			name = PushNotificationController;
+			sourceTree = "<group>";
+		};
+		73B3790E1B0E2F0B004012B2 /* SwitchCell */ = {
+			isa = PBXGroup;
+			children = (
+				73B3790F1B0E2F2E004012B2 /* SwitchCell.h */,
+				73B379101B0E2F2E004012B2 /* SwitchCell.m */,
+			);
+			name = SwitchCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -561,26 +724,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				7372021A1B06D35900F9EE56 /* NetWorking.m in Sources */,
+				73B379031B0DFF4C004012B2 /* ModifyPasswordController.m in Sources */,
 				73A07E171B0C989E007CF72F /* MainGroupView.m in Sources */,
+				73B378FB1B0DD39C004012B2 /* SettingController.m in Sources */,
 				73A07E1B1B0C992A007CF72F /* MainGroupButton.m in Sources */,
+				7325ABFD1B0EC861004D5FC3 /* SystemMessageController.m in Sources */,
 				73A07E2A1B0D692A007CF72F /* Category.m in Sources */,
 				737202141B06379800F9EE56 /* LineTextView.m in Sources */,
+				7325AC041B0ED740004D5FC3 /* PersonalViewController.m in Sources */,
+				73B379061B0E0009004012B2 /* ModifyPasswordViewController.m in Sources */,
 				73A07DFD1B0C81A9007CF72F /* UserModal.m in Sources */,
+				7325AC081B0ED85A004D5FC3 /* Screen.m in Sources */,
 				73A07E231B0CC905007CF72F /* MainTopicView.m in Sources */,
 				73A07E1F1B0CC118007CF72F /* MainViewConller.m in Sources */,
 				73A07E271B0D6476007CF72F /* MainIconView.m in Sources */,
 				73A07E061B0C89CD007CF72F /* StudentsModal.m in Sources */,
 				737202221B06DE9700F9EE56 /* SetNewPasswordController.m in Sources */,
+				7325AC011B0ED70A004D5FC3 /* PersonalController.m in Sources */,
+				7325AC101B0F2DC3004D5FC3 /* HonorListController.m in Sources */,
+				73B379111B0E2F2E004012B2 /* SwitchCell.m in Sources */,
 				737202261B06E1A900F9EE56 /* LineLabel.m in Sources */,
 				73041C131B05E4630064267C /* AppDelegate.m in Sources */,
+				73B3790A1B0E2BFD004012B2 /* PushNotificationController.m in Sources */,
 				73A07E001B0C81DF007CF72F /* TopicModal.m in Sources */,
+				73B378FE1B0DD49F004012B2 /* SettingViewController.m in Sources */,
 				7372020B1B05EB2C00F9EE56 /* LoginController.m in Sources */,
+				7325AC0C1B0EDF21004D5FC3 /* ParentContactModal.m in Sources */,
 				73A07E121B0C8FAE007CF72F /* RolesModal.m in Sources */,
 				73041C101B05E4630064267C /* main.m in Sources */,
+				7325ABF91B0EB808004D5FC3 /* UserSettingModal.m in Sources */,
 				7372021D1B06DCE000F9EE56 /* ForgetPasswordViewController.m in Sources */,
 				73943D701B0774BC00D41DA1 /* MainController.m in Sources */,
+				73B3790D1B0E2C1D004012B2 /* PushNotificationViewController.m in Sources */,
 				737202071B05EA0000F9EE56 /* SuperNavgationController.m in Sources */,
 				73A07DF91B0C812F007CF72F /* HomeModal.m in Sources */,
+				73B378F71B0DC531004012B2 /* GObserver.m in Sources */,
 				73A07E2E1B0D6EDE007CF72F /* IconList.m in Sources */,
 				73A07E0F1B0C8F92007CF72F /* ClassLitemodal.m in Sources */,
 			);

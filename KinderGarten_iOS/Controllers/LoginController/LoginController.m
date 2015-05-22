@@ -68,9 +68,9 @@ static NSString *forgetPasswordButtonTitle=@"忘记密码?";
 @implementation LoginController
 
 
--(instancetype)init{
+-(instancetype)initWithSuperController:(UIViewController<LoginDelegate> *)controller{
     if(self=[super init]){
-        
+        self.superController=controller;
     }
     
     return self;
@@ -167,14 +167,12 @@ static NSString *forgetPasswordButtonTitle=@"忘记密码?";
 }
 
 -(BOOL)inputIsLegal{
-    NSPredicate *regexMobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",REGULAR_EXPRESSION_MOBILE_PHONE];
-    NSPredicate *regexPassword = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",REGULAR_EXPRESSION_PASSWORD];
-    if(![regexMobile evaluateWithObject:self.accountText.text]){
+    if(![self.accountText.text checkWithRegularExpression:REGULAR_EXPRESSION_MOBILE_PHONE]){
         DLog(@"phone can't pass");
         return NO;
     }
 #warning 验证密码模块现在因为测试，故意弄反，在正式上线前将判断取反
-    if([regexPassword evaluateWithObject:self.passwordText.text]){
+    if([self.passwordText.text checkWithRegularExpression:REGULAR_EXPRESSION_PASSWORD]){
         DLog(@"password can't pass");
         return NO;
     }
@@ -193,16 +191,19 @@ static NSString *forgetPasswordButtonTitle=@"忘记密码?";
     [manager setCommonlyUsedRequsetHeaderFiled];
     
     [manager POST:LOGIN_PATH parameters:postInfo success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        DLog(@"login success:%@",operation.response.allHeaderFields);
         [self dismissViewControllerAnimated:YES completion:nil];
+        if([self.superController respondsToSelector:@selector(loginSuccess)]){
+            [self.superController loginSuccess];
+        }
         
-#warning this area hasn't finished,beacause main controller hasn't write.
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSInteger errorStatCode=operation.response.statusCode;
         if(errorStatCode == AUTHENTICATED_FAIL){
-            [self showHUDWithString:authenticatedFailString showingTime:3.0];
+            [MBProgressHUD showHUDWithString:authenticatedFailString showingTime:defaultTimeInterVal onView:self.view];
         }
         else if(errorStatCode == BAD_REQUEST){
-            [self showHUDWithString:badRequestString showingTime:3.0];
+            [MBProgressHUD showHUDWithString:badRequestString showingTime:defaultTimeInterVal onView:self.view];
         }
         else{
             DLog(@"Unknow Error:%li\n%@\nErrorString is %@",(long)errorStatCode,error,[[NSString alloc]initWithData:operation.responseData encoding:NSUTF8StringEncoding]);
@@ -211,12 +212,7 @@ static NSString *forgetPasswordButtonTitle=@"忘记密码?";
     
 }
 
--(void)showHUDWithString:(NSString*)string showingTime:(NSTimeInterval)timeInterval{
-    MBProgressHUD *hud=[MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.mode=MBProgressHUDModeText;
-    hud.labelText=string;
-    [hud hide:YES afterDelay:timeInterval];
-}
+
 
 
 @end

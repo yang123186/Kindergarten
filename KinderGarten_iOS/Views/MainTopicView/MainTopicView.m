@@ -8,6 +8,7 @@
 
 #import "MainTopicView.h"
 #import "General.h"
+#import "TopicModal.h"
 
 static  const   CGFloat paddingVertical=10.0f;
 static  const   CGFloat paddingHorizontal=15.0f;
@@ -87,6 +88,10 @@ static const    CGFloat detailLabelFontSize=14.0f;
 -(void)setTopic:(NSString *)topic detail:(NSString *)detail{
     [self.topicLabel setText:topic];
     [self.detailLabel setText:detail];
+}
+
+-(void)setTopicViewWithTopicModal:(TopicModal *)modal{
+    [self setTopic:modal.title detail:modal.detail];
 }
 
 +(CGFloat)height{

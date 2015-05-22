@@ -14,6 +14,15 @@ static const    CGFloat topImageViewHeight=203.0f;
 
 static NSString *settingBarButonTitle=@"设置";
 
+@interface MainViewConller ()
+
+@property   (nonatomic,strong)  UIView          *contentView;
+
+@end
+
+
+
+
 @implementation MainViewConller
 
 -(instancetype)initWithRootController:(MainController*)controller{
@@ -25,7 +34,9 @@ static NSString *settingBarButonTitle=@"设置";
 }
 
 -(void)createViews{
-    self.iconBarButton=[[MainIconView alloc]initWithImage:[UIImage imageNamed:@"testimg"] onView:self.view delegate:self.controller];
+    self.contentView=[[UIView alloc]init];
+    
+    self.iconBarButton=[[MainIconView alloc]initWithImage:[UIImage imageNamed:@"xiaoye"] onView:self.view delegate:self.controller];
     [self.controller.navigationItem setLeftBarButtonItem:self.iconBarButton];
     
     self.settingBarButton=[[UIBarButtonItem alloc]initWithTitle:settingBarButonTitle style:UIBarButtonItemStylePlain target:self.controller action:@selector(settingBarButtonTouched)];
@@ -34,65 +45,86 @@ static NSString *settingBarButonTitle=@"设置";
     
     self.topImageView=[[UIImageView alloc]init];
     self.topImageView.translatesAutoresizingMaskIntoConstraints=NO;
-    [self.view addSubview:self.topImageView];
+    [self.contentView addSubview:self.topImageView];
     [self.topImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top);
-        make.left.equalTo(self.view.mas_left);
-        make.right.equalTo(self.view.mas_right);
+        make.top.equalTo(self.contentView.mas_top);
+        make.left.equalTo(self.contentView.mas_left);
+        make.right.equalTo(self.contentView.mas_right);
         make.height.equalTo([NSNumber numberWithDouble:topImageViewHeight]);
     }];
     
     self.topicView=[[MainTopicView alloc]init];
     self.topicView.translatesAutoresizingMaskIntoConstraints=NO;
-    [self.view addSubview:self.topicView];
+    [self.contentView addSubview:self.topicView];
     [self.topicView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.topImageView.mas_bottom);
-        make.left.equalTo(self.view.mas_left);
-        make.right.equalTo(self.view.mas_right);
+        make.left.equalTo(self.contentView.mas_left);
+        make.right.equalTo(self.contentView.mas_right);
         make.height.equalTo([NSNumber numberWithDouble:[MainTopicView height]]);
     }];
     
     
     /***********TestArea********/
-    [self.topImageView setImage:[UIImage imageNamed:@"testimg"]];
+    [self.topImageView setImage:[UIImage imageNamed:@"xiaoye"]];
     [self.topicView setTopic:@"今日话题：你会鼓励孩纸吗🐴" detail:@"已有1000+位👪参与了讨论."];
-    UIImage *image=[UIImage imageNamed:@"testimg"];
+    UIImage *image=[UIImage imageNamed:@"xiaoye"];
     NSArray *icons=[NSArray arrayWithObjects:image,image,image,image,image,image,image,image,image,image,image,image, nil];
     NSString *teststr=@"测试字符";
-    NSArray *titles=[NSArray arrayWithObjects:teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr, nil];
+    NSArray *titles=[NSArray arrayWithObjects:@"韩小野",teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr, nil];
     /***********TestArea********/
     
     
     self.childGroupView=[[MainGroupView alloc]initWithItemNumer:3 icons:icons titles:titles];
     self.childGroupView.translatesAutoresizingMaskIntoConstraints=NO;
-    [self.view addSubview:self.childGroupView];
+    [self.contentView addSubview:self.childGroupView];
     [self.childGroupView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.topicView.mas_bottom);
-        make.left.equalTo(self.view.mas_left);
-        make.right.equalTo(self.view.mas_right);
+        make.left.equalTo(self.contentView.mas_left);
+        make.right.equalTo(self.contentView.mas_right);
         make.height.equalTo([NSNumber numberWithDouble:[self.childGroupView height]]);
     }];
+    self.childGroupView.delegate=self.controller;
     
     self.functionGroupView=[[MainGroupView alloc]initWithItemNumer:7 icons:icons titles:titles];
     self.functionGroupView.translatesAutoresizingMaskIntoConstraints=NO;
-    [self.view addSubview:self.functionGroupView];
+    [self.contentView addSubview:self.functionGroupView];
     [self.functionGroupView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.childGroupView.mas_bottom);
-        make.left.equalTo(self.view.mas_left);
-        make.right.equalTo(self.view.mas_right);
+        make.left.equalTo(self.contentView.mas_left);
+        make.right.equalTo(self.contentView.mas_right);
         make.height.equalTo([NSNumber numberWithDouble:[self.functionGroupView height]]);
     }];
+    self.functionGroupView.delegate=self.controller;
     
     self.bottomGroupView=[[MainGroupView alloc]initWithItemNumer:3 icons:icons titles:titles];
     self.bottomGroupView.translatesAutoresizingMaskIntoConstraints=NO;
-    [self.view addSubview:self.bottomGroupView];
+    [self.contentView addSubview:self.bottomGroupView];
     [self.bottomGroupView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.functionGroupView.mas_bottom);
-        make.left.equalTo(self.view.mas_left);
-        make.right.equalTo(self.view.mas_right);
+        make.left.equalTo(self.contentView.mas_left);
+        make.right.equalTo(self.contentView.mas_right);
         make.height.equalTo([NSNumber numberWithDouble:[self.bottomGroupView height]]);
     }];
+    self.bottomGroupView.delegate=self.controller;
     
+    
+    self.scrollView=[[UIScrollView   alloc]init];
+    self.scrollView.translatesAutoresizingMaskIntoConstraints=NO;
+    [self.view addSubview:self.scrollView];
+    [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top);
+        make.bottom.equalTo(self.view.mas_bottom);
+        make.left.equalTo(self.view.mas_left);
+        make.right.equalTo(self.view.mas_right);
+    }];
+    
+    
+    self.contentView.frame=CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, topImageViewHeight+[MainTopicView height]+[self.childGroupView height]+[self.functionGroupView height]+[self.bottomGroupView height]);
+    [self.scrollView addSubview:self.contentView];
+    self.scrollView.contentSize=self.contentView.frame.size;
+    self.scrollView.showsVerticalScrollIndicator=NO;
+    self.scrollView.showsHorizontalScrollIndicator=NO;
+//    self.scrollView.bounces=NO;
 }
 
 @end

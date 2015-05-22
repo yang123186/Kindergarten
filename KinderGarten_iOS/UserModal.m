@@ -7,9 +7,6 @@
 //
 
 #import "UserModal.h"
-#import "StudentsModal.h"
-#import "RolesModal.h"
-#import "ClassLitemodal.h"
 #import "General.h"
 
 
@@ -18,8 +15,10 @@
 
 -(instancetype)init{
     if(self=[super init]){
-        self.cStudents=[[StudentsModal alloc]init];
+        self.cStudents=[[StudentsContainer alloc]init];
         self.cClasses=[[ClassLiteModal alloc]init];
+        self.cRoles=[[RolesModal alloc]init];
+        self.settingModal=[[UserSettingModal alloc]init];
     }
     return self;
 }

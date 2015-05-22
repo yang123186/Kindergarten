@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "MainGroupView.h"
+#import "LoginController.h"
 
-@interface MainController : UIViewController<MainGroupViewDelegate>
+@interface MainController : UIViewController<MainGroupViewDelegate,LoginDelegate>
 -(void)settingBarButtonTouched;
+
+-(void)getDatafromNetWork;
 @end

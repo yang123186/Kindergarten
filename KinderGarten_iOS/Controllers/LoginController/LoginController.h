@@ -8,9 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol LoginDelegate <NSObject>
+
+-(void)loginSuccess;
+
+@end
+
+
 @interface LoginController : UIViewController
 
--(instancetype)init;
+@property   (nonatomic,weak)    UIViewController<LoginDelegate> *superController;
+
+
+-(instancetype)initWithSuperController:(UIViewController<LoginDelegate>*)controller;
 
 /**
  *  You can implement auto login by using this method.

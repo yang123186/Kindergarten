@@ -8,8 +8,10 @@
 #import "NetWorking.h"
 #import "ColorDefine.h"
 #import "Masonry.h"
+#import "MBProgressHUD.h"
 #import "UIImageView+AFNetworking.h"
 #import "Category.h"
+#import "Screen.h"
 
 #ifdef DEBUG
 #define DLog(...) NSLog(__VA_ARGS__)
@@ -23,7 +25,7 @@
 
 
 #warning teacher is test.should be change to parent.
-static NSString *loginTypeValue=@"teacher";
+static NSString *loginTypeValue=@"parent";
 
 
-
+static NSTimeInterval   defaultTimeInterVal=3.0f;

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class TopicModal;
 @interface MainTopicView : UIButton
 
 
@@ -41,6 +42,14 @@
  *  @param detail the detail of topic
  */
 -(void)setTopic:(NSString*)topic detail:(NSString*)detail;
+
+
+/**
+ *  Set the topic and detail by modal
+ *
+ *  @param modal the topic Modal
+ */
+-(void)setTopicViewWithTopicModal:(TopicModal*)modal;
 
 
 /**

@@ -17,7 +17,8 @@
 
 -(void)setCommonlyUsedRequsetHeaderFiled{
     [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    [self.requestSerializer setValue:@"application/json;charset=utf8" forHTTPHeaderField:@"Content-Type"];
+    [self.requestSerializer setValue:@"application/json;charset=utf-8" forHTTPHeaderField:@"Content-Type"];
 }
+
 
 @end

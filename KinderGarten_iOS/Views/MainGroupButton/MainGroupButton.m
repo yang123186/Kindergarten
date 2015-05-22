@@ -9,7 +9,6 @@
 #import "MainGroupButton.h"
 #import "General.h"
 
-static const    CGFloat pictureLength=60.0f;
 static const    CGFloat spacePadding=9.0f;
 static const    CGFloat titleHeight=14.0f;
 
@@ -21,6 +20,7 @@ static const    CGFloat titleFontSize=14.0f;
     if(self=[super init]){
         self.picture=[[UIImageView alloc]init];
         self.title=[[UILabel alloc]init];
+        self.userInteractionEnabled=YES;
         [self subviewsInitialize];
     }
     return self;
@@ -55,14 +55,12 @@ static const    CGFloat titleFontSize=14.0f;
         make.height.equalTo([NSNumber numberWithDouble:titleHeight]);
     }];
     
-    
-    [self.picture.layer setMasksToBounds:YES];
-    [self.picture.layer setCornerRadius:pictureLength/2];
+    [self.picture setCircleRadius:pictureLength/2];
     self.picture.contentMode=UIViewContentModeScaleToFill;
     
     
     [self.title setFont:[UIFont systemFontOfSize:titleFontSize]];
-    
+    [self.title setTextAlignment:NSTextAlignmentCenter];
 }
 
 

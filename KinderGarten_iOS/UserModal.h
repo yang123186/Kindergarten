@@ -7,13 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "StudentsModal.h"
+#import "RolesModal.h"
+#import "ClassLitemodal.h"
+#import "UserSettingModal.h"
+
+
 
 static  NSString    *timeFormat=@"yyyy-MM-ddTHH:mm:ssZ";
 
-@class StudentsModal,RolesModal,ClassLiteModal;
-
-
-
+@class StudentsContainer,RolesModal,ClassLiteModal,UserSettingModal;
 
 
 
@@ -22,13 +25,15 @@ static  NSString    *timeFormat=@"yyyy-MM-ddTHH:mm:ssZ";
 @property   (nonatomic,copy)    NSString    *_id;
 @property   (nonatomic,copy)    NSString    *phone;
 @property   (nonatomic,copy)    NSString    *name;
-@property   (nonatomic,assign)  NSInteger   *__v;
+@property   (nonatomic,assign)  NSInteger   __v;
 @property   (nonatomic,copy)    NSString    *avatar;
+@property   (nonatomic,copy)    NSString    *sex;
+@property   (nonatomic,copy)    NSString    *kindergarten;
 @property   (nonatomic,copy)    NSString    *createTime;
 @property   (nonatomic,strong)  ClassLiteModal  *cClasses;
-@property   (nonatomic,strong)  StudentsModal   *cStudents;
+@property   (nonatomic,strong)  StudentsContainer   *cStudents;
 @property   (nonatomic,strong)  RolesModal  *cRoles;
-
+@property   (nonatomic,strong)  UserSettingModal    *settingModal;
 
 /**
  *  Base initialize ,it's safe to use.
