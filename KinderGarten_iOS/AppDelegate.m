@@ -11,6 +11,7 @@
 
 #import "MainController.h"
 
+
 @interface AppDelegate ()
 
 @end
@@ -28,6 +29,7 @@ static AppDelegate  *theAppdelegate;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     theAppdelegate=self;
     
+    
     //CookiObserve
     [[NSHTTPCookieStorage sharedHTTPCookieStorage] addObserver:self.gObserver forKeyPath:@"cookies" options:NSKeyValueObservingOptionNew context:nil];
     
@@ -41,6 +43,8 @@ static AppDelegate  *theAppdelegate;
     
     self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [self.window setRootViewController:navCtrl];
+    
+    
     [self.window makeKeyAndVisible];
 
     [application setStatusBarStyle:UIStatusBarStyleLightContent];

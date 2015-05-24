@@ -172,10 +172,10 @@ static NSString *forgetPasswordButtonTitle=@"忘记密码?";
         return NO;
     }
 #warning 验证密码模块现在因为测试，故意弄反，在正式上线前将判断取反
-    if([self.passwordText.text checkWithRegularExpression:REGULAR_EXPRESSION_PASSWORD]){
-        DLog(@"password can't pass");
-        return NO;
-    }
+//    if(![self.passwordText.text checkWithRegularExpression:REGULAR_EXPRESSION_PASSWORD]){
+//        DLog(@"password can't pass");
+//        return NO;
+//    }
     return YES;
 }
 

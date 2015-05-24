@@ -8,6 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface ForgetPasswordViewController : UIViewController
+
+
+/**
+ *  will request server to get verify code.
+ */
+-(void)requestVerifyCodeButtonDidTouched;
+
+
+/**
+ *  Will send all information to server to reset password.
+ */
+-(void)commitPasswordInfo;
+
 
 @end

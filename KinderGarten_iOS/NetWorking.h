@@ -20,6 +20,7 @@
 #define FORGET_PASSWORD_PATH                                            PUREPATH(@"/auth/forgetpassword")
 #define HOME_PATH                                                       PUREPATH(@"/user/home")
 #define MODIFY_PASSWORD_PATH                                            PUREPATH(@"/user/password")
+#define SOCIAL_LIST_PATH                                                PUREPATH(@"/social")
 #endif
 
 

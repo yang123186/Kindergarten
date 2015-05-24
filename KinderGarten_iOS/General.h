@@ -12,6 +12,8 @@
 #import "UIImageView+AFNetworking.h"
 #import "Category.h"
 #import "Screen.h"
+#import "UIView+Emotion.h"
+
 
 #ifdef DEBUG
 #define DLog(...) NSLog(__VA_ARGS__)

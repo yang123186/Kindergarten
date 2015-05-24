@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HonorListViewController.h"
 
 @interface HonorListController : UIViewController
+
+@property   (nonatomic,strong)  HonorListViewController *viewController;
+
+-(instancetype)init;
 
 @end

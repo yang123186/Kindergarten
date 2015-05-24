@@ -11,11 +11,14 @@
 #import "General.h"
 #import "AppDelegate.h"
 
-#import "PersonalController.h"
-#import "SettingController.h"
 #import "MainViewConller.h"
 #import "HomeModal.h"
 #import "MainGroupButton.h"
+
+#import "PersonalController.h"
+#import "HonorListController.h"
+#import "SettingController.h"
+#import "SocialListController.h"
 
 static NSString *title=@"主页";
 
@@ -65,6 +68,7 @@ static NSString *observeTopicKey=@"cTopic";
         DLog(@"get new home info success");
         self.modal=[self.modal initWithDictioary:responseObject];
         [AppDelegate sharedAppDelegate].userModal=self.modal.cUser;
+        [self.viewController.topicView.detailLabel setEmotionText:@"haha[亲亲]"];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if(operation.response.statusCode==AUTHENTICATED_FAIL){
@@ -77,7 +81,7 @@ static NSString *observeTopicKey=@"cTopic";
             DLog(@"MainController:NetWorkfail:%@",error);
         }
     }];
-    NSLog(@"cookies:%@",[NSHTTPCookieStorage sharedHTTPCookieStorage].cookies);
+//    NSLog(@"cookies:%@",[NSHTTPCookieStorage sharedHTTPCookieStorage].cookies);
 }
 
 
@@ -124,6 +128,16 @@ static NSString *observeTopicKey=@"cTopic";
         if(button.tag==0){
             PersonalController *personalCtrl=[[PersonalController alloc]initWithStudentModal:nil];
             [self.navigationController pushViewController:personalCtrl animated:YES];
+        }
+        else if(button.tag==1){
+            SocialListController *socialCtrl=[[SocialListController alloc]init];
+            [self.navigationController pushViewController:socialCtrl animated:YES];
+        }
+    }
+    if(mainGroupView==self.viewController.functionGroupView){
+        if(button.tag==3){
+            HonorListController *honorListCtr=[[HonorListController alloc]init];
+            [self.navigationController pushViewController:honorListCtr animated:YES];
         }
     }
 }

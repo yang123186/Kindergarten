@@ -15,10 +15,18 @@
 
 -(instancetype)init{
     if(self=[super init]){
-        self.cStudents=[[StudentsContainer alloc]init];
-        self.cClasses=[[ClassLiteModal alloc]init];
-        self.cRoles=[[RolesModal alloc]init];
-        self.settingModal=[[UserSettingModal alloc]init];
+        if(!self.cStudents){
+            self.cStudents=[[StudentsContainer alloc]init];
+        }
+        if(!self.cClasses){
+            self.cClasses=[[ClassLiteContainer alloc]init];
+        }
+        if(!self.cRoles){
+            self.cRoles=[[RolesModal alloc]init];
+        }
+        if(!self.settingModal){
+            self.settingModal=[[UserSettingModal alloc]init];
+        }
     }
     return self;
 }
@@ -34,7 +42,7 @@
         self.cStudents=[self.cStudents initWithArray:value];
     }
     else if([key isEqualToString:@"classes"]){
-        self.cClasses=[self.cClasses initWithArray:value];
+        self.cClasses=[self.cClasses initWithClassIdArray:value];
     }
     else if([key isEqualToString:@"roles"]){
         self.cRoles=[self.cRoles initWithArray:value];

@@ -12,19 +12,59 @@
 
 -(instancetype)init{
     if(self=[super init]){
-        self.classContainer=[[NSMutableArray alloc]init];
+        
+    }
+    return self;
+}
+
+-(instancetype)initWithClassDictionary:(NSDictionary *)dictionary{
+    if (self=[self init]) {
+        [self setValuesForKeysWithDictionary:dictionary];
+    }
+    return self;
+}
+
+@end
+
+
+@implementation ClassLiteContainer
+
+-(instancetype)init{
+    if(self=[super init]){
+        if(self.classContainer){
+            [self.classContainer removeAllObjects];
+        }
+        else{
+            self.classContainer=[[NSMutableArray alloc]init];
+        }
     }
     return self;
 }
 
 
--(instancetype)initWithArray:(NSArray *)array{
-    [self.classContainer removeAllObjects];
-    [self.classContainer addObjectsFromArray:array];
+-(instancetype)initWithClassIdArray:(NSArray *)array{
+    if(self=[self init]){
+        [self.classContainer addObjectsFromArray:array];
+    }
+    return self;
+}
+
+
+-(instancetype)initWithClassModalsArray:(NSArray *)array{
+    if(self=[self init]){
+        for(NSDictionary *dic in array){
+            ClassLiteModal *modal=[[ClassLiteModal alloc]initWithClassDictionary:dic];
+            [self.classContainer addObject:modal];
+        }
+    }
     return self;
 }
 
 -(NSString*)classIdAtIndex:(NSUInteger)index{
+    return [self.classContainer objectAtIndex:index];
+}
+
+-(ClassLiteModal*)modalAtIndex:(NSUInteger)index{
     return [self.classContainer objectAtIndex:index];
 }
 

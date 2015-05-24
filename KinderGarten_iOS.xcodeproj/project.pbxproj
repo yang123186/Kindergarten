@@ -20,12 +20,24 @@
 		7325AC081B0ED85A004D5FC3 /* Screen.m in Sources */ = {isa = PBXBuildFile; fileRef = 7325AC071B0ED85A004D5FC3 /* Screen.m */; };
 		7325AC0C1B0EDF21004D5FC3 /* ParentContactModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7325AC0B1B0EDF21004D5FC3 /* ParentContactModal.m */; };
 		7325AC101B0F2DC3004D5FC3 /* HonorListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7325AC0F1B0F2DC3004D5FC3 /* HonorListController.m */; };
+		7358C52B1B0F47CB001CC5E2 /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358C52A1B0F47CB001CC5E2 /* ForgetViewController.m */; };
+		7358C52F1B0F5916001CC5E2 /* NavigationTopButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358C52E1B0F5916001CC5E2 /* NavigationTopButton.m */; };
+		7358C5321B0F668E001CC5E2 /* HonorListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358C5311B0F668D001CC5E2 /* HonorListViewController.m */; };
+		7358C53A1B1057F5001CC5E2 /* UIView+Emotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358C5391B1057F5001CC5E2 /* UIView+Emotion.m */; };
+		7358C5441B10D4D6001CC5E2 /* emotionFaces.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7358C5431B10D4D6001CC5E2 /* emotionFaces.plist */; };
+		7358C5481B1176E2001CC5E2 /* SocialListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358C5471B1176E2001CC5E2 /* SocialListController.m */; };
+		7358C54D1B117741001CC5E2 /* SocialListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358C54C1B117741001CC5E2 /* SocialListCell.m */; };
+		7358C5501B1178AB001CC5E2 /* MediaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358C54F1B1178AB001CC5E2 /* MediaView.m */; };
+		7358C5531B117B20001CC5E2 /* praiseBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358C5521B117B20001CC5E2 /* praiseBar.m */; };
+		7358C5561B117B3E001CC5E2 /* commentGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358C5551B117B3E001CC5E2 /* commentGroupView.m */; };
+		7358C5591B117FC6001CC5E2 /* SocialListModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358C5581B117FC6001CC5E2 /* SocialListModal.m */; };
+		7358C55D1B118166001CC5E2 /* SocialCommentContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358C55C1B118166001CC5E2 /* SocialCommentContainer.m */; };
+		7358C5601B1181E3001CC5E2 /* SocialLikesModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358C55F1B1181E3001CC5E2 /* SocialLikesModal.m */; };
 		737202071B05EA0000F9EE56 /* SuperNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737202061B05EA0000F9EE56 /* SuperNavgationController.m */; };
 		7372020B1B05EB2C00F9EE56 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7372020A1B05EB2C00F9EE56 /* LoginController.m */; };
 		737202141B06379800F9EE56 /* LineTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 737202131B06379800F9EE56 /* LineTextView.m */; };
 		7372021A1B06D35900F9EE56 /* NetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 737202191B06D35900F9EE56 /* NetWorking.m */; };
 		7372021D1B06DCE000F9EE56 /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7372021C1B06DCE000F9EE56 /* ForgetPasswordViewController.m */; };
-		737202221B06DE9700F9EE56 /* SetNewPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737202211B06DE9700F9EE56 /* SetNewPasswordController.m */; };
 		737202261B06E1A900F9EE56 /* LineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 737202251B06E1A900F9EE56 /* LineLabel.m */; };
 		737202281B06F39600F9EE56 /* TestUseXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 737202271B06F39600F9EE56 /* TestUseXib.xib */; };
 		73943D701B0774BC00D41DA1 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73943D6F1B0774BC00D41DA1 /* MainController.m */; };
@@ -87,6 +99,31 @@
 		7325AC0B1B0EDF21004D5FC3 /* ParentContactModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ParentContactModal.m; path = Modals/ParentContactModal/ParentContactModal.m; sourceTree = "<group>"; };
 		7325AC0E1B0F2DC3004D5FC3 /* HonorListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HonorListController.h; path = Controllers/HonorListController/HonorListController.h; sourceTree = "<group>"; };
 		7325AC0F1B0F2DC3004D5FC3 /* HonorListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HonorListController.m; path = Controllers/HonorListController/HonorListController.m; sourceTree = "<group>"; };
+		7358C5291B0F47CB001CC5E2 /* ForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ForgetViewController.h; path = Controllers/ForgetPasswordViewController/ViewController/ForgetViewController.h; sourceTree = "<group>"; };
+		7358C52A1B0F47CB001CC5E2 /* ForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForgetViewController.m; path = Controllers/ForgetPasswordViewController/ViewController/ForgetViewController.m; sourceTree = "<group>"; };
+		7358C52D1B0F5916001CC5E2 /* NavigationTopButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NavigationTopButton.h; path = Views/NavigationTopButton/NavigationTopButton.h; sourceTree = "<group>"; };
+		7358C52E1B0F5916001CC5E2 /* NavigationTopButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NavigationTopButton.m; path = Views/NavigationTopButton/NavigationTopButton.m; sourceTree = "<group>"; };
+		7358C5301B0F668D001CC5E2 /* HonorListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HonorListViewController.h; path = Controllers/HonorListController/ViewController/HonorListViewController.h; sourceTree = "<group>"; };
+		7358C5311B0F668D001CC5E2 /* HonorListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HonorListViewController.m; path = Controllers/HonorListController/ViewController/HonorListViewController.m; sourceTree = "<group>"; };
+		7358C5381B1057F5001CC5E2 /* UIView+Emotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Emotion.h"; path = "Views/EmojiProcessor/UIView+Emotion.h"; sourceTree = "<group>"; };
+		7358C5391B1057F5001CC5E2 /* UIView+Emotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Emotion.m"; path = "Views/EmojiProcessor/UIView+Emotion.m"; sourceTree = "<group>"; };
+		7358C5431B10D4D6001CC5E2 /* emotionFaces.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = emotionFaces.plist; sourceTree = "<group>"; };
+		7358C5461B1176E2001CC5E2 /* SocialListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SocialListController.h; path = Controllers/SocialController/SocialListController/SocialListController.h; sourceTree = "<group>"; };
+		7358C5471B1176E2001CC5E2 /* SocialListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocialListController.m; path = Controllers/SocialController/SocialListController/SocialListController.m; sourceTree = "<group>"; };
+		7358C54B1B117741001CC5E2 /* SocialListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SocialListCell.h; path = Views/SocialListCell/SocialListCell.h; sourceTree = "<group>"; };
+		7358C54C1B117741001CC5E2 /* SocialListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocialListCell.m; path = Views/SocialListCell/SocialListCell.m; sourceTree = "<group>"; };
+		7358C54E1B1178AB001CC5E2 /* MediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MediaView.h; path = Views/MediaView/MediaView.h; sourceTree = "<group>"; };
+		7358C54F1B1178AB001CC5E2 /* MediaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MediaView.m; path = Views/MediaView/MediaView.m; sourceTree = "<group>"; };
+		7358C5511B117B20001CC5E2 /* praiseBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = praiseBar.h; path = Views/pariseBar/praiseBar.h; sourceTree = "<group>"; };
+		7358C5521B117B20001CC5E2 /* praiseBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = praiseBar.m; path = Views/pariseBar/praiseBar.m; sourceTree = "<group>"; };
+		7358C5541B117B3E001CC5E2 /* commentGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = commentGroupView.h; path = Views/CommentGroupView/commentGroupView.h; sourceTree = "<group>"; };
+		7358C5551B117B3E001CC5E2 /* commentGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = commentGroupView.m; path = Views/CommentGroupView/commentGroupView.m; sourceTree = "<group>"; };
+		7358C5571B117FC6001CC5E2 /* SocialListModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialListModal.h; sourceTree = "<group>"; };
+		7358C5581B117FC6001CC5E2 /* SocialListModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialListModal.m; sourceTree = "<group>"; };
+		7358C55B1B118166001CC5E2 /* SocialCommentContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SocialCommentContainer.h; path = Modals/SocialCommentContainer/SocialCommentContainer.h; sourceTree = "<group>"; };
+		7358C55C1B118166001CC5E2 /* SocialCommentContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocialCommentContainer.m; path = Modals/SocialCommentContainer/SocialCommentContainer.m; sourceTree = "<group>"; };
+		7358C55E1B1181E3001CC5E2 /* SocialLikesModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SocialLikesModal.h; path = Modals/SocialLikesModal/SocialLikesModal.h; sourceTree = "<group>"; };
+		7358C55F1B1181E3001CC5E2 /* SocialLikesModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocialLikesModal.m; path = Modals/SocialLikesModal/SocialLikesModal.m; sourceTree = "<group>"; };
 		737202051B05EA0000F9EE56 /* SuperNavgationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuperNavgationController.h; path = Controllers/SuperNavgationController/SuperNavgationController.h; sourceTree = "<group>"; };
 		737202061B05EA0000F9EE56 /* SuperNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuperNavgationController.m; path = Controllers/SuperNavgationController/SuperNavgationController.m; sourceTree = "<group>"; };
 		737202091B05EB2C00F9EE56 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginController.h; path = Controllers/LoginController/LoginController.h; sourceTree = "<group>"; };
@@ -99,8 +136,6 @@
 		737202191B06D35900F9EE56 /* NetWorking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorking.m; sourceTree = "<group>"; };
 		7372021B1B06DCE000F9EE56 /* ForgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ForgetPasswordViewController.h; path = Controllers/ForgetPasswordViewController/ForgetPasswordViewController.h; sourceTree = "<group>"; };
 		7372021C1B06DCE000F9EE56 /* ForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForgetPasswordViewController.m; path = Controllers/ForgetPasswordViewController/ForgetPasswordViewController.m; sourceTree = "<group>"; };
-		737202201B06DE9700F9EE56 /* SetNewPasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetNewPasswordController.h; path = Controllers/SetNewPasswordController/SetNewPasswordController.h; sourceTree = "<group>"; };
-		737202211B06DE9700F9EE56 /* SetNewPasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetNewPasswordController.m; path = Controllers/SetNewPasswordController/SetNewPasswordController.m; sourceTree = "<group>"; };
 		737202241B06E1A900F9EE56 /* LineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineLabel.h; path = Views/LineLabel/LineLabel.h; sourceTree = "<group>"; };
 		737202251B06E1A900F9EE56 /* LineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineLabel.m; path = Views/LineLabel/LineLabel.m; sourceTree = "<group>"; };
 		737202271B06F39600F9EE56 /* TestUseXib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestUseXib.xib; sourceTree = "<group>"; };
@@ -214,6 +249,7 @@
 		73041C0C1B05E4630064267C /* KinderGarten_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				7358C5331B105720001CC5E2 /* CommonViews */,
 				73A07DFA1B0C8134007CF72F /* Modals */,
 				73041C331B05E4800064267C /* Controllers */,
 				73041C341B05E48A0064267C /* Common */,
@@ -242,6 +278,7 @@
 		73041C331B05E4800064267C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7358C5451B117654001CC5E2 /* SocialController */,
 				7325AC0D1B0F2D6C004D5FC3 /* HonorControllers */,
 				7325ABFE1B0ED6C7004D5FC3 /* PersonalController */,
 				73B378F81B0DD301004012B2 /* SettingController */,
@@ -331,10 +368,86 @@
 		7325AC0D1B0F2D6C004D5FC3 /* HonorControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7358C52C1B0F58DD001CC5E2 /* NavigationTopButton */,
 				7325AC0E1B0F2DC3004D5FC3 /* HonorListController.h */,
 				7325AC0F1B0F2DC3004D5FC3 /* HonorListController.m */,
+				7358C5301B0F668D001CC5E2 /* HonorListViewController.h */,
+				7358C5311B0F668D001CC5E2 /* HonorListViewController.m */,
 			);
 			name = HonorControllers;
+			sourceTree = "<group>";
+		};
+		7358C52C1B0F58DD001CC5E2 /* NavigationTopButton */ = {
+			isa = PBXGroup;
+			children = (
+				7358C52D1B0F5916001CC5E2 /* NavigationTopButton.h */,
+				7358C52E1B0F5916001CC5E2 /* NavigationTopButton.m */,
+			);
+			name = NavigationTopButton;
+			sourceTree = "<group>";
+		};
+		7358C5331B105720001CC5E2 /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				7358C5341B10572A001CC5E2 /* EmojiProcessor */,
+			);
+			name = CommonViews;
+			sourceTree = "<group>";
+		};
+		7358C5341B10572A001CC5E2 /* EmojiProcessor */ = {
+			isa = PBXGroup;
+			children = (
+				7358C5381B1057F5001CC5E2 /* UIView+Emotion.h */,
+				7358C5391B1057F5001CC5E2 /* UIView+Emotion.m */,
+				7358C5431B10D4D6001CC5E2 /* emotionFaces.plist */,
+			);
+			name = EmojiProcessor;
+			sourceTree = "<group>";
+		};
+		7358C5451B117654001CC5E2 /* SocialController */ = {
+			isa = PBXGroup;
+			children = (
+				7358C5491B1176E6001CC5E2 /* SocialListController */,
+			);
+			name = SocialController;
+			sourceTree = "<group>";
+		};
+		7358C5491B1176E6001CC5E2 /* SocialListController */ = {
+			isa = PBXGroup;
+			children = (
+				7358C54A1B11770D001CC5E2 /* SubViews */,
+				7358C5461B1176E2001CC5E2 /* SocialListController.h */,
+				7358C5471B1176E2001CC5E2 /* SocialListController.m */,
+			);
+			name = SocialListController;
+			sourceTree = "<group>";
+		};
+		7358C54A1B11770D001CC5E2 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				7358C54B1B117741001CC5E2 /* SocialListCell.h */,
+				7358C54C1B117741001CC5E2 /* SocialListCell.m */,
+				7358C54E1B1178AB001CC5E2 /* MediaView.h */,
+				7358C54F1B1178AB001CC5E2 /* MediaView.m */,
+				7358C5511B117B20001CC5E2 /* praiseBar.h */,
+				7358C5521B117B20001CC5E2 /* praiseBar.m */,
+				7358C5541B117B3E001CC5E2 /* commentGroupView.h */,
+				7358C5551B117B3E001CC5E2 /* commentGroupView.m */,
+			);
+			name = SubViews;
+			sourceTree = "<group>";
+		};
+		7358C55A1B117FCD001CC5E2 /* SocialListModal */ = {
+			isa = PBXGroup;
+			children = (
+				7358C55B1B118166001CC5E2 /* SocialCommentContainer.h */,
+				7358C55C1B118166001CC5E2 /* SocialCommentContainer.m */,
+				7358C55E1B1181E3001CC5E2 /* SocialLikesModal.h */,
+				7358C55F1B1181E3001CC5E2 /* SocialLikesModal.m */,
+				7358C5571B117FC6001CC5E2 /* SocialListModal.h */,
+				7358C5581B117FC6001CC5E2 /* SocialListModal.m */,
+			);
+			name = SocialListModal;
 			sourceTree = "<group>";
 		};
 		737202081B05EA0400F9EE56 /* SuperNavgationController */ = {
@@ -371,17 +484,10 @@
 			children = (
 				7372021B1B06DCE000F9EE56 /* ForgetPasswordViewController.h */,
 				7372021C1B06DCE000F9EE56 /* ForgetPasswordViewController.m */,
+				7358C5291B0F47CB001CC5E2 /* ForgetViewController.h */,
+				7358C52A1B0F47CB001CC5E2 /* ForgetViewController.m */,
 			);
 			name = ForgetPasswordViewController;
-			sourceTree = "<group>";
-		};
-		7372021F1B06DE7300F9EE56 /* SetNewPasswordController */ = {
-			isa = PBXGroup;
-			children = (
-				737202201B06DE9700F9EE56 /* SetNewPasswordController.h */,
-				737202211B06DE9700F9EE56 /* SetNewPasswordController.m */,
-			);
-			name = SetNewPasswordController;
 			sourceTree = "<group>";
 		};
 		737202231B06DEA900F9EE56 /* AuthenticateControllers */ = {
@@ -390,7 +496,6 @@
 				737202151B06379F00F9EE56 /* SubViews */,
 				7372020C1B05EB3200F9EE56 /* LoginController */,
 				7372021E1B06DCE600F9EE56 /* ForgetPasswordViewController */,
-				7372021F1B06DE7300F9EE56 /* SetNewPasswordController */,
 			);
 			name = AuthenticateControllers;
 			sourceTree = "<group>";
@@ -410,6 +515,8 @@
 		73A07DFA1B0C8134007CF72F /* Modals */ = {
 			isa = PBXGroup;
 			children = (
+				73A07E081B0C8E32007CF72F /* UserModal */,
+				7358C55A1B117FCD001CC5E2 /* SocialListModal */,
 				73A07E071B0C8E29007CF72F /* HomeModal */,
 			);
 			name = Modals;
@@ -418,7 +525,6 @@
 		73A07E071B0C8E29007CF72F /* HomeModal */ = {
 			isa = PBXGroup;
 			children = (
-				73A07E081B0C8E32007CF72F /* UserModal */,
 				73A07E091B0C8E43007CF72F /* TopicModal */,
 				73A07DF71B0C812F007CF72F /* HomeModal.h */,
 				73A07DF81B0C812F007CF72F /* HomeModal.m */,
@@ -670,6 +776,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7358C5441B10D4D6001CC5E2 /* emotionFaces.plist in Resources */,
 				737202281B06F39600F9EE56 /* TestUseXib.xib in Resources */,
 				73041C1E1B05E4630064267C /* LaunchScreen.xib in Resources */,
 				73041C1B1B05E4630064267C /* Images.xcassets in Resources */,
@@ -724,8 +831,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7372021A1B06D35900F9EE56 /* NetWorking.m in Sources */,
+				7358C53A1B1057F5001CC5E2 /* UIView+Emotion.m in Sources */,
 				73B379031B0DFF4C004012B2 /* ModifyPasswordController.m in Sources */,
 				73A07E171B0C989E007CF72F /* MainGroupView.m in Sources */,
+				7358C5481B1176E2001CC5E2 /* SocialListController.m in Sources */,
 				73B378FB1B0DD39C004012B2 /* SettingController.m in Sources */,
 				73A07E1B1B0C992A007CF72F /* MainGroupButton.m in Sources */,
 				7325ABFD1B0EC861004D5FC3 /* SystemMessageController.m in Sources */,
@@ -739,8 +848,9 @@
 				73A07E1F1B0CC118007CF72F /* MainViewConller.m in Sources */,
 				73A07E271B0D6476007CF72F /* MainIconView.m in Sources */,
 				73A07E061B0C89CD007CF72F /* StudentsModal.m in Sources */,
-				737202221B06DE9700F9EE56 /* SetNewPasswordController.m in Sources */,
+				7358C52F1B0F5916001CC5E2 /* NavigationTopButton.m in Sources */,
 				7325AC011B0ED70A004D5FC3 /* PersonalController.m in Sources */,
+				7358C55D1B118166001CC5E2 /* SocialCommentContainer.m in Sources */,
 				7325AC101B0F2DC3004D5FC3 /* HonorListController.m in Sources */,
 				73B379111B0E2F2E004012B2 /* SwitchCell.m in Sources */,
 				737202261B06E1A900F9EE56 /* LineLabel.m in Sources */,
@@ -750,15 +860,23 @@
 				73B378FE1B0DD49F004012B2 /* SettingViewController.m in Sources */,
 				7372020B1B05EB2C00F9EE56 /* LoginController.m in Sources */,
 				7325AC0C1B0EDF21004D5FC3 /* ParentContactModal.m in Sources */,
+				7358C5501B1178AB001CC5E2 /* MediaView.m in Sources */,
 				73A07E121B0C8FAE007CF72F /* RolesModal.m in Sources */,
 				73041C101B05E4630064267C /* main.m in Sources */,
+				7358C54D1B117741001CC5E2 /* SocialListCell.m in Sources */,
+				7358C5601B1181E3001CC5E2 /* SocialLikesModal.m in Sources */,
+				7358C5321B0F668E001CC5E2 /* HonorListViewController.m in Sources */,
 				7325ABF91B0EB808004D5FC3 /* UserSettingModal.m in Sources */,
+				7358C5531B117B20001CC5E2 /* praiseBar.m in Sources */,
 				7372021D1B06DCE000F9EE56 /* ForgetPasswordViewController.m in Sources */,
+				7358C5591B117FC6001CC5E2 /* SocialListModal.m in Sources */,
 				73943D701B0774BC00D41DA1 /* MainController.m in Sources */,
 				73B3790D1B0E2C1D004012B2 /* PushNotificationViewController.m in Sources */,
 				737202071B05EA0000F9EE56 /* SuperNavgationController.m in Sources */,
+				7358C5561B117B3E001CC5E2 /* commentGroupView.m in Sources */,
 				73A07DF91B0C812F007CF72F /* HomeModal.m in Sources */,
 				73B378F71B0DC531004012B2 /* GObserver.m in Sources */,
+				7358C52B1B0F47CB001CC5E2 /* ForgetViewController.m in Sources */,
 				73A07E2E1B0D6EDE007CF72F /* IconList.m in Sources */,
 				73A07E0F1B0C8F92007CF72F /* ClassLitemodal.m in Sources */,
 			);

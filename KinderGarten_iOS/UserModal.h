@@ -30,10 +30,13 @@ static  NSString    *timeFormat=@"yyyy-MM-ddTHH:mm:ssZ";
 @property   (nonatomic,copy)    NSString    *sex;
 @property   (nonatomic,copy)    NSString    *kindergarten;
 @property   (nonatomic,copy)    NSString    *createTime;
-@property   (nonatomic,strong)  ClassLiteModal  *cClasses;
+@property   (nonatomic,strong)  ClassLiteContainer  *cClasses;
 @property   (nonatomic,strong)  StudentsContainer   *cStudents;
 @property   (nonatomic,strong)  RolesModal  *cRoles;
 @property   (nonatomic,strong)  UserSettingModal    *settingModal;
+
+@property   (nonatomic,copy)    NSString    *user;
+@property   (nonatomic,copy)    NSString    *appellation;
 
 /**
  *  Base initialize ,it's safe to use.
