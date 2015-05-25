@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SocialCommentContainer.h"
+#import "CommentView.h"
 
 @interface CommentGroupView : UIView
+
+@property   (nonatomic,strong)  NSMutableArray  *comments;
+
+@property   (nonatomic,assign,readonly) CGFloat height;
+
+-(instancetype)init;
+
+-(void)setViewForCommentsContainer:(SocialCommentContainer*)container;
+
+-(instancetype)initWithCommentsContainer:(SocialCommentContainer*)container;
 
 @end

@@ -10,4 +10,12 @@
 
 @interface MediaView : UIView
 
+@property   (nonatomic,assign,readonly) CGFloat height;
+
+-(instancetype)init;
+
+-(instancetype)initWithMediaArray:(NSArray*)array;
+
+-(void)setViewForArray:(NSArray*)array;
+
 @end

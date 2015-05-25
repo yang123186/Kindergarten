@@ -33,6 +33,7 @@
 		7358C5591B117FC6001CC5E2 /* SocialListModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358C5581B117FC6001CC5E2 /* SocialListModal.m */; };
 		7358C55D1B118166001CC5E2 /* SocialCommentContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358C55C1B118166001CC5E2 /* SocialCommentContainer.m */; };
 		7358C5601B1181E3001CC5E2 /* SocialLikesModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358C55F1B1181E3001CC5E2 /* SocialLikesModal.m */; };
+		735A96251B12169D00F7C6A8 /* CommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 735A96241B12169D00F7C6A8 /* CommentView.m */; };
 		737202071B05EA0000F9EE56 /* SuperNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737202061B05EA0000F9EE56 /* SuperNavgationController.m */; };
 		7372020B1B05EB2C00F9EE56 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7372020A1B05EB2C00F9EE56 /* LoginController.m */; };
 		737202141B06379800F9EE56 /* LineTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 737202131B06379800F9EE56 /* LineTextView.m */; };
@@ -40,6 +41,7 @@
 		7372021D1B06DCE000F9EE56 /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7372021C1B06DCE000F9EE56 /* ForgetPasswordViewController.m */; };
 		737202261B06E1A900F9EE56 /* LineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 737202251B06E1A900F9EE56 /* LineLabel.m */; };
 		737202281B06F39600F9EE56 /* TestUseXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 737202271B06F39600F9EE56 /* TestUseXib.xib */; };
+		73750F881B1368E600FB3B18 /* PraiseLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73750F871B1368E600FB3B18 /* PraiseLabel.m */; };
 		73943D701B0774BC00D41DA1 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73943D6F1B0774BC00D41DA1 /* MainController.m */; };
 		73A07DF91B0C812F007CF72F /* HomeModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07DF81B0C812F007CF72F /* HomeModal.m */; };
 		73A07DFD1B0C81A9007CF72F /* UserModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07DFC1B0C81A9007CF72F /* UserModal.m */; };
@@ -124,6 +126,8 @@
 		7358C55C1B118166001CC5E2 /* SocialCommentContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocialCommentContainer.m; path = Modals/SocialCommentContainer/SocialCommentContainer.m; sourceTree = "<group>"; };
 		7358C55E1B1181E3001CC5E2 /* SocialLikesModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SocialLikesModal.h; path = Modals/SocialLikesModal/SocialLikesModal.h; sourceTree = "<group>"; };
 		7358C55F1B1181E3001CC5E2 /* SocialLikesModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocialLikesModal.m; path = Modals/SocialLikesModal/SocialLikesModal.m; sourceTree = "<group>"; };
+		735A96231B12169D00F7C6A8 /* CommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommentView.h; path = Views/CommentView/CommentView.h; sourceTree = "<group>"; };
+		735A96241B12169D00F7C6A8 /* CommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommentView.m; path = Views/CommentView/CommentView.m; sourceTree = "<group>"; };
 		737202051B05EA0000F9EE56 /* SuperNavgationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuperNavgationController.h; path = Controllers/SuperNavgationController/SuperNavgationController.h; sourceTree = "<group>"; };
 		737202061B05EA0000F9EE56 /* SuperNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuperNavgationController.m; path = Controllers/SuperNavgationController/SuperNavgationController.m; sourceTree = "<group>"; };
 		737202091B05EB2C00F9EE56 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginController.h; path = Controllers/LoginController/LoginController.h; sourceTree = "<group>"; };
@@ -139,6 +143,8 @@
 		737202241B06E1A900F9EE56 /* LineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineLabel.h; path = Views/LineLabel/LineLabel.h; sourceTree = "<group>"; };
 		737202251B06E1A900F9EE56 /* LineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineLabel.m; path = Views/LineLabel/LineLabel.m; sourceTree = "<group>"; };
 		737202271B06F39600F9EE56 /* TestUseXib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestUseXib.xib; sourceTree = "<group>"; };
+		73750F861B1368E600FB3B18 /* PraiseLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PraiseLabel.h; path = Views/RichLabel/PraiseLabel.h; sourceTree = "<group>"; };
+		73750F871B1368E600FB3B18 /* PraiseLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PraiseLabel.m; path = Views/RichLabel/PraiseLabel.m; sourceTree = "<group>"; };
 		73943D6E1B0774BC00D41DA1 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainController.h; path = Controllers/MainController/MainController.h; sourceTree = "<group>"; };
 		73943D6F1B0774BC00D41DA1 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainController.m; path = Controllers/MainController/MainController.m; sourceTree = "<group>"; };
 		73A07DF71B0C812F007CF72F /* HomeModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeModal.h; path = Modals/HomeModal.h; sourceTree = "<group>"; };
@@ -431,6 +437,10 @@
 				7358C54F1B1178AB001CC5E2 /* MediaView.m */,
 				7358C5511B117B20001CC5E2 /* praiseBar.h */,
 				7358C5521B117B20001CC5E2 /* praiseBar.m */,
+				73750F861B1368E600FB3B18 /* PraiseLabel.h */,
+				73750F871B1368E600FB3B18 /* PraiseLabel.m */,
+				735A96231B12169D00F7C6A8 /* CommentView.h */,
+				735A96241B12169D00F7C6A8 /* CommentView.m */,
 				7358C5541B117B3E001CC5E2 /* commentGroupView.h */,
 				7358C5551B117B3E001CC5E2 /* commentGroupView.m */,
 			);
@@ -844,12 +854,14 @@
 				73B379061B0E0009004012B2 /* ModifyPasswordViewController.m in Sources */,
 				73A07DFD1B0C81A9007CF72F /* UserModal.m in Sources */,
 				7325AC081B0ED85A004D5FC3 /* Screen.m in Sources */,
+				735A96251B12169D00F7C6A8 /* CommentView.m in Sources */,
 				73A07E231B0CC905007CF72F /* MainTopicView.m in Sources */,
 				73A07E1F1B0CC118007CF72F /* MainViewConller.m in Sources */,
 				73A07E271B0D6476007CF72F /* MainIconView.m in Sources */,
 				73A07E061B0C89CD007CF72F /* StudentsModal.m in Sources */,
 				7358C52F1B0F5916001CC5E2 /* NavigationTopButton.m in Sources */,
 				7325AC011B0ED70A004D5FC3 /* PersonalController.m in Sources */,
+				73750F881B1368E600FB3B18 /* PraiseLabel.m in Sources */,
 				7358C55D1B118166001CC5E2 /* SocialCommentContainer.m in Sources */,
 				7325AC101B0F2DC3004D5FC3 /* HonorListController.m in Sources */,
 				73B379111B0E2F2E004012B2 /* SwitchCell.m in Sources */,

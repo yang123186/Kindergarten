@@ -45,7 +45,7 @@ static NSString *observeTopicKey=@"cTopic";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title=title;
-    self.view.layer.backgroundColor=BACKGROUND_GRAY.CGColor;
+    self.view.layer.backgroundColor=GRAY_BACKGROUND.CGColor;
     self.viewController=[[MainViewConller alloc]initWithRootController:self];
     [self.viewController createViews];
     self.viewController.childGroupView.delegate=self;
@@ -68,7 +68,7 @@ static NSString *observeTopicKey=@"cTopic";
         DLog(@"get new home info success");
         self.modal=[self.modal initWithDictioary:responseObject];
         [AppDelegate sharedAppDelegate].userModal=self.modal.cUser;
-        [self.viewController.topicView.detailLabel setEmotionText:@"haha[亲亲]"];
+        [self.viewController.topicView.detailLabel setRichText:@"haha[亲亲]"];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if(operation.response.statusCode==AUTHENTICATED_FAIL){

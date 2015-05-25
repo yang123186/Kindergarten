@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "MediaView.h"
-#import "praiseBar.h"
+#import "PraiseLabel.h"
 #import "commentGroupView.h"
+#import "SocialListModal.h"
 
 static NSString *socialListCellIdentifier=@"SOCIAL_LIST_CELL";
 
@@ -22,11 +23,16 @@ static NSString *socialListCellIdentifier=@"SOCIAL_LIST_CELL";
 @property   (nonatomic,strong)  UILabel     *describeLabel;
 @property   (nonatomic,strong)  UIButton    *commentButton;
 @property   (nonatomic,strong)  UIButton    *praiseButton;
+@property   (nonatomic,strong)  PraiseLabel *praiseLabel;
 @property   (nonatomic,strong)  CommentGroupView    *commentGroupView;
-@property   (nonatomic,strong)  PraiseBar   *praiseBar;
 
 
 
 -(instancetype)init;
 
+-(CGFloat)height;
+
+-(instancetype)initWithSocialListModal:(SocialListModal*)modal;
+
+-(void)setViewForModal:(SocialListModal*)modal;
 @end

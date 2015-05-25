@@ -23,6 +23,12 @@
 
 @implementation NSString(LineTextViewExtention)
 
+-(NSString*)userEasyKnowTimeFormat{
+#warning the interface should be write
+    return self;
+}
+
+
 -(NSString*)MD5Encrypt{
     const char *original_str = [self UTF8String];
     unsigned char result[CC_MD5_DIGEST_LENGTH];

@@ -10,8 +10,10 @@
 #import "General.h"
 
 static NSDictionary  *emotionDic;
-static NSRegularExpression *regularExpression;
-static NSString *pattern=@"\\[[a-zA-Z0-9\\u4e00-\\u9fa5]+\\]";
+static NSRegularExpression *emotionRegularExpression;
+static NSString *emotionPattern=@"\\[[a-zA-Z0-9\\u4e00-\\u9fa5]+\\]";
+static NSRegularExpression  *nameRegularExpression;
+static NSString *namePattern=@"\\Usr:[a-zA-Z0-9\\u4e00-\\u9fa5]+/Usr\\";
 static NSDictionary *emotionDictionary;
 
 
@@ -23,9 +25,13 @@ static NSDictionary *emotionDictionary;
     static dispatch_once_t rEonceToken;
     dispatch_once(&rEonceToken, ^{
         NSError *error=nil;
-        regularExpression=[NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:&error];
-        if(!regularExpression){
-            DLog(@"emotionProcessor:initialize regularPexression error!");
+        emotionRegularExpression=[NSRegularExpression regularExpressionWithPattern:emotionPattern options:NSRegularExpressionCaseInsensitive error:&error];
+        if(!emotionRegularExpression){
+            DLog(@"emotionProcessor:initialize emotionRegularPexression error!");
+        }
+        nameRegularExpression=[NSRegularExpression regularExpressionWithPattern:namePattern options:NSRegularExpressionCaseInsensitive error:&error];
+        if(!nameRegularExpression){
+            DLog(@"emotionProcessor:initialize nameRegularPexression error!");
         }
     });
 }
@@ -38,15 +44,22 @@ static NSDictionary *emotionDictionary;
     });
 }
 
+
+
 +(NSAttributedString*)createEmotionStringWithText:(NSString *)text{
     [[self class] regularExpressionInitialize];
     [[self class] emotionDictionaryInitialize];
     NSMutableAttributedString *attributeString=[[NSMutableAttributedString alloc]initWithString:text];
     
-    NSArray *resultArray=[regularExpression matchesInString:text options:0 range:NSMakeRange(0, text.length)];
-    NSMutableArray *imageArray=[NSMutableArray arrayWithCapacity:resultArray.count];
+    NSArray *nameResultArray=[nameRegularExpression matchesInString:text options:0 range:NSMakeRange(0, text.length)];
+    for(NSTextCheckingResult *match in nameResultArray){
+        [attributeString setAttributes:@{NSForegroundColorAttributeName :BLUE_NAME} range:[match range]];
+    }
     
-    for(NSTextCheckingResult *match in resultArray){
+    NSArray *emotionResultArray=[emotionRegularExpression matchesInString:text options:0 range:NSMakeRange(0, text.length)];
+    NSMutableArray *imageArray=[NSMutableArray arrayWithCapacity:emotionResultArray.count];
+    
+    for(NSTextCheckingResult *match in emotionResultArray){
         NSRange range=[match range];
         NSString *subStr=[text substringWithRange:range];
         NSTextAttachment *textAttachment = [[NSTextAttachment alloc] init];
@@ -65,7 +78,6 @@ static NSDictionary *emotionDictionary;
         
         //把字典存入数组中
         [imageArray addObject:imageDic];
-
         
     }
     
@@ -83,7 +95,7 @@ static NSDictionary *emotionDictionary;
     return attributeString;
 }
 
--(void)setEmotionText:(NSString*)text{
+-(void)setRichText:(NSString*)text{
     NSAttributedString *emotionStr=[[self class]createEmotionStringWithText:text];
     if([self isKindOfClass:[UILabel class]]){
         [((UILabel*)self) setAttributedText:emotionStr];

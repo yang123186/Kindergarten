@@ -22,6 +22,7 @@
 
 -(NSString*)MD5Encrypt;
 
+-(NSString*)userEasyKnowTimeFormat;
 
 -(BOOL)checkWithRegularExpression:(NSString*)regularExpression;
 

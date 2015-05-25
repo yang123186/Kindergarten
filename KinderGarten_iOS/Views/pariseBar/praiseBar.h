@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SocialLikesModal.h"
 
 @interface PraiseBar : UIView
+
+
+@property   (nonatomic,assign,readonly) CGFloat height;
+
+-(instancetype)init;
+
+-(void)setViewForSocialLikeModal:(SocialLikesContainer*)container;
+
+-(instancetype)initWithSocialLikeModal:(SocialLikesContainer*)container;
 
 @end

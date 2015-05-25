@@ -28,7 +28,7 @@ static  const   CGFloat lineHeight=4.0f;
     if(self=[super init]){
         _buttonNumber=number;
         self.buttons=[[NSMutableArray alloc]init];
-        self.layer.backgroundColor=BACKGROUND_GRAY.CGColor;
+        self.layer.backgroundColor=GRAY_BACKGROUND.CGColor;
         [self createSubViews];
     }
     return self;
