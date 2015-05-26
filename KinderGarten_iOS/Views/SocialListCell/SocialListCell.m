@@ -191,13 +191,15 @@ static const    CGFloat commentGroupTop=10.0f;
     if(modal.cLikes.aLikes.count>0){
         self.praiseLabel=[[PraiseLabel alloc]init];
         self.praiseLabel.translatesAutoresizingMaskIntoConstraints=NO;
+//        [self.praiseLabel setBackgroundColor:BLACK_COLOR];
         [self.praiseLabel setViewWithSocialLikesContainer:modal.cLikes];
         [self addSubview:self.praiseLabel];
         [self.praiseLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(preView.mas_bottom).with.offset(functionButtonTop);
             make.left.equalTo(self.mas_left).with.offset(viewMarginHorizontal);
             make.right.equalTo(self.mas_right).with.offset(-viewMarginHorizontal);
-            make.height.equalTo(self.praiseLabel.mas_height);
+//            make.height.equalTo(self.praiseLabel.mas_height);
+            make.height.equalTo([NSNumber numberWithDouble:100.0f]);
         }];
         preView=self.praiseLabel;
     }

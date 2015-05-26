@@ -80,7 +80,7 @@ static NSString *forgetPasswordButtonTitle=@"忘记密码?";
 -(void)viewDidLoad{
     [super viewDidLoad];
     self.title=title;
-    self.view.layer.backgroundColor=BACKGROUND_GRAY.CGColor;
+    self.view.layer.backgroundColor=GRAY_BACKGROUND.CGColor;
     UIView *superView=self.view;
     
     self.accountText=[[LineTextView alloc]init];

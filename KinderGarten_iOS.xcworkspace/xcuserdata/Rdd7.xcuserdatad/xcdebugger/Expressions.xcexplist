@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[AFHTTPRequestOperationManager(NetWorking) setCommonlyUsedRequsetHeaderFiledWithCookie]:NetWorking.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[NSHTTPCookieStorage sharedHTTPCookieStorage]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[LoginController loginWithAcoount:rawPassword:]:LoginController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__36-[MainController getDatafromNetWork]_block_invoke:MainController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[AppDelegate sharedAppDelegate].userModal">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

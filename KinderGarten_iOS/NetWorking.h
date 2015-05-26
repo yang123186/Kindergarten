@@ -37,6 +37,8 @@
 
 #endif
 
+#define USER_URL_PREFIX     @"User://"
+#define USER_URL(USER_ID)   [NSString stringWithFormat:@"%@%@",USER_URL_PREFIX,USER_ID]
 
 
 

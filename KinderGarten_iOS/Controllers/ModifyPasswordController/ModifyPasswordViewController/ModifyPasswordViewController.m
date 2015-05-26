@@ -33,7 +33,7 @@ static NSString *OKbuttonImageName=@"nav_OK";
 
 
 -(void)createSubViews{
-    [self.view setBackgroundColor:BACKGROUND_GRAY];
+    [self.view setBackgroundColor:GRAY_BACKGROUND];
     
     self.oldPasswordText=[[UITextField alloc]init];
     self.oldPasswordText.translatesAutoresizingMaskIntoConstraints=NO;

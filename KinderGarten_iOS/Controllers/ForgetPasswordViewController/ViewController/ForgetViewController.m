@@ -62,7 +62,7 @@ static const NSInteger defaultCountingTime=10;
 
 -(void)createSubViews{
     self.controller.title=title;
-    self.view.layer.backgroundColor=BACKGROUND_GRAY.CGColor;
+    self.view.layer.backgroundColor=GRAY_BACKGROUND.CGColor;
     
     UIView *superView=self.view;
     self.groupTitleLabel=[[LineLabel alloc]initWithInsets:UIEdgeInsetsMake(0.0f,paddingHorizontal, 0.0f,paddingHorizontal)];

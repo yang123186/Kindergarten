@@ -26,7 +26,7 @@ static NSString *title=@"登陆";
 -(void)viewDidLoad{
     [super viewDidLoad];
     self.title=title;
-    [self.view setBackgroundColor:BACKGROUND_GRAY];
+    [self.view setBackgroundColor:GRAY_BACKGROUND];
     self.viewController=[[SettingViewController alloc]initWithSuperController:self];
     self.viewController.delegate=self;
     [self.viewController createViews];

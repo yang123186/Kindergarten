@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @class SocialLikesContainer;
-@interface PraiseLabel : UITextView
+@interface PraiseLabel : UILabel<UITextViewDelegate>
 
 -(instancetype)init;
 

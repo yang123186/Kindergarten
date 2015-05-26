@@ -13,7 +13,7 @@ static NSDictionary  *emotionDic;
 static NSRegularExpression *emotionRegularExpression;
 static NSString *emotionPattern=@"\\[[a-zA-Z0-9\\u4e00-\\u9fa5]+\\]";
 static NSRegularExpression  *nameRegularExpression;
-static NSString *namePattern=@"\\Usr:[a-zA-Z0-9\\u4e00-\\u9fa5]+/Usr\\";
+static NSString *namePattern=@"Usr:[a-zA-Z0-9\\u4e00-\\u9fa5]+/Usr";
 static NSDictionary *emotionDictionary;
 
 
