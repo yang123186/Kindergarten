@@ -72,6 +72,7 @@
 		73DB4B151B1463940038D685 /* AttendanceContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB4B141B1463940038D685 /* AttendanceContainer.m */; };
 		73DB4B181B146C200038D685 /* ImageLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB4B171B146C200038D685 /* ImageLabel.m */; };
 		73DB4B1D1B148C2A0038D685 /* AttendanceDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB4B1C1B148C2A0038D685 /* AttendanceDetailController.m */; };
+		73DB4B211B1499CB0038D685 /* DayOffController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB4B201B1499CB0038D685 /* DayOffController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -214,6 +215,8 @@
 		73DB4B171B146C200038D685 /* ImageLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageLabel.m; path = Views/ImageLabel/ImageLabel.m; sourceTree = "<group>"; };
 		73DB4B1B1B148C2A0038D685 /* AttendanceDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttendanceDetailController.h; path = Controllers/AttendanceDetailController/AttendanceDetailController.h; sourceTree = "<group>"; };
 		73DB4B1C1B148C2A0038D685 /* AttendanceDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttendanceDetailController.m; path = Controllers/AttendanceDetailController/AttendanceDetailController.m; sourceTree = "<group>"; };
+		73DB4B1F1B1499CB0038D685 /* DayOffController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DayOffController.h; path = Controllers/DaysOffController/DayOffController.h; sourceTree = "<group>"; };
+		73DB4B201B1499CB0038D685 /* DayOffController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DayOffController.m; path = Controllers/DaysOffController/DayOffController.m; sourceTree = "<group>"; };
 		9220AA07D54D752FC179581E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9726F1D47A571AEA326BD4CF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D6A2D55BDD0E608885BAC3A9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -308,6 +311,7 @@
 		73041C331B05E4800064267C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				73DB4B1E1B14996E0038D685 /* DaysOffController */,
 				73DB4B001B145AB40038D685 /* AttendanceController */,
 				7358C5451B117654001CC5E2 /* SocialController */,
 				7325AC0D1B0F2D6C004D5FC3 /* HonorControllers */,
@@ -784,6 +788,15 @@
 			name = AttendanceDetailController;
 			sourceTree = "<group>";
 		};
+		73DB4B1E1B14996E0038D685 /* DaysOffController */ = {
+			isa = PBXGroup;
+			children = (
+				73DB4B1F1B1499CB0038D685 /* DayOffController.h */,
+				73DB4B201B1499CB0038D685 /* DayOffController.m */,
+			);
+			name = DaysOffController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -955,6 +968,7 @@
 				73041C131B05E4630064267C /* AppDelegate.m in Sources */,
 				73B3790A1B0E2BFD004012B2 /* PushNotificationController.m in Sources */,
 				73A07E001B0C81DF007CF72F /* TopicModal.m in Sources */,
+				73DB4B211B1499CB0038D685 /* DayOffController.m in Sources */,
 				73DB4B151B1463940038D685 /* AttendanceContainer.m in Sources */,
 				73B378FE1B0DD49F004012B2 /* SettingViewController.m in Sources */,
 				73DB4B121B14611A0038D685 /* SourceBrief.m in Sources */,

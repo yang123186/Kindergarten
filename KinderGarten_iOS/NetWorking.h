@@ -21,7 +21,7 @@
 #define HOME_PATH                                                       PUREPATH(@"/user/home")
 #define MODIFY_PASSWORD_PATH                                            PUREPATH(@"/user/password")
 #define SOCIAL_LIST_PATH                                                PUREPATH(@"/social")
-#define ATTENDANCE_LIST_PATH                                            PUREPATH(@"attendance")
+#define ATTENDANCE_LIST_PATH(TIME_STAMP)                                PATH_AND_PARAMETER(@"/attendance?timestamp=",TIME_STAMP)
 #endif
 
 

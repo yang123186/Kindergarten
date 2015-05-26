@@ -58,7 +58,10 @@ static NSString *observeContainerKey=@"container";
     AFHTTPRequestOperationManager *manager=[AFHTTPRequestOperationManager manager];
     [manager beJsonManager];
     [manager setCommonlyUsedRequsetHeaderFiled];
-    [manager GET:ATTENDANCE_LIST_PATH parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    NSNumber *sec=[NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]];
+    sec=[NSNumber numberWithInteger:sec.integerValue];
+    DLog(@"%@",sec.stringValue);
+    [manager GET:ATTENDANCE_LIST_PATH(sec.stringValue) parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         DLog(@"%@",[[NSString alloc]initWithData:operation.responseData encoding:NSUTF8StringEncoding]);
     
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
