@@ -2,7 +2,6 @@ i学童家长端 iOS版
 =====================================
 
 
-# 项目说明
 ## 界面编写规范：
 界面布局使用代码编写，禁止StoryBoard与Xib界面.布局建议使用autoLayout,frame布局再在工程完工前必须全部转换成autoLayout布局.
 布局可使用系统自带 NSLayoutConstraint ,或 Masonry. 推荐使用Masonry,代码长度与可读性高于NSLayoutConstraint.
