@@ -70,7 +70,7 @@ static NSString *settingBarButonTitle=@"设置";
     UIImage *image=[UIImage imageNamed:@"xiaoye"];
     NSArray *icons=[NSArray arrayWithObjects:image,image,image,image,image,image,image,image,image,image,image,image, nil];
     NSString *teststr=@"测试字符";
-    NSArray *titles=[NSArray arrayWithObjects:@"韩小野",teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr, nil];
+    NSArray *titles=[NSArray arrayWithObjects:@"韩小野",@"签到",@"请假",teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr, nil];
     /***********TestArea********/
     
     

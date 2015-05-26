@@ -102,3 +102,32 @@
 }
 
 @end
+
+
+
+@implementation NSDate(TimeFormatExt)
+
+static NSDateFormatter *dateFormatter;
+
+-(void)dateFormatterInitialize{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        dateFormatter = [[NSDateFormatter alloc] init];
+    });
+}
+
+
+-(NSString*)to_yyyy_MM_dd_Style{
+    [self dateFormatterInitialize];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    return [dateFormatter stringFromDate:self];
+}
+
+-(NSString*)to_yyyy_MM_dd_HH_mm_Style{
+    [self dateFormatterInitialize];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    return [dateFormatter stringFromDate:self];
+}
+
+@end
+

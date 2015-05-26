@@ -73,6 +73,11 @@
 		73DB4B181B146C200038D685 /* ImageLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB4B171B146C200038D685 /* ImageLabel.m */; };
 		73DB4B1D1B148C2A0038D685 /* AttendanceDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB4B1C1B148C2A0038D685 /* AttendanceDetailController.m */; };
 		73DB4B211B1499CB0038D685 /* DayOffController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB4B201B1499CB0038D685 /* DayOffController.m */; };
+		73DB4B241B14A03B0038D685 /* DayOffViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB4B231B14A03B0038D685 /* DayOffViewController.m */; };
+		73DB4B271B14A9920038D685 /* TextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB4B261B14A9920038D685 /* TextViewCell.m */; };
+		73DB4B301B14ADAA0038D685 /* ClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB4B2D1B14ADAA0038D685 /* ClassInfo.m */; };
+		73DB4B311B14ADAA0038D685 /* DayOffModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB4B2F1B14ADAA0038D685 /* DayOffModal.m */; };
+		73DB4B341B14AE830038D685 /* DayOffContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB4B331B14AE830038D685 /* DayOffContainer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -217,6 +222,16 @@
 		73DB4B1C1B148C2A0038D685 /* AttendanceDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttendanceDetailController.m; path = Controllers/AttendanceDetailController/AttendanceDetailController.m; sourceTree = "<group>"; };
 		73DB4B1F1B1499CB0038D685 /* DayOffController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DayOffController.h; path = Controllers/DaysOffController/DayOffController.h; sourceTree = "<group>"; };
 		73DB4B201B1499CB0038D685 /* DayOffController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DayOffController.m; path = Controllers/DaysOffController/DayOffController.m; sourceTree = "<group>"; };
+		73DB4B221B14A03B0038D685 /* DayOffViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DayOffViewController.h; path = Controllers/DaysOffController/DayOffViewController.h; sourceTree = "<group>"; };
+		73DB4B231B14A03B0038D685 /* DayOffViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DayOffViewController.m; path = Controllers/DaysOffController/DayOffViewController.m; sourceTree = "<group>"; };
+		73DB4B251B14A9920038D685 /* TextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextViewCell.h; path = Views/TextViewCell/TextViewCell.h; sourceTree = "<group>"; };
+		73DB4B261B14A9920038D685 /* TextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextViewCell.m; path = Views/TextViewCell/TextViewCell.m; sourceTree = "<group>"; };
+		73DB4B2C1B14ADAA0038D685 /* ClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassInfo.h; sourceTree = "<group>"; };
+		73DB4B2D1B14ADAA0038D685 /* ClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClassInfo.m; sourceTree = "<group>"; };
+		73DB4B2E1B14ADAA0038D685 /* DayOffModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayOffModal.h; sourceTree = "<group>"; };
+		73DB4B2F1B14ADAA0038D685 /* DayOffModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayOffModal.m; sourceTree = "<group>"; };
+		73DB4B321B14AE830038D685 /* DayOffContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DayOffContainer.h; path = Modals/DayOffModal/DayOffContainer.h; sourceTree = "<group>"; };
+		73DB4B331B14AE830038D685 /* DayOffContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DayOffContainer.m; path = Modals/DayOffModal/DayOffContainer.m; sourceTree = "<group>"; };
 		9220AA07D54D752FC179581E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9726F1D47A571AEA326BD4CF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D6A2D55BDD0E608885BAC3A9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -554,6 +569,7 @@
 		73A07DFA1B0C8134007CF72F /* Modals */ = {
 			isa = PBXGroup;
 			children = (
+				73DB4B281B14AC880038D685 /* DayOffModal */,
 				73DB4B0C1B1460630038D685 /* AttendanceModal */,
 				73A07E081B0C8E32007CF72F /* UserModal */,
 				7358C55A1B117FCD001CC5E2 /* SocialListModal */,
@@ -793,8 +809,25 @@
 			children = (
 				73DB4B1F1B1499CB0038D685 /* DayOffController.h */,
 				73DB4B201B1499CB0038D685 /* DayOffController.m */,
+				73DB4B221B14A03B0038D685 /* DayOffViewController.h */,
+				73DB4B231B14A03B0038D685 /* DayOffViewController.m */,
+				73DB4B251B14A9920038D685 /* TextViewCell.h */,
+				73DB4B261B14A9920038D685 /* TextViewCell.m */,
 			);
 			name = DaysOffController;
+			sourceTree = "<group>";
+		};
+		73DB4B281B14AC880038D685 /* DayOffModal */ = {
+			isa = PBXGroup;
+			children = (
+				73DB4B2C1B14ADAA0038D685 /* ClassInfo.h */,
+				73DB4B2D1B14ADAA0038D685 /* ClassInfo.m */,
+				73DB4B2E1B14ADAA0038D685 /* DayOffModal.h */,
+				73DB4B2F1B14ADAA0038D685 /* DayOffModal.m */,
+				73DB4B321B14AE830038D685 /* DayOffContainer.h */,
+				73DB4B331B14AE830038D685 /* DayOffContainer.m */,
+			);
+			name = DayOffModal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -941,11 +974,14 @@
 				7358C5481B1176E2001CC5E2 /* SocialListController.m in Sources */,
 				73B378FB1B0DD39C004012B2 /* SettingController.m in Sources */,
 				73A07E1B1B0C992A007CF72F /* MainGroupButton.m in Sources */,
+				73DB4B271B14A9920038D685 /* TextViewCell.m in Sources */,
 				7325ABFD1B0EC861004D5FC3 /* SystemMessageController.m in Sources */,
+				73DB4B301B14ADAA0038D685 /* ClassInfo.m in Sources */,
 				73A07E2A1B0D692A007CF72F /* Category.m in Sources */,
 				737202141B06379800F9EE56 /* LineTextView.m in Sources */,
 				73DB4B0F1B1460830038D685 /* AttendanceModal.m in Sources */,
 				7325AC041B0ED740004D5FC3 /* PersonalViewController.m in Sources */,
+				73DB4B311B14ADAA0038D685 /* DayOffModal.m in Sources */,
 				73DB4B181B146C200038D685 /* ImageLabel.m in Sources */,
 				73B379061B0E0009004012B2 /* ModifyPasswordViewController.m in Sources */,
 				73A07DFD1B0C81A9007CF72F /* UserModal.m in Sources */,
@@ -963,11 +999,13 @@
 				7325AC101B0F2DC3004D5FC3 /* HonorListController.m in Sources */,
 				73DB4B031B145B010038D685 /* AttendanceController.m in Sources */,
 				73B379111B0E2F2E004012B2 /* SwitchCell.m in Sources */,
+				73DB4B341B14AE830038D685 /* DayOffContainer.m in Sources */,
 				737202261B06E1A900F9EE56 /* LineLabel.m in Sources */,
 				73DB4B1D1B148C2A0038D685 /* AttendanceDetailController.m in Sources */,
 				73041C131B05E4630064267C /* AppDelegate.m in Sources */,
 				73B3790A1B0E2BFD004012B2 /* PushNotificationController.m in Sources */,
 				73A07E001B0C81DF007CF72F /* TopicModal.m in Sources */,
+				73DB4B241B14A03B0038D685 /* DayOffViewController.m in Sources */,
 				73DB4B211B1499CB0038D685 /* DayOffController.m in Sources */,
 				73DB4B151B1463940038D685 /* AttendanceContainer.m in Sources */,
 				73B378FE1B0DD49F004012B2 /* SettingViewController.m in Sources */,

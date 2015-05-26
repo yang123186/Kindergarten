@@ -20,6 +20,7 @@
 #import "SettingController.h"
 #import "SocialListController.h"
 #import "AttendanceController.h"
+#import "DayOffController.h"
 
 static NSString *title=@"主页";
 
@@ -139,6 +140,10 @@ static NSString *observeTopicKey=@"cTopic";
         if(button.tag==0){
             AttendanceController *attendanceCtrl=[[AttendanceController alloc]init];
             [self.navigationController pushViewController:attendanceCtrl animated:YES];
+        }
+        else if (button.tag==1){
+            DayOffController *dayOffCtrl=[[DayOffController alloc]init];
+            [self.navigationController pushViewController:dayOffCtrl animated:YES];
         }
         else if(button.tag==3){
             HonorListController *honorListCtr=[[HonorListController alloc]init];

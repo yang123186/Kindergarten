@@ -71,3 +71,18 @@
 +(void)showHUDWithString:(NSString*)string showingTime:(NSTimeInterval)timeInterval onView:(UIView*)view;
 
 @end
+
+
+
+
+@interface NSDate(TimeFormatExt)
+
+-(NSString*)to_yyyy_MM_dd_Style;
+
+-(NSString*)to_yyyy_MM_dd_HH_mm_Style;
+
+@end
+
+
+
+
