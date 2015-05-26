@@ -9,6 +9,7 @@
 
 #define COLOR_MANAGER(R,G,B,ALPHA)        [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:ALPHA]
 
+#define CLEAR_COLOR         [UIColor clearColor]
 #define BLACK_COLOR         COLOR_MANAGER(0.0f,0.0f,0.0f,1.0f)
 #define WHITE_COLOR         COLOR_MANAGER(255.0f,255.0f,255.0f,1.0f)
 #define PINK_COLOR          COLOR_MANAGER(254.0f,101.0f,115.0f,1.0f)

@@ -64,6 +64,14 @@
 		73B3790A1B0E2BFD004012B2 /* PushNotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B379091B0E2BFD004012B2 /* PushNotificationController.m */; };
 		73B3790D1B0E2C1D004012B2 /* PushNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B3790C1B0E2C1D004012B2 /* PushNotificationViewController.m */; };
 		73B379111B0E2F2E004012B2 /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B379101B0E2F2E004012B2 /* SwitchCell.m */; };
+		73DB4B031B145B010038D685 /* AttendanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB4B021B145B010038D685 /* AttendanceController.m */; };
+		73DB4B071B145B5D0038D685 /* AttendanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB4B061B145B5D0038D685 /* AttendanceViewController.m */; };
+		73DB4B0B1B145B870038D685 /* AttendanceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB4B0A1B145B870038D685 /* AttendanceCell.m */; };
+		73DB4B0F1B1460830038D685 /* AttendanceModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB4B0E1B1460830038D685 /* AttendanceModal.m */; };
+		73DB4B121B14611A0038D685 /* SourceBrief.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB4B111B14611A0038D685 /* SourceBrief.m */; };
+		73DB4B151B1463940038D685 /* AttendanceContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB4B141B1463940038D685 /* AttendanceContainer.m */; };
+		73DB4B181B146C200038D685 /* ImageLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB4B171B146C200038D685 /* ImageLabel.m */; };
+		73DB4B1D1B148C2A0038D685 /* AttendanceDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB4B1C1B148C2A0038D685 /* AttendanceDetailController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,6 +198,22 @@
 		73B3790C1B0E2C1D004012B2 /* PushNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PushNotificationViewController.m; path = Controllers/PushNotificationController/ViewController/PushNotificationViewController.m; sourceTree = "<group>"; };
 		73B3790F1B0E2F2E004012B2 /* SwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwitchCell.h; path = Views/SwitchCell/SwitchCell.h; sourceTree = "<group>"; };
 		73B379101B0E2F2E004012B2 /* SwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwitchCell.m; path = Views/SwitchCell/SwitchCell.m; sourceTree = "<group>"; };
+		73DB4B011B145B010038D685 /* AttendanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttendanceController.h; path = Controllers/Attendance/AttendanceController.h; sourceTree = "<group>"; };
+		73DB4B021B145B010038D685 /* AttendanceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttendanceController.m; path = Controllers/Attendance/AttendanceController.m; sourceTree = "<group>"; };
+		73DB4B051B145B5D0038D685 /* AttendanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttendanceViewController.h; path = Controllers/Attendance/AttendanceViewController.h; sourceTree = "<group>"; };
+		73DB4B061B145B5D0038D685 /* AttendanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttendanceViewController.m; path = Controllers/Attendance/AttendanceViewController.m; sourceTree = "<group>"; };
+		73DB4B091B145B870038D685 /* AttendanceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttendanceCell.h; path = Views/AttendanceCell/AttendanceCell.h; sourceTree = "<group>"; };
+		73DB4B0A1B145B870038D685 /* AttendanceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttendanceCell.m; path = Views/AttendanceCell/AttendanceCell.m; sourceTree = "<group>"; };
+		73DB4B0D1B1460830038D685 /* AttendanceModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttendanceModal.h; path = Modals/AttendanceModal/AttendanceModal.h; sourceTree = "<group>"; };
+		73DB4B0E1B1460830038D685 /* AttendanceModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttendanceModal.m; path = Modals/AttendanceModal/AttendanceModal.m; sourceTree = "<group>"; };
+		73DB4B101B14611A0038D685 /* SourceBrief.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SourceBrief.h; path = Modals/AttendanceModal/SourceBrief.h; sourceTree = "<group>"; };
+		73DB4B111B14611A0038D685 /* SourceBrief.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SourceBrief.m; path = Modals/AttendanceModal/SourceBrief.m; sourceTree = "<group>"; };
+		73DB4B131B1463940038D685 /* AttendanceContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttendanceContainer.h; path = Modals/AttendanceModal/AttendanceContainer.h; sourceTree = "<group>"; };
+		73DB4B141B1463940038D685 /* AttendanceContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttendanceContainer.m; path = Modals/AttendanceModal/AttendanceContainer.m; sourceTree = "<group>"; };
+		73DB4B161B146C200038D685 /* ImageLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageLabel.h; path = Views/ImageLabel/ImageLabel.h; sourceTree = "<group>"; };
+		73DB4B171B146C200038D685 /* ImageLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageLabel.m; path = Views/ImageLabel/ImageLabel.m; sourceTree = "<group>"; };
+		73DB4B1B1B148C2A0038D685 /* AttendanceDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttendanceDetailController.h; path = Controllers/AttendanceDetailController/AttendanceDetailController.h; sourceTree = "<group>"; };
+		73DB4B1C1B148C2A0038D685 /* AttendanceDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttendanceDetailController.m; path = Controllers/AttendanceDetailController/AttendanceDetailController.m; sourceTree = "<group>"; };
 		9220AA07D54D752FC179581E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9726F1D47A571AEA326BD4CF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D6A2D55BDD0E608885BAC3A9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -284,6 +308,7 @@
 		73041C331B05E4800064267C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				73DB4B001B145AB40038D685 /* AttendanceController */,
 				7358C5451B117654001CC5E2 /* SocialController */,
 				7325AC0D1B0F2D6C004D5FC3 /* HonorControllers */,
 				7325ABFE1B0ED6C7004D5FC3 /* PersonalController */,
@@ -525,6 +550,7 @@
 		73A07DFA1B0C8134007CF72F /* Modals */ = {
 			isa = PBXGroup;
 			children = (
+				73DB4B0C1B1460630038D685 /* AttendanceModal */,
 				73A07E081B0C8E32007CF72F /* UserModal */,
 				7358C55A1B117FCD001CC5E2 /* SocialListModal */,
 				73A07E071B0C8E29007CF72F /* HomeModal */,
@@ -704,6 +730,60 @@
 			name = SwitchCell;
 			sourceTree = "<group>";
 		};
+		73DB4B001B145AB40038D685 /* AttendanceController */ = {
+			isa = PBXGroup;
+			children = (
+				73DB4B1A1B148BDB0038D685 /* AttendanceDetailController */,
+				73DB4B191B148BC40038D685 /* AttendanceListController */,
+			);
+			name = AttendanceController;
+			sourceTree = "<group>";
+		};
+		73DB4B041B145B3B0038D685 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				73DB4B161B146C200038D685 /* ImageLabel.h */,
+				73DB4B171B146C200038D685 /* ImageLabel.m */,
+				73DB4B091B145B870038D685 /* AttendanceCell.h */,
+				73DB4B0A1B145B870038D685 /* AttendanceCell.m */,
+			);
+			name = SubViews;
+			sourceTree = "<group>";
+		};
+		73DB4B0C1B1460630038D685 /* AttendanceModal */ = {
+			isa = PBXGroup;
+			children = (
+				73DB4B101B14611A0038D685 /* SourceBrief.h */,
+				73DB4B111B14611A0038D685 /* SourceBrief.m */,
+				73DB4B0D1B1460830038D685 /* AttendanceModal.h */,
+				73DB4B0E1B1460830038D685 /* AttendanceModal.m */,
+				73DB4B131B1463940038D685 /* AttendanceContainer.h */,
+				73DB4B141B1463940038D685 /* AttendanceContainer.m */,
+			);
+			name = AttendanceModal;
+			sourceTree = "<group>";
+		};
+		73DB4B191B148BC40038D685 /* AttendanceListController */ = {
+			isa = PBXGroup;
+			children = (
+				73DB4B041B145B3B0038D685 /* SubViews */,
+				73DB4B011B145B010038D685 /* AttendanceController.h */,
+				73DB4B021B145B010038D685 /* AttendanceController.m */,
+				73DB4B051B145B5D0038D685 /* AttendanceViewController.h */,
+				73DB4B061B145B5D0038D685 /* AttendanceViewController.m */,
+			);
+			name = AttendanceListController;
+			sourceTree = "<group>";
+		};
+		73DB4B1A1B148BDB0038D685 /* AttendanceDetailController */ = {
+			isa = PBXGroup;
+			children = (
+				73DB4B1B1B148C2A0038D685 /* AttendanceDetailController.h */,
+				73DB4B1C1B148C2A0038D685 /* AttendanceDetailController.m */,
+			);
+			name = AttendanceDetailController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -851,7 +931,9 @@
 				7325ABFD1B0EC861004D5FC3 /* SystemMessageController.m in Sources */,
 				73A07E2A1B0D692A007CF72F /* Category.m in Sources */,
 				737202141B06379800F9EE56 /* LineTextView.m in Sources */,
+				73DB4B0F1B1460830038D685 /* AttendanceModal.m in Sources */,
 				7325AC041B0ED740004D5FC3 /* PersonalViewController.m in Sources */,
+				73DB4B181B146C200038D685 /* ImageLabel.m in Sources */,
 				73B379061B0E0009004012B2 /* ModifyPasswordViewController.m in Sources */,
 				73A07DFD1B0C81A9007CF72F /* UserModal.m in Sources */,
 				7325AC081B0ED85A004D5FC3 /* Screen.m in Sources */,
@@ -864,17 +946,23 @@
 				7325AC011B0ED70A004D5FC3 /* PersonalController.m in Sources */,
 				73750F881B1368E600FB3B18 /* PraiseLabel.m in Sources */,
 				7358C55D1B118166001CC5E2 /* SocialCommentContainer.m in Sources */,
+				73DB4B071B145B5D0038D685 /* AttendanceViewController.m in Sources */,
 				7325AC101B0F2DC3004D5FC3 /* HonorListController.m in Sources */,
+				73DB4B031B145B010038D685 /* AttendanceController.m in Sources */,
 				73B379111B0E2F2E004012B2 /* SwitchCell.m in Sources */,
 				737202261B06E1A900F9EE56 /* LineLabel.m in Sources */,
+				73DB4B1D1B148C2A0038D685 /* AttendanceDetailController.m in Sources */,
 				73041C131B05E4630064267C /* AppDelegate.m in Sources */,
 				73B3790A1B0E2BFD004012B2 /* PushNotificationController.m in Sources */,
 				73A07E001B0C81DF007CF72F /* TopicModal.m in Sources */,
+				73DB4B151B1463940038D685 /* AttendanceContainer.m in Sources */,
 				73B378FE1B0DD49F004012B2 /* SettingViewController.m in Sources */,
+				73DB4B121B14611A0038D685 /* SourceBrief.m in Sources */,
 				7372020B1B05EB2C00F9EE56 /* LoginController.m in Sources */,
 				7325AC0C1B0EDF21004D5FC3 /* ParentContactModal.m in Sources */,
 				7358C5501B1178AB001CC5E2 /* MediaView.m in Sources */,
 				73A07E121B0C8FAE007CF72F /* RolesModal.m in Sources */,
+				73DB4B0B1B145B870038D685 /* AttendanceCell.m in Sources */,
 				73041C101B05E4630064267C /* main.m in Sources */,
 				7358C54D1B117741001CC5E2 /* SocialListCell.m in Sources */,
 				7358C5601B1181E3001CC5E2 /* SocialLikesModal.m in Sources */,

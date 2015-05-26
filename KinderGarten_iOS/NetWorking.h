@@ -21,6 +21,7 @@
 #define HOME_PATH                                                       PUREPATH(@"/user/home")
 #define MODIFY_PASSWORD_PATH                                            PUREPATH(@"/user/password")
 #define SOCIAL_LIST_PATH                                                PUREPATH(@"/social")
+#define ATTENDANCE_LIST_PATH                                            PUREPATH(@"attendance")
 #endif
 
 
@@ -30,6 +31,7 @@
 #define AUTHENTICATED_SUCCESS  200
 #define REQUEST_SUCCESS        201
 #define AUTHENTICATED_FAIL     401 //Password or Account may be wrong.
+#define VERIFYCODE_WRONG       401
 #define BAD_REQUEST            400
 #define PASSWORD_WRONG         403
 #define USER_UNSEARCHED        404

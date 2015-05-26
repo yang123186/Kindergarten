@@ -21,7 +21,7 @@
 
 -(void)setViewForCommentModal:(SocialCommentModal *)modal{
     NSString *completeStr=[self generateCommentTypeString];
-    [self setRichText:completeStr];
+    [self setAttributedStringWithRawText:completeStr];
 }
 
 

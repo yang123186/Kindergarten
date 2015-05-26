@@ -26,7 +26,6 @@
 #define  REGULAR_EXPRESSION_PASSWORD    @"\\w{6,16}"
 
 
-#warning teacher is test.should be change to parent.
 static NSString *loginTypeValue=@"parent";
 
 

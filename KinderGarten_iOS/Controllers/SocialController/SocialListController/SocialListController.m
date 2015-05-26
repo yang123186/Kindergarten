@@ -62,7 +62,7 @@
 //    [manager beJsonManager];
     [manager setCommonlyUsedRequsetHeaderFiled];
     [manager GET:@"http://1.r7test.sinaapp.com/SocialList.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        DLog(@"%@",responseObject);
+//        DLog(@"%@",responseObject);
         self.modal=[self.modal initWithSocialsArray:[responseObject objectForKey:@"socials"]];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
