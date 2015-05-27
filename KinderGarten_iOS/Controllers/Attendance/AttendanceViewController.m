@@ -49,8 +49,8 @@ static const CGFloat    tableViewPaddingHorizontal=10.0f;
 
 #pragma mark UITableViewDelegate & UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-//    return self.controller.container.container.count;
-    return 10;
+    return self.controller.container.container.count;
+//    return 10;
 }
 
 

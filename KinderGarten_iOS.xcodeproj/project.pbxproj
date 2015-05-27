@@ -13,6 +13,7 @@
 		73041C1B1B05E4630064267C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73041C1A1B05E4630064267C /* Images.xcassets */; };
 		73041C1E1B05E4630064267C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73041C1C1B05E4630064267C /* LaunchScreen.xib */; };
 		73041C2A1B05E4630064267C /* KinderGarten_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 73041C291B05E4630064267C /* KinderGarten_iOSTests.m */; };
+		731F07BD1B156510004004CA /* DayOffReasonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F07BC1B156510004004CA /* DayOffReasonController.m */; };
 		7325ABF91B0EB808004D5FC3 /* UserSettingModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7325ABF81B0EB808004D5FC3 /* UserSettingModal.m */; };
 		7325ABFD1B0EC861004D5FC3 /* SystemMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7325ABFC1B0EC861004D5FC3 /* SystemMessageController.m */; };
 		7325AC011B0ED70A004D5FC3 /* PersonalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7325AC001B0ED70A004D5FC3 /* PersonalController.m */; };
@@ -64,6 +65,7 @@
 		73B3790A1B0E2BFD004012B2 /* PushNotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B379091B0E2BFD004012B2 /* PushNotificationController.m */; };
 		73B3790D1B0E2C1D004012B2 /* PushNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B3790C1B0E2C1D004012B2 /* PushNotificationViewController.m */; };
 		73B379111B0E2F2E004012B2 /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B379101B0E2F2E004012B2 /* SwitchCell.m */; };
+		73B79F9B1B154E25002F3CDA /* DatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B79F9A1B154E25002F3CDA /* DatePickerView.m */; };
 		73DB4B031B145B010038D685 /* AttendanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB4B021B145B010038D685 /* AttendanceController.m */; };
 		73DB4B071B145B5D0038D685 /* AttendanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB4B061B145B5D0038D685 /* AttendanceViewController.m */; };
 		73DB4B0B1B145B870038D685 /* AttendanceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB4B0A1B145B870038D685 /* AttendanceCell.m */; };
@@ -101,6 +103,8 @@
 		73041C231B05E4630064267C /* KinderGarten_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KinderGarten_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73041C281B05E4630064267C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73041C291B05E4630064267C /* KinderGarten_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KinderGarten_iOSTests.m; sourceTree = "<group>"; };
+		731F07BB1B156510004004CA /* DayOffReasonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DayOffReasonController.h; path = Controllers/DayOffReasonController/DayOffReasonController.h; sourceTree = "<group>"; };
+		731F07BC1B156510004004CA /* DayOffReasonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DayOffReasonController.m; path = Controllers/DayOffReasonController/DayOffReasonController.m; sourceTree = "<group>"; };
 		7325ABF71B0EB808004D5FC3 /* UserSettingModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserSettingModal.h; path = Modals/UserSettingModal/UserSettingModal.h; sourceTree = "<group>"; };
 		7325ABF81B0EB808004D5FC3 /* UserSettingModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSettingModal.m; path = Modals/UserSettingModal/UserSettingModal.m; sourceTree = "<group>"; };
 		7325ABFB1B0EC861004D5FC3 /* SystemMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemMessageController.h; path = Controllers/SystemMessageController/SystemMessageController.h; sourceTree = "<group>"; };
@@ -204,6 +208,8 @@
 		73B3790C1B0E2C1D004012B2 /* PushNotificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PushNotificationViewController.m; path = Controllers/PushNotificationController/ViewController/PushNotificationViewController.m; sourceTree = "<group>"; };
 		73B3790F1B0E2F2E004012B2 /* SwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwitchCell.h; path = Views/SwitchCell/SwitchCell.h; sourceTree = "<group>"; };
 		73B379101B0E2F2E004012B2 /* SwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwitchCell.m; path = Views/SwitchCell/SwitchCell.m; sourceTree = "<group>"; };
+		73B79F991B154E25002F3CDA /* DatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DatePickerView.h; path = Views/DatePickerVIew/DatePickerView.h; sourceTree = "<group>"; };
+		73B79F9A1B154E25002F3CDA /* DatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DatePickerView.m; path = Views/DatePickerVIew/DatePickerView.m; sourceTree = "<group>"; };
 		73DB4B011B145B010038D685 /* AttendanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttendanceController.h; path = Controllers/Attendance/AttendanceController.h; sourceTree = "<group>"; };
 		73DB4B021B145B010038D685 /* AttendanceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttendanceController.m; path = Controllers/Attendance/AttendanceController.m; sourceTree = "<group>"; };
 		73DB4B051B145B5D0038D685 /* AttendanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttendanceViewController.h; path = Controllers/Attendance/AttendanceViewController.h; sourceTree = "<group>"; };
@@ -750,6 +756,17 @@
 			name = SwitchCell;
 			sourceTree = "<group>";
 		};
+		73B79F981B154DD2002F3CDA /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				73DB4B251B14A9920038D685 /* TextViewCell.h */,
+				73DB4B261B14A9920038D685 /* TextViewCell.m */,
+				73B79F991B154E25002F3CDA /* DatePickerView.h */,
+				73B79F9A1B154E25002F3CDA /* DatePickerView.m */,
+			);
+			name = SubViews;
+			sourceTree = "<group>";
+		};
 		73DB4B001B145AB40038D685 /* AttendanceController */ = {
 			isa = PBXGroup;
 			children = (
@@ -807,12 +824,13 @@
 		73DB4B1E1B14996E0038D685 /* DaysOffController */ = {
 			isa = PBXGroup;
 			children = (
+				73B79F981B154DD2002F3CDA /* SubViews */,
 				73DB4B1F1B1499CB0038D685 /* DayOffController.h */,
 				73DB4B201B1499CB0038D685 /* DayOffController.m */,
 				73DB4B221B14A03B0038D685 /* DayOffViewController.h */,
 				73DB4B231B14A03B0038D685 /* DayOffViewController.m */,
-				73DB4B251B14A9920038D685 /* TextViewCell.h */,
-				73DB4B261B14A9920038D685 /* TextViewCell.m */,
+				731F07BB1B156510004004CA /* DayOffReasonController.h */,
+				731F07BC1B156510004004CA /* DayOffReasonController.m */,
 			);
 			name = DaysOffController;
 			sourceTree = "<group>";
@@ -999,6 +1017,7 @@
 				7325AC101B0F2DC3004D5FC3 /* HonorListController.m in Sources */,
 				73DB4B031B145B010038D685 /* AttendanceController.m in Sources */,
 				73B379111B0E2F2E004012B2 /* SwitchCell.m in Sources */,
+				731F07BD1B156510004004CA /* DayOffReasonController.m in Sources */,
 				73DB4B341B14AE830038D685 /* DayOffContainer.m in Sources */,
 				737202261B06E1A900F9EE56 /* LineLabel.m in Sources */,
 				73DB4B1D1B148C2A0038D685 /* AttendanceDetailController.m in Sources */,
@@ -1029,6 +1048,7 @@
 				7358C5561B117B3E001CC5E2 /* commentGroupView.m in Sources */,
 				73A07DF91B0C812F007CF72F /* HomeModal.m in Sources */,
 				73B378F71B0DC531004012B2 /* GObserver.m in Sources */,
+				73B79F9B1B154E25002F3CDA /* DatePickerView.m in Sources */,
 				7358C52B1B0F47CB001CC5E2 /* ForgetViewController.m in Sources */,
 				73A07E2E1B0D6EDE007CF72F /* IconList.m in Sources */,
 				73A07E0F1B0C8F92007CF72F /* ClassLitemodal.m in Sources */,

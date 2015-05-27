@@ -13,6 +13,7 @@
 @property   (nonatomic,copy)    NSString    *name;
 @property   (nonatomic,copy)    NSString    *avatar;
 @property   (nonatomic,copy)    NSString    *user;
+@property   (nonatomic,copy)    NSString    *student;
 
 -(instancetype)init;
 

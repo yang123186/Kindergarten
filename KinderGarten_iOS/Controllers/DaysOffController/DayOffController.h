@@ -11,6 +11,11 @@
 #import "DayOffViewController.h"
 #import "DayOffContainer.h"
 
+
+static NSString *observeStartDateKey=@"dayOffStartDate";
+static NSString *observeEndDateKey=@"dayOffEndDate";
+static NSString *observeTypeKey=@"dayOffType";
+
 typedef enum : NSUInteger {
     LeaveForSick=0,
     LeaveForAbsence=1,

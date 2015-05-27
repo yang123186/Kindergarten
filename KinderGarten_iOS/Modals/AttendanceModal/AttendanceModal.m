@@ -34,6 +34,9 @@
     else if([key isEqualToString:@"studentBrief"]){
         [self.cStudentBrief setValuesForKeysWithDictionary:value];
     }
+    else if ([key isEqualToString:@"class"]){
+        self._class=value;
+    }
     else{
         DLog(@"AttendanceModal:unknow key:%@",key);
     }

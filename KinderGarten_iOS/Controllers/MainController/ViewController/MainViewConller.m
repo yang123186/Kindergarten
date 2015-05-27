@@ -18,6 +18,10 @@ static NSString *settingBarButonTitle=@"设置";
 
 @property   (nonatomic,strong)  UIView          *contentView;
 
+@property   (nonatomic,strong)  NSArray         *childGroupTitles;
+@property   (nonatomic,strong)  NSArray         *functionGroupTitles;
+@property   (nonatomic,strong)  NSArray         *bottomGroupTitles;
+
 @end
 
 
@@ -29,6 +33,9 @@ static NSString *settingBarButonTitle=@"设置";
     if(self=[super init]){
         self.controller=controller;
         self.view=controller.view;
+        self.childGroupTitles=[NSArray arrayWithObjects:@"XXX",@"家长圈",@"消息", nil];
+        self.functionGroupTitles=[NSArray arrayWithObjects:@"签到",@"请假",@"作业",@"红花榜",@"课程表",@"行为指导",@"今日食谱", nil];
+        self.bottomGroupTitles=[NSArray arrayWithObjects:@"评价老师",@"通知公告",@"投诉与建议", nil];
     }
     return self;
 }
@@ -69,12 +76,12 @@ static NSString *settingBarButonTitle=@"设置";
     [self.topicView setTopic:@"今日话题：你会鼓励孩纸吗🐴" detail:@"已有1000+位👪参与了讨论."];
     UIImage *image=[UIImage imageNamed:@"xiaoye"];
     NSArray *icons=[NSArray arrayWithObjects:image,image,image,image,image,image,image,image,image,image,image,image, nil];
-    NSString *teststr=@"测试字符";
-    NSArray *titles=[NSArray arrayWithObjects:@"韩小野",@"签到",@"请假",teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr, nil];
+//    NSString *teststr=@"测试字符";
+//    NSArray *titles=[NSArray arrayWithObjects:@"韩小野",@"签到",@"请假",teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr, nil];
     /***********TestArea********/
     
     
-    self.childGroupView=[[MainGroupView alloc]initWithItemNumer:3 icons:icons titles:titles];
+    self.childGroupView=[[MainGroupView alloc]initWithItemNumer:3 icons:icons titles:self.childGroupTitles];
     self.childGroupView.translatesAutoresizingMaskIntoConstraints=NO;
     [self.contentView addSubview:self.childGroupView];
     [self.childGroupView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -85,7 +92,7 @@ static NSString *settingBarButonTitle=@"设置";
     }];
     self.childGroupView.delegate=self.controller;
     
-    self.functionGroupView=[[MainGroupView alloc]initWithItemNumer:7 icons:icons titles:titles];
+    self.functionGroupView=[[MainGroupView alloc]initWithItemNumer:7 icons:icons titles:self.functionGroupTitles];
     self.functionGroupView.translatesAutoresizingMaskIntoConstraints=NO;
     [self.contentView addSubview:self.functionGroupView];
     [self.functionGroupView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -96,7 +103,7 @@ static NSString *settingBarButonTitle=@"设置";
     }];
     self.functionGroupView.delegate=self.controller;
     
-    self.bottomGroupView=[[MainGroupView alloc]initWithItemNumer:3 icons:icons titles:titles];
+    self.bottomGroupView=[[MainGroupView alloc]initWithItemNumer:3 icons:icons titles:self.bottomGroupTitles];
     self.bottomGroupView.translatesAutoresizingMaskIntoConstraints=NO;
     [self.contentView addSubview:self.bottomGroupView];
     [self.bottomGroupView mas_makeConstraints:^(MASConstraintMaker *make) {

@@ -42,7 +42,7 @@ static NSString *observeContainerKey=@"container";
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
     if([keyPath isEqualToString:observeContainerKey]){
-        
+        [self.viewController.tableView reloadData];
     }
 }
 
@@ -61,8 +61,11 @@ static NSString *observeContainerKey=@"container";
     NSNumber *sec=[NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]];
     sec=[NSNumber numberWithInteger:sec.integerValue];
     DLog(@"%@",sec.stringValue);
-    [manager GET:ATTENDANCE_LIST_PATH(sec.stringValue) parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:@"http://1.r7test.sinaapp.com/att.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+
+//    [manager GET:ATTENDANCE_LIST_PATH(sec.stringValue) parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         DLog(@"%@",[[NSString alloc]initWithData:operation.responseData encoding:NSUTF8StringEncoding]);
+        self.container=[self.container initWithArray:[responseObject objectForKey:@"attendances"]];
     
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     

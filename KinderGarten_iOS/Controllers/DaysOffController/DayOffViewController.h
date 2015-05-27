@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "TextViewCell.h"
+#import "DatePickerView.h"
+
+
 
 @class DayOffController;
-@interface DayOffViewController : NSObject<UITableViewDataSource,UITableViewDelegate>
+@interface DayOffViewController : NSObject<UITableViewDataSource,UITableViewDelegate,DatePickerViewDelegate>
 
 @property   (nonatomic,strong)  UITableView     *tableView;
 
@@ -23,6 +26,7 @@
 @property   (nonatomic,weak)   DayOffController *controller;
 @property   (nonatomic,weak)    UIView          *view;
 
+@property   (nonatomic,strong)  NSArray *dayOffTypeStr;
 
 -(instancetype)initWithRootController:(DayOffController*)controller;
 
