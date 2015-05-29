@@ -12,6 +12,8 @@
 #import "commentGroupView.h"
 #import "SocialListModal.h"
 
+#import "PraiseLabel.h"
+
 static NSString *socialListCellIdentifier=@"SOCIAL_LIST_CELL";
 
 @interface SocialListCell : UITableViewCell
@@ -23,7 +25,7 @@ static NSString *socialListCellIdentifier=@"SOCIAL_LIST_CELL";
 @property   (nonatomic,strong)  UILabel     *describeLabel;
 @property   (nonatomic,strong)  UIButton    *commentButton;
 @property   (nonatomic,strong)  UIButton    *praiseButton;
-@property   (nonatomic,strong)  PraiseLabel *praiseLabel;
+@property   (nonatomic,strong)  PraiseLabel   *praiseLabel;
 @property   (nonatomic,strong)  CommentGroupView    *commentGroupView;
 
 
@@ -31,8 +33,6 @@ static NSString *socialListCellIdentifier=@"SOCIAL_LIST_CELL";
 -(instancetype)init;
 
 -(CGFloat)height;
-
--(instancetype)initWithSocialListModal:(SocialListModal*)modal;
 
 -(void)setViewForModal:(SocialListModal*)modal;
 @end

@@ -3,10 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[AFHTTPRequestOperationManager(NetWorking) setCommonlyUsedRequsetHeaderFiledWithCookie]:NetWorking.m">
+         contextName = "__36-[MainController getDatafromNetWork]_block_invoke:MainController.m">
          <PersistentStrings>
             <PersistentString
-               value = "[NSHTTPCookieStorage sharedHTTPCookieStorage]">
+               value = "[AppDelegate sharedAppDelegate].userModal">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -14,10 +14,30 @@
          contextName = "-[LoginController loginWithAcoount:rawPassword:]:LoginController.m">
       </ContextState>
       <ContextState
-         contextName = "__36-[MainController getDatafromNetWork]_block_invoke:MainController.m">
+         contextName = "-[RichLabel getRangesForPhoneNumbers:]:RichLabel.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[RichLabel updateTextStoreWithAttributedString:]:RichLabel.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[RichLabel addLinkAttributesToAttributedString:linkRanges:]:RichLabel.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[RichLabel getRangesForLinks:]:RichLabel.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[RichLabel touchesBegan:withEvent:]:RichLabel.m">
          <PersistentStrings>
             <PersistentString
-               value = "[AppDelegate sharedAppDelegate].userModal">
+               value = "[[touchedLink objectForKey:@&quot;range&quot;] rangeValue]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AFHTTPRequestOperationManager(NetWorking) setCommonlyUsedRequsetHeaderFiledWithCookie]:NetWorking.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[NSHTTPCookieStorage sharedHTTPCookieStorage]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

@@ -14,6 +14,29 @@
 		73041C1E1B05E4630064267C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73041C1C1B05E4630064267C /* LaunchScreen.xib */; };
 		73041C2A1B05E4630064267C /* KinderGarten_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 73041C291B05E4630064267C /* KinderGarten_iOSTests.m */; };
 		731F07BD1B156510004004CA /* DayOffReasonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F07BC1B156510004004CA /* DayOffReasonController.m */; };
+		731F07C01B156F81004004CA /* FlowerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F07BF1B156F81004004CA /* FlowerCell.m */; };
+		731F07C41B15A34C004004CA /* PersonalFlowerModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F07C31B15A34C004004CA /* PersonalFlowerModal.m */; };
+		731F07C71B15A488004004CA /* FlowerModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F07C61B15A488004004CA /* FlowerModal.m */; };
+		731F07CA1B15B825004004CA /* HonorCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F07C91B15B825004004CA /* HonorCollectionViewController.m */; };
+		731F07CD1B15BB85004004CA /* FlowerCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F07CC1B15BB85004004CA /* FlowerCollectionCell.m */; };
+		731F07D21B15E2B2004004CA /* NameListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F07D11B15E2B2004004CA /* NameListController.m */; };
+		731F07D71B15E7B4004004CA /* FlowerListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F07D61B15E7B4004004CA /* FlowerListController.m */; };
+		731F07DB1B15EC63004004CA /* RecipeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F07DA1B15EC63004004CA /* RecipeController.m */; };
+		731F07DE1B15EEA5004004CA /* CommonCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F07DD1B15EEA5004004CA /* CommonCollectionCell.m */; };
+		731F07E31B15F1D2004004CA /* PersonFlowerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F07E21B15F1D2004004CA /* PersonFlowerController.m */; };
+		731F07E61B15F1F6004004CA /* PersonFlowerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F07E51B15F1F6004004CA /* PersonFlowerViewController.m */; };
+		731F07EC1B15FD82004004CA /* NSAttributedString+Emotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F07E91B15FD82004004CA /* NSAttributedString+Emotion.m */; };
+		731F07ED1B15FD82004004CA /* RichLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F07EB1B15FD82004004CA /* RichLabel.m */; };
+		731F07F01B16A32F004004CA /* PraiseLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F07EF1B16A32F004004CA /* PraiseLabel.m */; };
+		731F07F31B16A6B9004004CA /* CommentLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F07F21B16A6B9004004CA /* CommentLabel.m */; };
+		731F08111B174762004004CA /* PublishMomentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F08101B174762004004CA /* PublishMomentController.m */; };
+		731F08141B17478D004004CA /* PublishMomenViewtController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F08131B17478D004004CA /* PublishMomenViewtController.m */; };
+		731F08191B1747F5004004CA /* PhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F08181B1747F5004004CA /* PhotoManager.m */; };
+		731F081D1B17F2D4004004CA /* PersonFlowerTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F081C1B17F2D4004004CA /* PersonFlowerTopView.m */; };
+		731F08201B17F65A004004CA /* FlowerProgressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F081F1B17F65A004004CA /* FlowerProgressCell.m */; };
+		731F08231B180C39004004CA /* RecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F08221B180C39004004CA /* RecipeViewController.m */; };
+		731F08271B180CF6004004CA /* WeekTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F08261B180CF6004004CA /* WeekTopView.m */; };
+		731F082A1B1819F6004004CA /* RecipeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F08291B1819F6004004CA /* RecipeCell.m */; };
 		7325ABF91B0EB808004D5FC3 /* UserSettingModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7325ABF81B0EB808004D5FC3 /* UserSettingModal.m */; };
 		7325ABFD1B0EC861004D5FC3 /* SystemMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7325ABFC1B0EC861004D5FC3 /* SystemMessageController.m */; };
 		7325AC011B0ED70A004D5FC3 /* PersonalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7325AC001B0ED70A004D5FC3 /* PersonalController.m */; };
@@ -29,12 +52,10 @@
 		7358C5481B1176E2001CC5E2 /* SocialListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358C5471B1176E2001CC5E2 /* SocialListController.m */; };
 		7358C54D1B117741001CC5E2 /* SocialListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358C54C1B117741001CC5E2 /* SocialListCell.m */; };
 		7358C5501B1178AB001CC5E2 /* MediaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358C54F1B1178AB001CC5E2 /* MediaView.m */; };
-		7358C5531B117B20001CC5E2 /* praiseBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358C5521B117B20001CC5E2 /* praiseBar.m */; };
 		7358C5561B117B3E001CC5E2 /* commentGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358C5551B117B3E001CC5E2 /* commentGroupView.m */; };
 		7358C5591B117FC6001CC5E2 /* SocialListModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358C5581B117FC6001CC5E2 /* SocialListModal.m */; };
 		7358C55D1B118166001CC5E2 /* SocialCommentContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358C55C1B118166001CC5E2 /* SocialCommentContainer.m */; };
 		7358C5601B1181E3001CC5E2 /* SocialLikesModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7358C55F1B1181E3001CC5E2 /* SocialLikesModal.m */; };
-		735A96251B12169D00F7C6A8 /* CommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 735A96241B12169D00F7C6A8 /* CommentView.m */; };
 		737202071B05EA0000F9EE56 /* SuperNavgationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737202061B05EA0000F9EE56 /* SuperNavgationController.m */; };
 		7372020B1B05EB2C00F9EE56 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7372020A1B05EB2C00F9EE56 /* LoginController.m */; };
 		737202141B06379800F9EE56 /* LineTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 737202131B06379800F9EE56 /* LineTextView.m */; };
@@ -42,7 +63,6 @@
 		7372021D1B06DCE000F9EE56 /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7372021C1B06DCE000F9EE56 /* ForgetPasswordViewController.m */; };
 		737202261B06E1A900F9EE56 /* LineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 737202251B06E1A900F9EE56 /* LineLabel.m */; };
 		737202281B06F39600F9EE56 /* TestUseXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 737202271B06F39600F9EE56 /* TestUseXib.xib */; };
-		73750F881B1368E600FB3B18 /* PraiseLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 73750F871B1368E600FB3B18 /* PraiseLabel.m */; };
 		73943D701B0774BC00D41DA1 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73943D6F1B0774BC00D41DA1 /* MainController.m */; };
 		73A07DF91B0C812F007CF72F /* HomeModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07DF81B0C812F007CF72F /* HomeModal.m */; };
 		73A07DFD1B0C81A9007CF72F /* UserModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07DFC1B0C81A9007CF72F /* UserModal.m */; };
@@ -105,6 +125,52 @@
 		73041C291B05E4630064267C /* KinderGarten_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KinderGarten_iOSTests.m; sourceTree = "<group>"; };
 		731F07BB1B156510004004CA /* DayOffReasonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DayOffReasonController.h; path = Controllers/DayOffReasonController/DayOffReasonController.h; sourceTree = "<group>"; };
 		731F07BC1B156510004004CA /* DayOffReasonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DayOffReasonController.m; path = Controllers/DayOffReasonController/DayOffReasonController.m; sourceTree = "<group>"; };
+		731F07BE1B156F81004004CA /* FlowerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlowerCell.h; path = Views/FlowerCell/FlowerCell.h; sourceTree = "<group>"; };
+		731F07BF1B156F81004004CA /* FlowerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlowerCell.m; path = Views/FlowerCell/FlowerCell.m; sourceTree = "<group>"; };
+		731F07C21B15A34C004004CA /* PersonalFlowerModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonalFlowerModal.h; path = Modals/PersonalFlowerModal/PersonalFlowerModal.h; sourceTree = "<group>"; };
+		731F07C31B15A34C004004CA /* PersonalFlowerModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonalFlowerModal.m; path = Modals/PersonalFlowerModal/PersonalFlowerModal.m; sourceTree = "<group>"; };
+		731F07C51B15A488004004CA /* FlowerModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlowerModal.h; path = Modals/FlowerModal/FlowerModal.h; sourceTree = "<group>"; };
+		731F07C61B15A488004004CA /* FlowerModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlowerModal.m; path = Modals/FlowerModal/FlowerModal.m; sourceTree = "<group>"; };
+		731F07C81B15B825004004CA /* HonorCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HonorCollectionViewController.h; path = Controllers/HonorListController/ViewController/HonorCollectionViewController.h; sourceTree = "<group>"; };
+		731F07C91B15B825004004CA /* HonorCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HonorCollectionViewController.m; path = Controllers/HonorListController/ViewController/HonorCollectionViewController.m; sourceTree = "<group>"; };
+		731F07CB1B15BB85004004CA /* FlowerCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlowerCollectionCell.h; path = Views/FlowerCollectionCell/FlowerCollectionCell.h; sourceTree = "<group>"; };
+		731F07CC1B15BB85004004CA /* FlowerCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlowerCollectionCell.m; path = Views/FlowerCollectionCell/FlowerCollectionCell.m; sourceTree = "<group>"; };
+		731F07D01B15E2B2004004CA /* NameListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NameListController.h; path = Controllers/NameListController/NameListController.h; sourceTree = "<group>"; };
+		731F07D11B15E2B2004004CA /* NameListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NameListController.m; path = Controllers/NameListController/NameListController.m; sourceTree = "<group>"; };
+		731F07D51B15E7B4004004CA /* FlowerListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlowerListController.h; path = Controllers/FlowerListController/FlowerListController.h; sourceTree = "<group>"; };
+		731F07D61B15E7B4004004CA /* FlowerListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlowerListController.m; path = Controllers/FlowerListController/FlowerListController.m; sourceTree = "<group>"; };
+		731F07D91B15EC63004004CA /* RecipeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecipeController.h; path = Controllers/RecipeController/RecipeController.h; sourceTree = "<group>"; };
+		731F07DA1B15EC63004004CA /* RecipeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecipeController.m; path = Controllers/RecipeController/RecipeController.m; sourceTree = "<group>"; };
+		731F07DC1B15EEA5004004CA /* CommonCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonCollectionCell.h; path = Views/CommonCollectionCell/CommonCollectionCell.h; sourceTree = "<group>"; };
+		731F07DD1B15EEA5004004CA /* CommonCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonCollectionCell.m; path = Views/CommonCollectionCell/CommonCollectionCell.m; sourceTree = "<group>"; };
+		731F07E11B15F1D2004004CA /* PersonFlowerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonFlowerController.h; path = Controllers/PersonFlowerController/PersonFlowerController.h; sourceTree = "<group>"; };
+		731F07E21B15F1D2004004CA /* PersonFlowerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonFlowerController.m; path = Controllers/PersonFlowerController/PersonFlowerController.m; sourceTree = "<group>"; };
+		731F07E41B15F1F6004004CA /* PersonFlowerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonFlowerViewController.h; path = Controllers/PersonFlowerController/PersonFlowerViewController.h; sourceTree = "<group>"; };
+		731F07E51B15F1F6004004CA /* PersonFlowerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonFlowerViewController.m; path = Controllers/PersonFlowerController/PersonFlowerViewController.m; sourceTree = "<group>"; };
+		731F07E81B15FD82004004CA /* NSAttributedString+Emotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Emotion.h"; sourceTree = "<group>"; };
+		731F07E91B15FD82004004CA /* NSAttributedString+Emotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Emotion.m"; sourceTree = "<group>"; };
+		731F07EA1B15FD82004004CA /* RichLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RichLabel.h; sourceTree = "<group>"; };
+		731F07EB1B15FD82004004CA /* RichLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RichLabel.m; sourceTree = "<group>"; };
+		731F07EE1B16A32F004004CA /* PraiseLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PraiseLabel.h; path = Views/PraiseLabel/PraiseLabel.h; sourceTree = "<group>"; };
+		731F07EF1B16A32F004004CA /* PraiseLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PraiseLabel.m; path = Views/PraiseLabel/PraiseLabel.m; sourceTree = "<group>"; };
+		731F07F11B16A6B9004004CA /* CommentLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommentLabel.h; path = Views/CommentLabel/CommentLabel.h; sourceTree = "<group>"; };
+		731F07F21B16A6B9004004CA /* CommentLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommentLabel.m; path = Views/CommentLabel/CommentLabel.m; sourceTree = "<group>"; };
+		731F080F1B174762004004CA /* PublishMomentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PublishMomentController.h; path = Controllers/PublishMomentController/PublishMomentController.h; sourceTree = "<group>"; };
+		731F08101B174762004004CA /* PublishMomentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PublishMomentController.m; path = Controllers/PublishMomentController/PublishMomentController.m; sourceTree = "<group>"; };
+		731F08121B17478D004004CA /* PublishMomenViewtController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PublishMomenViewtController.h; path = Controllers/PublishMomentController/PublishMomenViewtController.h; sourceTree = "<group>"; };
+		731F08131B17478D004004CA /* PublishMomenViewtController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PublishMomenViewtController.m; path = Controllers/PublishMomentController/PublishMomenViewtController.m; sourceTree = "<group>"; };
+		731F08171B1747F5004004CA /* PhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoManager.h; path = Views/PhotoManager/PhotoManager.h; sourceTree = "<group>"; };
+		731F08181B1747F5004004CA /* PhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoManager.m; path = Views/PhotoManager/PhotoManager.m; sourceTree = "<group>"; };
+		731F081B1B17F2D4004004CA /* PersonFlowerTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonFlowerTopView.h; path = Views/PersonFlowerTopView/PersonFlowerTopView.h; sourceTree = "<group>"; };
+		731F081C1B17F2D4004004CA /* PersonFlowerTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonFlowerTopView.m; path = Views/PersonFlowerTopView/PersonFlowerTopView.m; sourceTree = "<group>"; };
+		731F081E1B17F65A004004CA /* FlowerProgressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlowerProgressCell.h; path = Views/FlowerProgressCell/FlowerProgressCell.h; sourceTree = "<group>"; };
+		731F081F1B17F65A004004CA /* FlowerProgressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlowerProgressCell.m; path = Views/FlowerProgressCell/FlowerProgressCell.m; sourceTree = "<group>"; };
+		731F08211B180C39004004CA /* RecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecipeViewController.h; path = Controllers/RecipeController/RecipeViewController.h; sourceTree = "<group>"; };
+		731F08221B180C39004004CA /* RecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecipeViewController.m; path = Controllers/RecipeController/RecipeViewController.m; sourceTree = "<group>"; };
+		731F08251B180CF6004004CA /* WeekTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeekTopView.h; path = Views/WeekTopView/WeekTopView.h; sourceTree = "<group>"; };
+		731F08261B180CF6004004CA /* WeekTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeekTopView.m; path = Views/WeekTopView/WeekTopView.m; sourceTree = "<group>"; };
+		731F08281B1819F6004004CA /* RecipeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecipeCell.h; path = Views/RecipeCell/RecipeCell.h; sourceTree = "<group>"; };
+		731F08291B1819F6004004CA /* RecipeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecipeCell.m; path = Views/RecipeCell/RecipeCell.m; sourceTree = "<group>"; };
 		7325ABF71B0EB808004D5FC3 /* UserSettingModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserSettingModal.h; path = Modals/UserSettingModal/UserSettingModal.h; sourceTree = "<group>"; };
 		7325ABF81B0EB808004D5FC3 /* UserSettingModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSettingModal.m; path = Modals/UserSettingModal/UserSettingModal.m; sourceTree = "<group>"; };
 		7325ABFB1B0EC861004D5FC3 /* SystemMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemMessageController.h; path = Controllers/SystemMessageController/SystemMessageController.h; sourceTree = "<group>"; };
@@ -134,8 +200,6 @@
 		7358C54C1B117741001CC5E2 /* SocialListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocialListCell.m; path = Views/SocialListCell/SocialListCell.m; sourceTree = "<group>"; };
 		7358C54E1B1178AB001CC5E2 /* MediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MediaView.h; path = Views/MediaView/MediaView.h; sourceTree = "<group>"; };
 		7358C54F1B1178AB001CC5E2 /* MediaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MediaView.m; path = Views/MediaView/MediaView.m; sourceTree = "<group>"; };
-		7358C5511B117B20001CC5E2 /* praiseBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = praiseBar.h; path = Views/pariseBar/praiseBar.h; sourceTree = "<group>"; };
-		7358C5521B117B20001CC5E2 /* praiseBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = praiseBar.m; path = Views/pariseBar/praiseBar.m; sourceTree = "<group>"; };
 		7358C5541B117B3E001CC5E2 /* commentGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = commentGroupView.h; path = Views/CommentGroupView/commentGroupView.h; sourceTree = "<group>"; };
 		7358C5551B117B3E001CC5E2 /* commentGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = commentGroupView.m; path = Views/CommentGroupView/commentGroupView.m; sourceTree = "<group>"; };
 		7358C5571B117FC6001CC5E2 /* SocialListModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialListModal.h; sourceTree = "<group>"; };
@@ -144,8 +208,6 @@
 		7358C55C1B118166001CC5E2 /* SocialCommentContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocialCommentContainer.m; path = Modals/SocialCommentContainer/SocialCommentContainer.m; sourceTree = "<group>"; };
 		7358C55E1B1181E3001CC5E2 /* SocialLikesModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SocialLikesModal.h; path = Modals/SocialLikesModal/SocialLikesModal.h; sourceTree = "<group>"; };
 		7358C55F1B1181E3001CC5E2 /* SocialLikesModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocialLikesModal.m; path = Modals/SocialLikesModal/SocialLikesModal.m; sourceTree = "<group>"; };
-		735A96231B12169D00F7C6A8 /* CommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommentView.h; path = Views/CommentView/CommentView.h; sourceTree = "<group>"; };
-		735A96241B12169D00F7C6A8 /* CommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommentView.m; path = Views/CommentView/CommentView.m; sourceTree = "<group>"; };
 		737202051B05EA0000F9EE56 /* SuperNavgationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuperNavgationController.h; path = Controllers/SuperNavgationController/SuperNavgationController.h; sourceTree = "<group>"; };
 		737202061B05EA0000F9EE56 /* SuperNavgationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuperNavgationController.m; path = Controllers/SuperNavgationController/SuperNavgationController.m; sourceTree = "<group>"; };
 		737202091B05EB2C00F9EE56 /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginController.h; path = Controllers/LoginController/LoginController.h; sourceTree = "<group>"; };
@@ -161,8 +223,6 @@
 		737202241B06E1A900F9EE56 /* LineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineLabel.h; path = Views/LineLabel/LineLabel.h; sourceTree = "<group>"; };
 		737202251B06E1A900F9EE56 /* LineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineLabel.m; path = Views/LineLabel/LineLabel.m; sourceTree = "<group>"; };
 		737202271B06F39600F9EE56 /* TestUseXib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestUseXib.xib; sourceTree = "<group>"; };
-		73750F861B1368E600FB3B18 /* PraiseLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PraiseLabel.h; path = Views/RichLabel/PraiseLabel.h; sourceTree = "<group>"; };
-		73750F871B1368E600FB3B18 /* PraiseLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PraiseLabel.m; path = Views/RichLabel/PraiseLabel.m; sourceTree = "<group>"; };
 		73943D6E1B0774BC00D41DA1 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainController.h; path = Controllers/MainController/MainController.h; sourceTree = "<group>"; };
 		73943D6F1B0774BC00D41DA1 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainController.m; path = Controllers/MainController/MainController.m; sourceTree = "<group>"; };
 		73A07DF71B0C812F007CF72F /* HomeModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeModal.h; path = Modals/HomeModal.h; sourceTree = "<group>"; };
@@ -332,6 +392,7 @@
 		73041C331B05E4800064267C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				731F07D81B15EC1A004004CA /* RecipeController */,
 				73DB4B1E1B14996E0038D685 /* DaysOffController */,
 				73DB4B001B145AB40038D685 /* AttendanceController */,
 				7358C5451B117654001CC5E2 /* SocialController */,
@@ -367,6 +428,145 @@
 				73041C1C1B05E4630064267C /* LaunchScreen.xib */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		731F07C11B15A31F004004CA /* PersonalFlowerModal */ = {
+			isa = PBXGroup;
+			children = (
+				731F07C21B15A34C004004CA /* PersonalFlowerModal.h */,
+				731F07C31B15A34C004004CA /* PersonalFlowerModal.m */,
+				731F07C51B15A488004004CA /* FlowerModal.h */,
+				731F07C61B15A488004004CA /* FlowerModal.m */,
+			);
+			name = PersonalFlowerModal;
+			sourceTree = "<group>";
+		};
+		731F07CE1B15E1FF004004CA /* HonorListController */ = {
+			isa = PBXGroup;
+			children = (
+				7358C52C1B0F58DD001CC5E2 /* SubViews */,
+				7325AC0E1B0F2DC3004D5FC3 /* HonorListController.h */,
+				7325AC0F1B0F2DC3004D5FC3 /* HonorListController.m */,
+				7358C5301B0F668D001CC5E2 /* HonorListViewController.h */,
+				7358C5311B0F668D001CC5E2 /* HonorListViewController.m */,
+				731F07C81B15B825004004CA /* HonorCollectionViewController.h */,
+				731F07C91B15B825004004CA /* HonorCollectionViewController.m */,
+			);
+			name = HonorListController;
+			sourceTree = "<group>";
+		};
+		731F07CF1B15E218004004CA /* NameListController */ = {
+			isa = PBXGroup;
+			children = (
+				731F07D01B15E2B2004004CA /* NameListController.h */,
+				731F07D11B15E2B2004004CA /* NameListController.m */,
+			);
+			name = NameListController;
+			sourceTree = "<group>";
+		};
+		731F07D31B15E763004004CA /* SendFlowerController */ = {
+			isa = PBXGroup;
+			children = (
+				731F07D41B15E786004004CA /* FlowerListController */,
+				731F07CF1B15E218004004CA /* NameListController */,
+			);
+			name = SendFlowerController;
+			sourceTree = "<group>";
+		};
+		731F07D41B15E786004004CA /* FlowerListController */ = {
+			isa = PBXGroup;
+			children = (
+				731F07D51B15E7B4004004CA /* FlowerListController.h */,
+				731F07D61B15E7B4004004CA /* FlowerListController.m */,
+			);
+			name = FlowerListController;
+			sourceTree = "<group>";
+		};
+		731F07D81B15EC1A004004CA /* RecipeController */ = {
+			isa = PBXGroup;
+			children = (
+				731F08241B180CD3004004CA /* SubViews */,
+				731F07D91B15EC63004004CA /* RecipeController.h */,
+				731F07DA1B15EC63004004CA /* RecipeController.m */,
+				731F08211B180C39004004CA /* RecipeViewController.h */,
+				731F08221B180C39004004CA /* RecipeViewController.m */,
+			);
+			name = RecipeController;
+			sourceTree = "<group>";
+		};
+		731F07DF1B15EEAE004004CA /* CommonCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				731F07DC1B15EEA5004004CA /* CommonCollectionCell.h */,
+				731F07DD1B15EEA5004004CA /* CommonCollectionCell.m */,
+			);
+			name = CommonCollectionCell;
+			sourceTree = "<group>";
+		};
+		731F07E01B15F183004004CA /* PersonFlowerController */ = {
+			isa = PBXGroup;
+			children = (
+				731F081A1B17F2A6004004CA /* subViews */,
+				731F07E11B15F1D2004004CA /* PersonFlowerController.h */,
+				731F07E21B15F1D2004004CA /* PersonFlowerController.m */,
+				731F07E41B15F1F6004004CA /* PersonFlowerViewController.h */,
+				731F07E51B15F1F6004004CA /* PersonFlowerViewController.m */,
+			);
+			name = PersonFlowerController;
+			sourceTree = "<group>";
+		};
+		731F07E71B15FD0E004004CA /* RichLabel */ = {
+			isa = PBXGroup;
+			children = (
+				731F07E81B15FD82004004CA /* NSAttributedString+Emotion.h */,
+				731F07E91B15FD82004004CA /* NSAttributedString+Emotion.m */,
+				731F07EA1B15FD82004004CA /* RichLabel.h */,
+				731F07EB1B15FD82004004CA /* RichLabel.m */,
+			);
+			name = RichLabel;
+			sourceTree = "<group>";
+		};
+		731F080D1B17470A004004CA /* PublishMomentController */ = {
+			isa = PBXGroup;
+			children = (
+				731F08151B1747D4004004CA /* SubViews */,
+				731F08121B17478D004004CA /* PublishMomenViewtController.h */,
+				731F08131B17478D004004CA /* PublishMomenViewtController.m */,
+				731F080F1B174762004004CA /* PublishMomentController.h */,
+				731F08101B174762004004CA /* PublishMomentController.m */,
+			);
+			name = PublishMomentController;
+			sourceTree = "<group>";
+		};
+		731F08151B1747D4004004CA /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				731F08171B1747F5004004CA /* PhotoManager.h */,
+				731F08181B1747F5004004CA /* PhotoManager.m */,
+			);
+			name = SubViews;
+			sourceTree = "<group>";
+		};
+		731F081A1B17F2A6004004CA /* subViews */ = {
+			isa = PBXGroup;
+			children = (
+				731F081B1B17F2D4004004CA /* PersonFlowerTopView.h */,
+				731F081C1B17F2D4004004CA /* PersonFlowerTopView.m */,
+				731F081E1B17F65A004004CA /* FlowerProgressCell.h */,
+				731F081F1B17F65A004004CA /* FlowerProgressCell.m */,
+			);
+			name = subViews;
+			sourceTree = "<group>";
+		};
+		731F08241B180CD3004004CA /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				731F08251B180CF6004004CA /* WeekTopView.h */,
+				731F08261B180CF6004004CA /* WeekTopView.m */,
+				731F08281B1819F6004004CA /* RecipeCell.h */,
+				731F08291B1819F6004004CA /* RecipeCell.m */,
+			);
+			name = SubViews;
 			sourceTree = "<group>";
 		};
 		7325ABF61B0EB7D6004D5FC3 /* SettingsModal */ = {
@@ -424,27 +624,31 @@
 		7325AC0D1B0F2D6C004D5FC3 /* HonorControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7358C52C1B0F58DD001CC5E2 /* NavigationTopButton */,
-				7325AC0E1B0F2DC3004D5FC3 /* HonorListController.h */,
-				7325AC0F1B0F2DC3004D5FC3 /* HonorListController.m */,
-				7358C5301B0F668D001CC5E2 /* HonorListViewController.h */,
-				7358C5311B0F668D001CC5E2 /* HonorListViewController.m */,
+				731F07E01B15F183004004CA /* PersonFlowerController */,
+				731F07D31B15E763004004CA /* SendFlowerController */,
+				731F07CE1B15E1FF004004CA /* HonorListController */,
 			);
 			name = HonorControllers;
 			sourceTree = "<group>";
 		};
-		7358C52C1B0F58DD001CC5E2 /* NavigationTopButton */ = {
+		7358C52C1B0F58DD001CC5E2 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
 				7358C52D1B0F5916001CC5E2 /* NavigationTopButton.h */,
 				7358C52E1B0F5916001CC5E2 /* NavigationTopButton.m */,
+				731F07BE1B156F81004004CA /* FlowerCell.h */,
+				731F07BF1B156F81004004CA /* FlowerCell.m */,
+				731F07CB1B15BB85004004CA /* FlowerCollectionCell.h */,
+				731F07CC1B15BB85004004CA /* FlowerCollectionCell.m */,
 			);
-			name = NavigationTopButton;
+			name = SubViews;
 			sourceTree = "<group>";
 		};
 		7358C5331B105720001CC5E2 /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
+				731F07E71B15FD0E004004CA /* RichLabel */,
+				731F07DF1B15EEAE004004CA /* CommonCollectionCell */,
 				7358C5341B10572A001CC5E2 /* EmojiProcessor */,
 			);
 			name = CommonViews;
@@ -463,6 +667,7 @@
 		7358C5451B117654001CC5E2 /* SocialController */ = {
 			isa = PBXGroup;
 			children = (
+				731F080D1B17470A004004CA /* PublishMomentController */,
 				7358C5491B1176E6001CC5E2 /* SocialListController */,
 			);
 			name = SocialController;
@@ -483,16 +688,14 @@
 			children = (
 				7358C54B1B117741001CC5E2 /* SocialListCell.h */,
 				7358C54C1B117741001CC5E2 /* SocialListCell.m */,
+				731F07EE1B16A32F004004CA /* PraiseLabel.h */,
+				731F07EF1B16A32F004004CA /* PraiseLabel.m */,
 				7358C54E1B1178AB001CC5E2 /* MediaView.h */,
 				7358C54F1B1178AB001CC5E2 /* MediaView.m */,
-				7358C5511B117B20001CC5E2 /* praiseBar.h */,
-				7358C5521B117B20001CC5E2 /* praiseBar.m */,
-				73750F861B1368E600FB3B18 /* PraiseLabel.h */,
-				73750F871B1368E600FB3B18 /* PraiseLabel.m */,
-				735A96231B12169D00F7C6A8 /* CommentView.h */,
-				735A96241B12169D00F7C6A8 /* CommentView.m */,
 				7358C5541B117B3E001CC5E2 /* commentGroupView.h */,
 				7358C5551B117B3E001CC5E2 /* commentGroupView.m */,
+				731F07F11B16A6B9004004CA /* CommentLabel.h */,
+				731F07F21B16A6B9004004CA /* CommentLabel.m */,
 			);
 			name = SubViews;
 			sourceTree = "<group>";
@@ -575,6 +778,7 @@
 		73A07DFA1B0C8134007CF72F /* Modals */ = {
 			isa = PBXGroup;
 			children = (
+				731F07C11B15A31F004004CA /* PersonalFlowerModal */,
 				73DB4B281B14AC880038D685 /* DayOffModal */,
 				73DB4B0C1B1460630038D685 /* AttendanceModal */,
 				73A07E081B0C8E32007CF72F /* UserModal */,
@@ -987,31 +1191,41 @@
 			files = (
 				7372021A1B06D35900F9EE56 /* NetWorking.m in Sources */,
 				7358C53A1B1057F5001CC5E2 /* UIView+Emotion.m in Sources */,
+				731F081D1B17F2D4004004CA /* PersonFlowerTopView.m in Sources */,
 				73B379031B0DFF4C004012B2 /* ModifyPasswordController.m in Sources */,
 				73A07E171B0C989E007CF72F /* MainGroupView.m in Sources */,
+				731F07C71B15A488004004CA /* FlowerModal.m in Sources */,
+				731F08141B17478D004004CA /* PublishMomenViewtController.m in Sources */,
 				7358C5481B1176E2001CC5E2 /* SocialListController.m in Sources */,
+				731F07D21B15E2B2004004CA /* NameListController.m in Sources */,
 				73B378FB1B0DD39C004012B2 /* SettingController.m in Sources */,
 				73A07E1B1B0C992A007CF72F /* MainGroupButton.m in Sources */,
+				731F07E61B15F1F6004004CA /* PersonFlowerViewController.m in Sources */,
 				73DB4B271B14A9920038D685 /* TextViewCell.m in Sources */,
+				731F07DE1B15EEA5004004CA /* CommonCollectionCell.m in Sources */,
 				7325ABFD1B0EC861004D5FC3 /* SystemMessageController.m in Sources */,
 				73DB4B301B14ADAA0038D685 /* ClassInfo.m in Sources */,
 				73A07E2A1B0D692A007CF72F /* Category.m in Sources */,
+				731F08111B174762004004CA /* PublishMomentController.m in Sources */,
 				737202141B06379800F9EE56 /* LineTextView.m in Sources */,
+				731F08191B1747F5004004CA /* PhotoManager.m in Sources */,
 				73DB4B0F1B1460830038D685 /* AttendanceModal.m in Sources */,
 				7325AC041B0ED740004D5FC3 /* PersonalViewController.m in Sources */,
 				73DB4B311B14ADAA0038D685 /* DayOffModal.m in Sources */,
 				73DB4B181B146C200038D685 /* ImageLabel.m in Sources */,
+				731F082A1B1819F6004004CA /* RecipeCell.m in Sources */,
 				73B379061B0E0009004012B2 /* ModifyPasswordViewController.m in Sources */,
 				73A07DFD1B0C81A9007CF72F /* UserModal.m in Sources */,
 				7325AC081B0ED85A004D5FC3 /* Screen.m in Sources */,
-				735A96251B12169D00F7C6A8 /* CommentView.m in Sources */,
+				731F07CD1B15BB85004004CA /* FlowerCollectionCell.m in Sources */,
 				73A07E231B0CC905007CF72F /* MainTopicView.m in Sources */,
 				73A07E1F1B0CC118007CF72F /* MainViewConller.m in Sources */,
 				73A07E271B0D6476007CF72F /* MainIconView.m in Sources */,
+				731F08201B17F65A004004CA /* FlowerProgressCell.m in Sources */,
 				73A07E061B0C89CD007CF72F /* StudentsModal.m in Sources */,
+				731F07DB1B15EC63004004CA /* RecipeController.m in Sources */,
 				7358C52F1B0F5916001CC5E2 /* NavigationTopButton.m in Sources */,
 				7325AC011B0ED70A004D5FC3 /* PersonalController.m in Sources */,
-				73750F881B1368E600FB3B18 /* PraiseLabel.m in Sources */,
 				7358C55D1B118166001CC5E2 /* SocialCommentContainer.m in Sources */,
 				73DB4B071B145B5D0038D685 /* AttendanceViewController.m in Sources */,
 				7325AC101B0F2DC3004D5FC3 /* HonorListController.m in Sources */,
@@ -1023,35 +1237,45 @@
 				73DB4B1D1B148C2A0038D685 /* AttendanceDetailController.m in Sources */,
 				73041C131B05E4630064267C /* AppDelegate.m in Sources */,
 				73B3790A1B0E2BFD004012B2 /* PushNotificationController.m in Sources */,
+				731F07ED1B15FD82004004CA /* RichLabel.m in Sources */,
 				73A07E001B0C81DF007CF72F /* TopicModal.m in Sources */,
 				73DB4B241B14A03B0038D685 /* DayOffViewController.m in Sources */,
 				73DB4B211B1499CB0038D685 /* DayOffController.m in Sources */,
 				73DB4B151B1463940038D685 /* AttendanceContainer.m in Sources */,
 				73B378FE1B0DD49F004012B2 /* SettingViewController.m in Sources */,
+				731F07D71B15E7B4004004CA /* FlowerListController.m in Sources */,
 				73DB4B121B14611A0038D685 /* SourceBrief.m in Sources */,
 				7372020B1B05EB2C00F9EE56 /* LoginController.m in Sources */,
+				731F07EC1B15FD82004004CA /* NSAttributedString+Emotion.m in Sources */,
 				7325AC0C1B0EDF21004D5FC3 /* ParentContactModal.m in Sources */,
+				731F08271B180CF6004004CA /* WeekTopView.m in Sources */,
 				7358C5501B1178AB001CC5E2 /* MediaView.m in Sources */,
 				73A07E121B0C8FAE007CF72F /* RolesModal.m in Sources */,
 				73DB4B0B1B145B870038D685 /* AttendanceCell.m in Sources */,
 				73041C101B05E4630064267C /* main.m in Sources */,
+				731F07E31B15F1D2004004CA /* PersonFlowerController.m in Sources */,
+				731F07C01B156F81004004CA /* FlowerCell.m in Sources */,
 				7358C54D1B117741001CC5E2 /* SocialListCell.m in Sources */,
 				7358C5601B1181E3001CC5E2 /* SocialLikesModal.m in Sources */,
+				731F07CA1B15B825004004CA /* HonorCollectionViewController.m in Sources */,
 				7358C5321B0F668E001CC5E2 /* HonorListViewController.m in Sources */,
 				7325ABF91B0EB808004D5FC3 /* UserSettingModal.m in Sources */,
-				7358C5531B117B20001CC5E2 /* praiseBar.m in Sources */,
 				7372021D1B06DCE000F9EE56 /* ForgetPasswordViewController.m in Sources */,
 				7358C5591B117FC6001CC5E2 /* SocialListModal.m in Sources */,
 				73943D701B0774BC00D41DA1 /* MainController.m in Sources */,
 				73B3790D1B0E2C1D004012B2 /* PushNotificationViewController.m in Sources */,
+				731F07C41B15A34C004004CA /* PersonalFlowerModal.m in Sources */,
 				737202071B05EA0000F9EE56 /* SuperNavgationController.m in Sources */,
 				7358C5561B117B3E001CC5E2 /* commentGroupView.m in Sources */,
 				73A07DF91B0C812F007CF72F /* HomeModal.m in Sources */,
 				73B378F71B0DC531004012B2 /* GObserver.m in Sources */,
 				73B79F9B1B154E25002F3CDA /* DatePickerView.m in Sources */,
 				7358C52B1B0F47CB001CC5E2 /* ForgetViewController.m in Sources */,
+				731F07F31B16A6B9004004CA /* CommentLabel.m in Sources */,
 				73A07E2E1B0D6EDE007CF72F /* IconList.m in Sources */,
+				731F07F01B16A32F004004CA /* PraiseLabel.m in Sources */,
 				73A07E0F1B0C8F92007CF72F /* ClassLitemodal.m in Sources */,
+				731F08231B180C39004004CA /* RecipeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

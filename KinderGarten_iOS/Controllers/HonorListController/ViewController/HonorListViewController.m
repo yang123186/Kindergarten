@@ -9,14 +9,10 @@
 #import "HonorListViewController.h"
 #import "HonorListController.h"
 #import "General.h"
+#import "FlowerCell.h"
 
-
-static const    NSUInteger  titleNumber=3;
 
 @interface HonorListViewController()
-
-@property   (nonatomic,strong)  NavigationTopButton *topButton;
-@property   (nonatomic,strong)  NSArray             *topButtonTitles;
 
 @end
 
@@ -32,24 +28,54 @@ static const    NSUInteger  titleNumber=3;
     return self;
 }
 
--(void)buttonTouchedAtIndex:(NSUInteger)index{
+
+-(void)createSubView{
+        
+    self.tableView=[[UITableView alloc]init];
+    self.tableView.hidden=YES;
+    self.tableView.delegate=self;
+    self.tableView.dataSource=self;
+    self.tableView.allowsSelection=NO;
+    self.tableView.translatesAutoresizingMaskIntoConstraints=NO;
+    [self.view addSubview:self.tableView];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.controller.topButton.mas_bottom);
+        make.left.equalTo(self.view.mas_left);
+        make.right.equalTo(self.view.mas_right);
+        make.bottom.equalTo(self.view.mas_bottom).with.offset(-sendFlowerButtonHeight);
+    }];
+    
     
 }
 
--(void)createSubView{
-    self.topButtonTitles=[NSArray arrayWithObjects:@"今天",@"本周",@"本月" ,nil];
-    self.topButton=[[NavigationTopButton alloc]initWithButtonNumber:titleNumber];
-    self.topButton.delegate=self;
-    [self.topButton setTitlesWithArray:self.topButtonTitles];
-    [self.view addSubview:self.topButton];
-    self.topButton.translatesAutoresizingMaskIntoConstraints=NO;
-    [self.topButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top);
-        make.left.equalTo(self.view.mas_left);
-        make.right.equalTo(self.view.mas_right);
-        make.height.equalTo([NSNumber numberWithDouble:[NavigationTopButton height]]);
-    }];
+
+#pragma mark KVO
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
+    if([keyPath isEqualToString:observeTodayContainerKey]){
+        [self.tableView reloadData];
+    }
 }
 
+
+#pragma mark UITableViewDelegate & UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.controller.todayContainer.container.count;
+}
+
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    FlowerCell *cell=[tableView dequeueReusableCellWithIdentifier:FlowerCellIdentifier];
+    if(!cell){
+        cell=[[FlowerCell alloc]init];
+    }
+    [cell setViewForModal:[self.controller.todayContainer modalAtIndex:indexPath.row]];
+    return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return [FlowerCell height];
+}
 
 @end

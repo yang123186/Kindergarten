@@ -21,6 +21,7 @@
 #import "SocialListController.h"
 #import "AttendanceController.h"
 #import "DayOffController.h"
+#import "RecipeController.h"
 
 static NSString *title=@"主页";
 
@@ -148,6 +149,10 @@ static NSString *observeTopicKey=@"cTopic";
         else if(button.tag==3){
             HonorListController *honorListCtr=[[HonorListController alloc]init];
             [self.navigationController pushViewController:honorListCtr animated:YES];
+        }
+        else if (button.tag==6){
+            RecipeController *recipeCtrl=[[RecipeController alloc]init];
+            [self.navigationController pushViewController:recipeCtrl animated:YES];
         }
     }
 }

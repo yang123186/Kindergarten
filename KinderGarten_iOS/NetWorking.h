@@ -23,8 +23,15 @@
 #define SOCIAL_LIST_PATH                                                PUREPATH(@"/social")
 #define ATTENDANCE_LIST_PATH(TIME_STAMP)                                PATH_AND_PARAMETER(@"/attendance?timestamp=",TIME_STAMP)
 #define DAYOFF_REQUEST_PATH                                             PUREPATH(@"/leave")
+//#define TODAY_HONOR_LIST_PATH(TIME_STAMP)                               PATH_AND_PARAMETER(@"/flower/today?timestamp=",TIME_STAMP)
+#define WEEK_HONOR_LIST_PATH(TIME_STAMP)                                PATH_AND_PARAMETER(@"/flower/week?timestamp=",TIME_STAMP)
+#define MONTH_HONOR_LIST_PATH(TIME_STAMP)                               PATH_AND_PARAMETER(@"/flower/month?timestamp=",TIME_STAMP)
+#define STUDENTS_LIST_PATH
+#define FLOWER_LIST_PATH                                                PUREPATH(@"/flower/available")
+#define ASSIGN_FLOWER_PATH(FLOWER_ID,STUDENT_ID)                        [NSString stringWithFormat:@"/flower/%@/student/%@",FLOWER_ID,STUDENT_ID]
 
 
+#define TODAY_HONOR_LIST_PATH(TIME_STAMP)                               @"http://1.r7test.sinaapp.com/coll.json"
 
 #endif
 

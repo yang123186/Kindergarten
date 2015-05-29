@@ -13,7 +13,7 @@
 #import "Category.h"
 #import "Screen.h"
 #import "UIView+Emotion.h"
-
+#import "UITableView+FDTemplateLayoutCell.h"
 
 #ifdef DEBUG
 #define DLog(...) NSLog(__VA_ARGS__)

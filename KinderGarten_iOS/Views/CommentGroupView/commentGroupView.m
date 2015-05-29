@@ -20,20 +20,21 @@
 
 
 -(void)setViewForCommentsContainer:(SocialCommentContainer*)container{
-    for (CommentView *commentView in self.comments) {
-        if(commentView.superview){
-            [commentView removeFromSuperview];
+    for (CommentLabel *commentLabel in self.comments) {
+        if(commentLabel.superview){
+            [commentLabel removeFromSuperview];
         }
     }
     [self.comments removeAllObjects];
     
     UIView *preView=nil;
     for(SocialCommentModal *modal in container.aComments){
-        CommentView *commentView=[[CommentView alloc]initWithSocialCommentModal:modal];
-        [self.comments addObject:commentView];
-        commentView.translatesAutoresizingMaskIntoConstraints=NO;
-        [self addSubview:commentView];
-        [commentView mas_makeConstraints:^(MASConstraintMaker *make) {
+        CommentLabel *commentLabel=[[CommentLabel alloc]init];
+        [commentLabel setViewForModal:modal];
+        [self.comments addObject:commentLabel];
+        commentLabel.translatesAutoresizingMaskIntoConstraints=NO;
+        [self addSubview:commentLabel];
+        [commentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             if(preView){
                 make.top.equalTo(preView.mas_bottom);
             }
@@ -42,10 +43,18 @@
             }
             make.left.equalTo(self.mas_left);
             make.right.equalTo(self.mas_right);
-            make.height.equalTo(commentView.mas_height);
+            if(modal ==container.aComments.lastObject){
+                make.bottom.equalTo(self.mas_bottom);
+            }
+            else{
+                make.height.equalTo(commentLabel.mas_height);
+            }
         }];
+        preView=commentLabel;
     }
-
+    [self setNeedsUpdateConstraints];
+    [self updateConstraintsIfNeeded];
+//    [self layoutIfNeeded];
 }
 
 

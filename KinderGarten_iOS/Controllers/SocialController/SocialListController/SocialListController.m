@@ -11,6 +11,7 @@
 #import "SocialListModal.h"
 #import "SocialListCell.h"
 
+
 @interface SocialListController ()
 
 @property   (nonatomic,strong)  SocialListContainer *modal;
@@ -24,6 +25,9 @@
         self.modal=[[SocialListContainer alloc]init];
         self.tableView.delegate=self;
         self.tableView.dataSource=self;
+        self.tableView.rowHeight=UITableViewAutomaticDimension;
+        self.tableView.estimatedRowHeight = 300.0;
+        [self.tableView registerClass:[SocialListCell class] forCellReuseIdentifier:socialListCellIdentifier];
     }
     return self;
 }
@@ -61,7 +65,7 @@
     AFHTTPRequestOperationManager *manager=[AFHTTPRequestOperationManager manager];
 //    [manager beJsonManager];
     [manager setCommonlyUsedRequsetHeaderFiled];
-    [manager GET:@"http://1.r7test.sinaapp.com/SocialList.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:@"http://1.r7test.sinaapp.com/SocialList_lite.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
 //        DLog(@"%@",responseObject);
         self.modal=[self.modal initWithSocialsArray:[responseObject objectForKey:@"socials"]];
         
@@ -71,6 +75,10 @@
     }];
 }
 
+
+-(void)publishNewMoment{
+    
+}
 
 #pragma mark - Table view data source
 
@@ -85,13 +93,14 @@
     if(!cell){
         cell=[[SocialListCell alloc]init];
     }
-    [cell setViewForModal:[self.modal socialListModalAtIndex:indexPath.row]];
 
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 500.0f;
+    return [tableView fd_heightForCellWithIdentifier:socialListCellIdentifier configuration:^(id cell) {
+        [cell setViewForModal:[self.modal socialListModalAtIndex:indexPath.row]];
+    }];
 }
 
 @end
