@@ -10,7 +10,7 @@
 
 @protocol WeekTopViewDelegate <NSObject>
 
--(void)dayButtonDidSelectedAtDay:(NSInteger)day;
+-(void)dayButtonDidSelectedAtIndex:(NSInteger)index;
 
 @end
 
@@ -22,5 +22,6 @@
 -(instancetype)initWithDefaultDay:(NSInteger)day;
 
 +(CGFloat)height;
+-(void)selectDay:(NSInteger)day;
 
 @end

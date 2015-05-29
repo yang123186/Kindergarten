@@ -81,6 +81,11 @@
 
 -(NSString*)to_yyyy_MM_dd_HH_mm_Style;
 
+-(NSInteger)dayInYear:(NSDate*)date;
+
+-(NSInteger)dayNumberFromNow;
+
+-(NSInteger)dayInWeek;
 @end
 
 

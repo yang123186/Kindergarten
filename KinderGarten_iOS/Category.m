@@ -108,10 +108,11 @@
 @implementation NSDate(TimeFormatExt)
 
 static NSDateFormatter *dateFormatter;
+static NSInteger    AdaySec=86400;
 
 -(void)dateFormatterInitialize{
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
+    static dispatch_once_t dateFormatonceToken;
+    dispatch_once(&dateFormatonceToken, ^{
         dateFormatter = [[NSDateFormatter alloc] init];
     });
 }
@@ -127,6 +128,33 @@ static NSDateFormatter *dateFormatter;
     [self dateFormatterInitialize];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
     return [dateFormatter stringFromDate:self];
+}
+
+-(NSDateComponents*)daycomps{
+    static NSCalendar *calendar;
+    static NSDateComponents *comps;
+    static NSInteger unitFlags;
+    static dispatch_once_t dateNumberOnceToken;
+    dispatch_once(&dateNumberOnceToken, ^{
+        calendar= [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+        comps = [[NSDateComponents alloc] init];
+        unitFlags =NSDayCalendarUnit|NSWeekdayCalendarUnit;
+    });
+    comps = [calendar components:unitFlags fromDate:self];
+    return comps;
+}
+
+-(NSInteger)dayInWeek{
+    return [self daycomps].weekday-1;
+}
+
+-(NSInteger)dayNumberFromNow{
+    NSInteger RawSec=[self timeIntervalSinceNow];
+    NSInteger DayNum=RawSec/AdaySec;
+    if(RawSec%AdaySec>0){
+        DayNum++;
+    }
+    return DayNum;
 }
 
 @end

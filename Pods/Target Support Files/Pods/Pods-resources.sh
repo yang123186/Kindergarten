@@ -57,6 +57,18 @@ install_resource()
       ;;
   esac
 }
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "PMCalendar/PMCalendar/Theme/apple calendar.plist"
+  install_resource "PMCalendar/PMCalendar/Theme/background.png"
+  install_resource "PMCalendar/PMCalendar/Theme/background@2x.png"
+  install_resource "PMCalendar/PMCalendar/Theme/default.plist"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "PMCalendar/PMCalendar/Theme/apple calendar.plist"
+  install_resource "PMCalendar/PMCalendar/Theme/background.png"
+  install_resource "PMCalendar/PMCalendar/Theme/background@2x.png"
+  install_resource "PMCalendar/PMCalendar/Theme/default.plist"
+fi
 
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 if [[ "${ACTION}" == "install" ]]; then

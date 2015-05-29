@@ -98,9 +98,7 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return [tableView fd_heightForCellWithIdentifier:socialListCellIdentifier configuration:^(id cell) {
-        [cell setViewForModal:[self.modal socialListModalAtIndex:indexPath.row]];
-    }];
+    return  300.0f;
 }
 
 @end

@@ -10,7 +10,7 @@
 #import "General.h"
 
 
-static const CGFloat    dayOfAweek=5;
+static const CGFloat    dayOfAweek=7;
 static const CGFloat    dayButtonEdgeLength=30.0f;
 static const CGFloat    dayButtonPaddingVertical=10.0f;
 static CGFloat  buttonPaddingHorizontal;
@@ -20,22 +20,24 @@ static CGFloat  buttonPaddingHorizontal;
 @property   (nonatomic,strong)  NSArray         *weekTitlCn;
 @property   (nonatomic,weak)    UIButton        *selectedButton;
 
+@property   (nonatomic,assign)  NSInteger       todayNumber;
 @end
 
 @implementation WeekTopView
 
 -(instancetype)init{
-    if(self=[super init]){
-        buttonPaddingHorizontal=([Screen width]-dayOfAweek*dayButtonEdgeLength)/(dayOfAweek+1);
-        self.weekButtonArray=[[NSMutableArray alloc]initWithCapacity:dayOfAweek];
-        self.weekTitlCn=[[NSArray alloc]initWithObjects:@"一",@"二",@"三",@"四",@"五",@"六",@"日", nil];
-        [self createView];
+    if(self=[self initWithDefaultDay:[NSDate date].dayInWeek]){
     }
     return self;
 }
 
 -(instancetype)initWithDefaultDay:(NSInteger)day{
-    if(self=[self init]){
+    if(self=[super init]){
+        self.todayNumber=day;
+        buttonPaddingHorizontal=([Screen width]-dayOfAweek*dayButtonEdgeLength)/(dayOfAweek+1);
+        self.weekButtonArray=[[NSMutableArray alloc]initWithCapacity:dayOfAweek];
+        self.weekTitlCn=[[NSArray alloc]initWithObjects:@"日",@"一",@"二",@"三",@"四",@"五",@"六", nil];
+        [self createView];
         [self selectDay:day];
     }
     return self;
@@ -47,7 +49,7 @@ static CGFloat  buttonPaddingHorizontal;
         UIButton *dayButton=[[UIButton alloc]init];
         [dayButton addTarget:self action:@selector(weekButtonDidSelected:) forControlEvents:UIControlEventTouchUpInside];
         [dayButton setTitle:[self.weekTitlCn objectAtIndex:itr] forState:UIControlStateNormal];
-        [dayButton setTag:itr+1];
+        [dayButton setTag:itr];
         [dayButton setTitleColor:WHITE_COLOR forState:UIControlStateNormal];
         [dayButton setBackgroundColor:PINK_COLOR];
         [dayButton setCircleRadius:dayButtonEdgeLength/2];
@@ -74,13 +76,13 @@ static CGFloat  buttonPaddingHorizontal;
     if(self.selectedButton){
         [self.selectedButton setBackgroundColor:PINK_COLOR];
     }
-    self.selectedButton=[self.weekButtonArray objectAtIndex:day-1];
+    self.selectedButton=[self.weekButtonArray objectAtIndex:day];
     [self.selectedButton setBackgroundColor:PINK_LIGHT_COLOR];
 }
 
 -(void)weekButtonDidSelected:(UIButton*)sender{
-    if([self.delegate respondsToSelector:@selector(dayButtonDidSelectedAtDay:)]){
-        [self.delegate dayButtonDidSelectedAtDay:sender.tag];
+    if([self.delegate respondsToSelector:@selector(dayButtonDidSelectedAtIndex:)]){
+        [self.delegate dayButtonDidSelectedAtIndex:sender.tag];
         [self selectDay:sender.tag];
     }
 }

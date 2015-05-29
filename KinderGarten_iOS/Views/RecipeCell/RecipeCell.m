@@ -17,6 +17,8 @@ static const CGFloat    titleLabelHeight=30.0f;
 static const CGFloat    paddingHorizontal=10.0f;
 static CGFloat    pictureEdgeHeight=-1;
 
+static NSArray *mealTitles;
+
 @interface RecipeCell ()
 @property   (nonatomic,strong)  NSMutableArray *pictureArray;
 @end
@@ -26,11 +28,19 @@ static CGFloat    pictureEdgeHeight=-1;
 
 -(instancetype)init{
     if(self=[super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:RecipeCellIdentifier]){
+        [self initMealTitles];
         pictureEdgeHeight=([Screen width]-paddingHorizontal*(picNumberEachRow+3))/picNumberEachRow;
         self.pictureArray=[[NSMutableArray alloc]initWithCapacity:0];
         [self createView];
     }
     return self;
+}
+
+-(void)initMealTitles{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        mealTitles=@[@"早餐",@"上午加餐",@"午餐",@"下午加餐",@"晚餐"];
+    });
 }
 
 -(void)createView{
@@ -87,6 +97,10 @@ static CGFloat    pictureEdgeHeight=-1;
         }];
     }
     
+}
+
+-(void)setViewForModal:(MealModal *)modal{
+    [self.titleLabel setText:[mealTitles objectAtIndex:modal.type.integerValue]];
 }
 
 

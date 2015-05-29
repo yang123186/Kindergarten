@@ -13,6 +13,11 @@
 		73041C1B1B05E4630064267C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73041C1A1B05E4630064267C /* Images.xcassets */; };
 		73041C1E1B05E4630064267C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73041C1C1B05E4630064267C /* LaunchScreen.xib */; };
 		73041C2A1B05E4630064267C /* KinderGarten_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 73041C291B05E4630064267C /* KinderGarten_iOSTests.m */; };
+		731092E31B184B040052228E /* MealModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 731092E21B184B040052228E /* MealModal.m */; };
+		731092E61B184C6E0052228E /* RecipeModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 731092E51B184C6E0052228E /* RecipeModal.m */; };
+		731093151B18615E0052228E /* BottomCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 731093141B18615E0052228E /* BottomCalendarView.m */; };
+		731AEC521B189B9000F68B40 /* ScheduleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731AEC511B189B9000F68B40 /* ScheduleController.m */; };
+		731AEC551B189BD600F68B40 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731AEC541B189BD600F68B40 /* ScheduleViewController.m */; };
 		731F07BD1B156510004004CA /* DayOffReasonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F07BC1B156510004004CA /* DayOffReasonController.m */; };
 		731F07C01B156F81004004CA /* FlowerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F07BF1B156F81004004CA /* FlowerCell.m */; };
 		731F07C41B15A34C004004CA /* PersonalFlowerModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F07C31B15A34C004004CA /* PersonalFlowerModal.m */; };
@@ -123,6 +128,16 @@
 		73041C231B05E4630064267C /* KinderGarten_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KinderGarten_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73041C281B05E4630064267C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73041C291B05E4630064267C /* KinderGarten_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KinderGarten_iOSTests.m; sourceTree = "<group>"; };
+		731092E11B184B040052228E /* MealModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MealModal.h; path = Modals/MealModal/MealModal.h; sourceTree = "<group>"; };
+		731092E21B184B040052228E /* MealModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MealModal.m; path = Modals/MealModal/MealModal.m; sourceTree = "<group>"; };
+		731092E41B184C6E0052228E /* RecipeModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeModal.h; sourceTree = "<group>"; };
+		731092E51B184C6E0052228E /* RecipeModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeModal.m; sourceTree = "<group>"; };
+		731093131B18615E0052228E /* BottomCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BottomCalendarView.h; path = Views/BottomCalendarView/BottomCalendarView.h; sourceTree = "<group>"; };
+		731093141B18615E0052228E /* BottomCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BottomCalendarView.m; path = Views/BottomCalendarView/BottomCalendarView.m; sourceTree = "<group>"; };
+		731AEC501B189B9000F68B40 /* ScheduleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleController.h; path = Controllers/ScheduleController/ScheduleController.h; sourceTree = "<group>"; };
+		731AEC511B189B9000F68B40 /* ScheduleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleController.m; path = Controllers/ScheduleController/ScheduleController.m; sourceTree = "<group>"; };
+		731AEC531B189BD600F68B40 /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleViewController.h; path = Controllers/ScheduleController/ScheduleViewController.h; sourceTree = "<group>"; };
+		731AEC541B189BD600F68B40 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleViewController.m; path = Controllers/ScheduleController/ScheduleViewController.m; sourceTree = "<group>"; };
 		731F07BB1B156510004004CA /* DayOffReasonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DayOffReasonController.h; path = Controllers/DayOffReasonController/DayOffReasonController.h; sourceTree = "<group>"; };
 		731F07BC1B156510004004CA /* DayOffReasonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DayOffReasonController.m; path = Controllers/DayOffReasonController/DayOffReasonController.m; sourceTree = "<group>"; };
 		731F07BE1B156F81004004CA /* FlowerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlowerCell.h; path = Views/FlowerCell/FlowerCell.h; sourceTree = "<group>"; };
@@ -392,6 +407,7 @@
 		73041C331B05E4800064267C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				731AEC4F1B189B2200F68B40 /* ScheduleController */,
 				731F07D81B15EC1A004004CA /* RecipeController */,
 				73DB4B1E1B14996E0038D685 /* DaysOffController */,
 				73DB4B001B145AB40038D685 /* AttendanceController */,
@@ -428,6 +444,28 @@
 				73041C1C1B05E4630064267C /* LaunchScreen.xib */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		731092E01B184AE80052228E /* RecipeModal */ = {
+			isa = PBXGroup;
+			children = (
+				731092E11B184B040052228E /* MealModal.h */,
+				731092E21B184B040052228E /* MealModal.m */,
+				731092E41B184C6E0052228E /* RecipeModal.h */,
+				731092E51B184C6E0052228E /* RecipeModal.m */,
+			);
+			name = RecipeModal;
+			sourceTree = "<group>";
+		};
+		731AEC4F1B189B2200F68B40 /* ScheduleController */ = {
+			isa = PBXGroup;
+			children = (
+				731AEC501B189B9000F68B40 /* ScheduleController.h */,
+				731AEC511B189B9000F68B40 /* ScheduleController.m */,
+				731AEC531B189BD600F68B40 /* ScheduleViewController.h */,
+				731AEC541B189BD600F68B40 /* ScheduleViewController.m */,
+			);
+			name = ScheduleController;
 			sourceTree = "<group>";
 		};
 		731F07C11B15A31F004004CA /* PersonalFlowerModal */ = {
@@ -565,6 +603,8 @@
 				731F08261B180CF6004004CA /* WeekTopView.m */,
 				731F08281B1819F6004004CA /* RecipeCell.h */,
 				731F08291B1819F6004004CA /* RecipeCell.m */,
+				731093131B18615E0052228E /* BottomCalendarView.h */,
+				731093141B18615E0052228E /* BottomCalendarView.m */,
 			);
 			name = SubViews;
 			sourceTree = "<group>";
@@ -778,6 +818,7 @@
 		73A07DFA1B0C8134007CF72F /* Modals */ = {
 			isa = PBXGroup;
 			children = (
+				731092E01B184AE80052228E /* RecipeModal */,
 				731F07C11B15A31F004004CA /* PersonalFlowerModal */,
 				73DB4B281B14AC880038D685 /* DayOffModal */,
 				73DB4B0C1B1460630038D685 /* AttendanceModal */,
@@ -1215,6 +1256,7 @@
 				73DB4B181B146C200038D685 /* ImageLabel.m in Sources */,
 				731F082A1B1819F6004004CA /* RecipeCell.m in Sources */,
 				73B379061B0E0009004012B2 /* ModifyPasswordViewController.m in Sources */,
+				731092E31B184B040052228E /* MealModal.m in Sources */,
 				73A07DFD1B0C81A9007CF72F /* UserModal.m in Sources */,
 				7325AC081B0ED85A004D5FC3 /* Screen.m in Sources */,
 				731F07CD1B15BB85004004CA /* FlowerCollectionCell.m in Sources */,
@@ -1222,6 +1264,7 @@
 				73A07E1F1B0CC118007CF72F /* MainViewConller.m in Sources */,
 				73A07E271B0D6476007CF72F /* MainIconView.m in Sources */,
 				731F08201B17F65A004004CA /* FlowerProgressCell.m in Sources */,
+				731AEC521B189B9000F68B40 /* ScheduleController.m in Sources */,
 				73A07E061B0C89CD007CF72F /* StudentsModal.m in Sources */,
 				731F07DB1B15EC63004004CA /* RecipeController.m in Sources */,
 				7358C52F1B0F5916001CC5E2 /* NavigationTopButton.m in Sources */,
@@ -1230,6 +1273,7 @@
 				73DB4B071B145B5D0038D685 /* AttendanceViewController.m in Sources */,
 				7325AC101B0F2DC3004D5FC3 /* HonorListController.m in Sources */,
 				73DB4B031B145B010038D685 /* AttendanceController.m in Sources */,
+				731AEC551B189BD600F68B40 /* ScheduleViewController.m in Sources */,
 				73B379111B0E2F2E004012B2 /* SwitchCell.m in Sources */,
 				731F07BD1B156510004004CA /* DayOffReasonController.m in Sources */,
 				73DB4B341B14AE830038D685 /* DayOffContainer.m in Sources */,
@@ -1252,6 +1296,7 @@
 				7358C5501B1178AB001CC5E2 /* MediaView.m in Sources */,
 				73A07E121B0C8FAE007CF72F /* RolesModal.m in Sources */,
 				73DB4B0B1B145B870038D685 /* AttendanceCell.m in Sources */,
+				731093151B18615E0052228E /* BottomCalendarView.m in Sources */,
 				73041C101B05E4630064267C /* main.m in Sources */,
 				731F07E31B15F1D2004004CA /* PersonFlowerController.m in Sources */,
 				731F07C01B156F81004004CA /* FlowerCell.m in Sources */,
@@ -1260,6 +1305,7 @@
 				731F07CA1B15B825004004CA /* HonorCollectionViewController.m in Sources */,
 				7358C5321B0F668E001CC5E2 /* HonorListViewController.m in Sources */,
 				7325ABF91B0EB808004D5FC3 /* UserSettingModal.m in Sources */,
+				731092E61B184C6E0052228E /* RecipeModal.m in Sources */,
 				7372021D1B06DCE000F9EE56 /* ForgetPasswordViewController.m in Sources */,
 				7358C5591B117FC6001CC5E2 /* SocialListModal.m in Sources */,
 				73943D701B0774BC00D41DA1 /* MainController.m in Sources */,
