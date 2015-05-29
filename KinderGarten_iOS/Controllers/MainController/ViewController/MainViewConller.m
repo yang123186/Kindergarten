@@ -73,15 +73,21 @@ static NSString *settingBarButonTitle=@"设置";
     
     /***********TestArea********/
     [self.topImageView setImage:[UIImage imageNamed:@"xiaoye"]];
-    [self.topicView setTopic:@"今日话题：你会鼓励孩纸吗🐴" detail:@"已有1000+位👪参与了讨论."];
+    [self.topicView setTopic:@"今日话题：你会鼓励孩纸吗" detail:@"已有1000+位👪参与了讨论."];
     UIImage *image=[UIImage imageNamed:@"xiaoye"];
-    NSArray *icons=[NSArray arrayWithObjects:image,image,image,image,image,image,image,image,image,image,image,image, nil];
+    UIImage *okImage=[UIImage imageNamed:@"OKOKOKOK"];
+    UIImage *noimg=[UIImage imageNamed:@"NONONONO"];
+    UIImage *ingimg=[UIImage imageNamed:@"INGING"];
+    NSArray *funcicons=[NSArray arrayWithObjects:ingimg,okImage,noimg,ingimg,ingimg,noimg,okImage, nil];
+    NSArray *topicons=[NSArray arrayWithObjects:okImage,ingimg,noimg, nil];
+    NSArray *boicons=[NSArray arrayWithObjects:noimg,noimg,noimg, nil];
+
 //    NSString *teststr=@"测试字符";
 //    NSArray *titles=[NSArray arrayWithObjects:@"韩小野",@"签到",@"请假",teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr,teststr, nil];
     /***********TestArea********/
     
     
-    self.childGroupView=[[MainGroupView alloc]initWithItemNumer:3 icons:icons titles:self.childGroupTitles];
+    self.childGroupView=[[MainGroupView alloc]initWithItemNumer:3 icons:topicons titles:self.childGroupTitles];
     self.childGroupView.translatesAutoresizingMaskIntoConstraints=NO;
     [self.contentView addSubview:self.childGroupView];
     [self.childGroupView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -92,7 +98,7 @@ static NSString *settingBarButonTitle=@"设置";
     }];
     self.childGroupView.delegate=self.controller;
     
-    self.functionGroupView=[[MainGroupView alloc]initWithItemNumer:7 icons:icons titles:self.functionGroupTitles];
+    self.functionGroupView=[[MainGroupView alloc]initWithItemNumer:7 icons:funcicons titles:self.functionGroupTitles];
     self.functionGroupView.translatesAutoresizingMaskIntoConstraints=NO;
     [self.contentView addSubview:self.functionGroupView];
     [self.functionGroupView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -103,7 +109,7 @@ static NSString *settingBarButonTitle=@"设置";
     }];
     self.functionGroupView.delegate=self.controller;
     
-    self.bottomGroupView=[[MainGroupView alloc]initWithItemNumer:3 icons:icons titles:self.bottomGroupTitles];
+    self.bottomGroupView=[[MainGroupView alloc]initWithItemNumer:3 icons:boicons titles:self.bottomGroupTitles];
     self.bottomGroupView.translatesAutoresizingMaskIntoConstraints=NO;
     [self.contentView addSubview:self.bottomGroupView];
     [self.bottomGroupView mas_makeConstraints:^(MASConstraintMaker *make) {
