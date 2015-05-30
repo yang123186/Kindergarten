@@ -30,6 +30,9 @@
 #define FLOWER_LIST_PATH                                                PUREPATH(@"/flower/available")
 #define ASSIGN_FLOWER_PATH(FLOWER_ID,STUDENT_ID)                        [NSString stringWithFormat:@"/flower/%@/student/%@",FLOWER_ID,STUDENT_ID]
 #define RECIPRE_PATH(OFFSET)                                            PATH_AND_PARAMETER(@"/receipe/",OFFSET)
+#define SCHEDULE_PATH(OFFSET)                                           PATH_AND_PARAMETER(@"/schedule/",OFFSET)
+
+
 
 #define TODAY_HONOR_LIST_PATH(TIME_STAMP)                               @"http://1.r7test.sinaapp.com/coll.json"
 

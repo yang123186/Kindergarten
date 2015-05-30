@@ -42,6 +42,8 @@
 		731F08231B180C39004004CA /* RecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F08221B180C39004004CA /* RecipeViewController.m */; };
 		731F08271B180CF6004004CA /* WeekTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F08261B180CF6004004CA /* WeekTopView.m */; };
 		731F082A1B1819F6004004CA /* RecipeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F08291B1819F6004004CA /* RecipeCell.m */; };
+		7322CDBB1B194C56001DD6A3 /* ScheduleModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7322CDBA1B194C56001DD6A3 /* ScheduleModal.m */; };
+		7322CDBF1B194EE2001DD6A3 /* ScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7322CDBE1B194EE2001DD6A3 /* ScheduleCell.m */; };
 		7325ABF91B0EB808004D5FC3 /* UserSettingModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7325ABF81B0EB808004D5FC3 /* UserSettingModal.m */; };
 		7325ABFD1B0EC861004D5FC3 /* SystemMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7325ABFC1B0EC861004D5FC3 /* SystemMessageController.m */; };
 		7325AC011B0ED70A004D5FC3 /* PersonalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7325AC001B0ED70A004D5FC3 /* PersonalController.m */; };
@@ -186,6 +188,10 @@
 		731F08261B180CF6004004CA /* WeekTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeekTopView.m; path = Views/WeekTopView/WeekTopView.m; sourceTree = "<group>"; };
 		731F08281B1819F6004004CA /* RecipeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecipeCell.h; path = Views/RecipeCell/RecipeCell.h; sourceTree = "<group>"; };
 		731F08291B1819F6004004CA /* RecipeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecipeCell.m; path = Views/RecipeCell/RecipeCell.m; sourceTree = "<group>"; };
+		7322CDB91B194C56001DD6A3 /* ScheduleModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleModal.h; path = Modals/ScheduleModal/ScheduleModal.h; sourceTree = "<group>"; };
+		7322CDBA1B194C56001DD6A3 /* ScheduleModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleModal.m; path = Modals/ScheduleModal/ScheduleModal.m; sourceTree = "<group>"; };
+		7322CDBD1B194EE2001DD6A3 /* ScheduleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleCell.h; path = Views/ScheduleCell/ScheduleCell.h; sourceTree = "<group>"; };
+		7322CDBE1B194EE2001DD6A3 /* ScheduleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleCell.m; path = Views/ScheduleCell/ScheduleCell.m; sourceTree = "<group>"; };
 		7325ABF71B0EB808004D5FC3 /* UserSettingModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserSettingModal.h; path = Modals/UserSettingModal/UserSettingModal.h; sourceTree = "<group>"; };
 		7325ABF81B0EB808004D5FC3 /* UserSettingModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSettingModal.m; path = Modals/UserSettingModal/UserSettingModal.m; sourceTree = "<group>"; };
 		7325ABFB1B0EC861004D5FC3 /* SystemMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemMessageController.h; path = Controllers/SystemMessageController/SystemMessageController.h; sourceTree = "<group>"; };
@@ -460,6 +466,7 @@
 		731AEC4F1B189B2200F68B40 /* ScheduleController */ = {
 			isa = PBXGroup;
 			children = (
+				7322CDBC1B194EBA001DD6A3 /* SubView */,
 				731AEC501B189B9000F68B40 /* ScheduleController.h */,
 				731AEC511B189B9000F68B40 /* ScheduleController.m */,
 				731AEC531B189BD600F68B40 /* ScheduleViewController.h */,
@@ -607,6 +614,24 @@
 				731093141B18615E0052228E /* BottomCalendarView.m */,
 			);
 			name = SubViews;
+			sourceTree = "<group>";
+		};
+		7322CDB81B194C39001DD6A3 /* ScheduleModal */ = {
+			isa = PBXGroup;
+			children = (
+				7322CDB91B194C56001DD6A3 /* ScheduleModal.h */,
+				7322CDBA1B194C56001DD6A3 /* ScheduleModal.m */,
+			);
+			name = ScheduleModal;
+			sourceTree = "<group>";
+		};
+		7322CDBC1B194EBA001DD6A3 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				7322CDBD1B194EE2001DD6A3 /* ScheduleCell.h */,
+				7322CDBE1B194EE2001DD6A3 /* ScheduleCell.m */,
+			);
+			name = SubView;
 			sourceTree = "<group>";
 		};
 		7325ABF61B0EB7D6004D5FC3 /* SettingsModal */ = {
@@ -818,6 +843,7 @@
 		73A07DFA1B0C8134007CF72F /* Modals */ = {
 			isa = PBXGroup;
 			children = (
+				7322CDB81B194C39001DD6A3 /* ScheduleModal */,
 				731092E01B184AE80052228E /* RecipeModal */,
 				731F07C11B15A31F004004CA /* PersonalFlowerModal */,
 				73DB4B281B14AC880038D685 /* DayOffModal */,
@@ -1257,6 +1283,7 @@
 				73B379061B0E0009004012B2 /* ModifyPasswordViewController.m in Sources */,
 				731092E31B184B040052228E /* MealModal.m in Sources */,
 				73A07DFD1B0C81A9007CF72F /* UserModal.m in Sources */,
+				7322CDBB1B194C56001DD6A3 /* ScheduleModal.m in Sources */,
 				7325AC081B0ED85A004D5FC3 /* Screen.m in Sources */,
 				731F07CD1B15BB85004004CA /* FlowerCollectionCell.m in Sources */,
 				73A07E231B0CC905007CF72F /* MainTopicView.m in Sources */,
@@ -1320,6 +1347,7 @@
 				73A07E2E1B0D6EDE007CF72F /* IconList.m in Sources */,
 				731F07F01B16A32F004004CA /* PraiseLabel.m in Sources */,
 				73A07E0F1B0C8F92007CF72F /* ClassLitemodal.m in Sources */,
+				7322CDBF1B194EE2001DD6A3 /* ScheduleCell.m in Sources */,
 				731F08231B180C39004004CA /* RecipeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
