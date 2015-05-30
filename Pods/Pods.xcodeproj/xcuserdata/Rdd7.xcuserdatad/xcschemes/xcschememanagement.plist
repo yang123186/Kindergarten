@@ -19,11 +19,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-PMCalendar.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>256CBFA2494FFAB93B8E5995</key>
+		<key>3B81ECC7911E48979EBA3294</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>798397208DBC9BA37E3F5682</key>
+		<key>7DF0B3A497C448C51FBC9B28</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A05301CE3E3FFB84CAA69AD4</key>
+		<key>E65F99DCD8AB3C5A6C212211</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F0C770EE287214F0A09309CA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FCD6D8413C8DE096267CEACB</key>
+		<key>EFD0D3296B3106D6C7348768</key>
 		<dict>
 			<key>primary</key>
 			<true/>

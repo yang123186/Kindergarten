@@ -22,18 +22,15 @@ PODS:
     - AFNetworking/NSURLSession
   - Masonry (0.6.1)
   - MBProgressHUD (0.9.1)
-  - PMCalendar (0.3.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5.3)
   - Masonry (~> 0.6.1)
   - MBProgressHUD (~> 0.9.1)
-  - PMCalendar (~> 0.3.2)
 
 SPEC CHECKSUMS:
   AFNetworking: e1d86c2a96bb5d2e7408da36149806706ee122fe
   Masonry: 4972309f2f134de9dd312f4dc4a21359b50e6caa
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
-  PMCalendar: 9fdd7486385dfe59717b4a864a73ed1b907dcf5d
 
 COCOAPODS: 0.37.1
