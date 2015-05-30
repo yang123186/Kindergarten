@@ -29,11 +29,9 @@ static NSString *title=@"签到详情";
 @implementation AttendanceDetailController
 
 
--(instancetype)initWithModal:(AttendanceModal *)modal{
+-(instancetype)initWithModal:(AttendanceIndex *)modal{
     if(self=[super init]){
-        self.imageView=[[UIImageView alloc]init];
-        self.attendanceSourceLabel=[[UITableViewCell alloc]init];
-        self.attendanceDateLabel=[[UITableViewCell alloc]init];
+        self.modal=modal;
     }
     return self;
 }
@@ -44,6 +42,7 @@ static NSString *title=@"签到详情";
     self.title=title;
     self.view.backgroundColor=GRAY_BACKGROUND;
     
+    self.imageView=[[UIImageView alloc]init];
     [self.imageView setCircleRadius:circleRadius];
     self.imageView.translatesAutoresizingMaskIntoConstraints=NO;
     [self.view addSubview:self.imageView];
@@ -54,8 +53,9 @@ static NSString *title=@"签到详情";
         make.height.equalTo([NSNumber numberWithDouble:imageViewHeight]);
     }];
     
-    
+    self.attendanceSourceLabel=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
     [self.attendanceSourceLabel setCircleRadius:circleRadius];
+    [self.attendanceSourceLabel.detailTextLabel setTextColor:BLACK_COLOR];
     [self.attendanceSourceLabel.textLabel setText:attendanceSourceTitle];
     self.attendanceSourceLabel.translatesAutoresizingMaskIntoConstraints=NO;
     [self.view addSubview:self.attendanceSourceLabel];
@@ -67,7 +67,10 @@ static NSString *title=@"签到详情";
     }];
     
     
+    
+    self.attendanceDateLabel=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
     [self.attendanceDateLabel setCircleRadius:circleRadius];
+    [self.attendanceDateLabel.detailTextLabel setTextColor:BLACK_COLOR];
     [self.attendanceDateLabel.textLabel setText:attendanceDateTitle];
     self.attendanceDateLabel.translatesAutoresizingMaskIntoConstraints=NO;
     [self.view addSubview:self.attendanceDateLabel];
@@ -79,15 +82,19 @@ static NSString *title=@"签到详情";
     }];
     
     if(self.modal){
-        [self setViewForModal:self.modal];
+        [self setViewForSelfModal];
     }
     
 }
 
--(void)setViewForModal:(AttendanceModal*)modal{
-    [self.imageView setImageWithURL:[NSURL URLWithString:self.modal.picture]];
-    [self.attendanceSourceLabel.detailTextLabel setText:self.modal.source];
-    [self.attendanceDateLabel.detailTextLabel setText:self.modal.time];
+-(void)setViewForModal:(AttendanceIndex*)modal{
+    [self.imageView setImageWithURL:[NSURL URLWithString:modal.picture]];
+    [self.attendanceSourceLabel.detailTextLabel setText:modal.signInSource];
+    [self.attendanceDateLabel.detailTextLabel setText:[NSString stringWithFormat:@"%@ %@",modal.datePreFix,modal.arriveTime]];
+}
+
+-(void)setViewForSelfModal{
+    [self setViewForModal:self.modal];
 }
 
 @end

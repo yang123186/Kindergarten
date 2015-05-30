@@ -26,6 +26,10 @@
 
 -(BOOL)checkWithRegularExpression:(NSString*)regularExpression;
 
+-(NSString*)UTCPrefixDate;
+
+-(NSString*)UTCTime;
+
 @end
 
 

@@ -40,7 +40,6 @@ static const    CGFloat commentGroupTop=10.0f;
 -(instancetype)init{
     if(self=[super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:socialListCellIdentifier]){
         [self createBaseView];
-//        self.selectionStyle=UITableViewCellSelectionStyleNone;
     }
     return self;
 }

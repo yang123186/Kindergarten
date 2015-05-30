@@ -74,11 +74,10 @@ static NSString *settingBarButonTitle=@"设置";
     /***********TestArea********/
     [self.topImageView setImage:[UIImage imageNamed:@"xiaoye"]];
     [self.topicView setTopic:@"今日话题：你会鼓励孩纸吗" detail:@"已有1000+位👪参与了讨论."];
-    UIImage *image=[UIImage imageNamed:@"xiaoye"];
     UIImage *okImage=[UIImage imageNamed:@"OKOKOKOK"];
     UIImage *noimg=[UIImage imageNamed:@"NONONONO"];
     UIImage *ingimg=[UIImage imageNamed:@"INGING"];
-    NSArray *funcicons=[NSArray arrayWithObjects:ingimg,okImage,noimg,ingimg,ingimg,noimg,okImage, nil];
+    NSArray *funcicons=[NSArray arrayWithObjects:okImage,okImage,noimg,ingimg,ingimg,noimg,okImage, nil];
     NSArray *topicons=[NSArray arrayWithObjects:okImage,ingimg,noimg, nil];
     NSArray *boicons=[NSArray arrayWithObjects:noimg,noimg,noimg, nil];
 

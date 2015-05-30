@@ -14,8 +14,8 @@ static const CGFloat labelHeight=20.0f;
 
 @implementation CommonCollectionCell
 
--(instancetype)init{
-    if (self=[super init]) {
+-(instancetype)initWithFrame:(CGRect)frame{
+    if (self=[super initWithFrame:frame]) {
         [self createView];
     }
     return self;
@@ -24,11 +24,11 @@ static const CGFloat labelHeight=20.0f;
 -(void)createView{
     self.imageView=[[UIImageView alloc]init];
     self.imageView.translatesAutoresizingMaskIntoConstraints=NO;
-    [self addSubview:self.imageView];
+    [self.contentView addSubview:self.imageView];
     [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.mas_top);
-        make.left.equalTo(self.mas_left);
-        make.right.equalTo(self.mas_right);
+        make.top.equalTo(self.contentView.mas_top);
+        make.left.equalTo(self.contentView.mas_left);
+        make.right.equalTo(self.contentView.mas_right);
         make.height.equalTo([NSNumber numberWithDouble:imageEdgeLength]);
     }];
     
@@ -38,8 +38,8 @@ static const CGFloat labelHeight=20.0f;
     [self addSubview:self.textLabel];
     [self.textLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.imageView.mas_bottom);
-        make.left.equalTo(self.mas_left);
-        make.right.equalTo(self.mas_right);
+        make.left.equalTo(self.contentView.mas_left);
+        make.right.equalTo(self.contentView.mas_right);
         make.height.equalTo([NSNumber numberWithDouble:labelHeight]);
     }];
     
@@ -48,6 +48,15 @@ static const CGFloat labelHeight=20.0f;
 -(void)setViewImageWithURL:(NSString *)url text:(NSString *)text{
     [self.imageView setImageWithURL:[NSURL URLWithString:url]];
     [self.textLabel setText:text];
+}
+
+
++(CGFloat)height{
+    return imageEdgeLength+labelHeight;
+}
+
++(CGFloat)width{
+    return imageEdgeLength;
 }
 
 @end

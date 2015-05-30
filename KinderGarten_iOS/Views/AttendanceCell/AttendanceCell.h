@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AttendanceModal.h"
+#import "AttendanceIndex.h"
 #import "ImageLabel.h"
 
 static NSString *attendanceCellIdentifier=@"AttendanceCell";
@@ -20,9 +20,9 @@ static NSString *attendanceCellIdentifier=@"AttendanceCell";
 
 -(instancetype)init;
 
--(void)setViewForModal:(AttendanceModal*)modal;
+-(void)setViewForModal:(AttendanceIndex*)modal;
 
--(instancetype)initWithModal:(AttendanceModal*)modal;
+-(instancetype)initWithModal:(AttendanceIndex*)modal;
 
 
 +(CGFloat)height;

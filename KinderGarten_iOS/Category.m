@@ -51,6 +51,15 @@
 
 }
 
+
+-(NSString*)UTCPrefixDate{
+    return [self substringWithRange:NSMakeRange(0, 10)];
+}
+
+-(NSString*)UTCTime{
+    return [self substringWithRange:NSMakeRange(11, 5)];
+}
+
 @end
 
 

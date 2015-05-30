@@ -25,9 +25,6 @@
         self.modal=[[SocialListContainer alloc]init];
         self.tableView.delegate=self;
         self.tableView.dataSource=self;
-        self.tableView.rowHeight=UITableViewAutomaticDimension;
-        self.tableView.estimatedRowHeight = 300.0;
-        [self.tableView registerClass:[SocialListCell class] forCellReuseIdentifier:socialListCellIdentifier];
     }
     return self;
 }
@@ -93,12 +90,12 @@
     if(!cell){
         cell=[[SocialListCell alloc]init];
     }
-
+    [cell setViewForModal:[self.modal socialListModalAtIndex:indexPath.row]];
     return cell;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return  300.0f;
-}
+//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    return  300.0f;
+//}
 
 @end

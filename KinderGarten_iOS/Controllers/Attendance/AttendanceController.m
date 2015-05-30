@@ -10,7 +10,8 @@
 #import "General.h"
 #import "AttendanceDetailController.h"
 
-static NSString *observeContainerKey=@"container";
+static NSString* const observeContainerKey=@"container";
+static NSString* const observeManagerKey=@"manager";
 
 @interface AttendanceController ()
 
@@ -21,6 +22,7 @@ static NSString *observeContainerKey=@"container";
 -(instancetype)init{
     if(self=[super init]){
         self.container=[[AttendanceContainer alloc]init];
+        self.manager=[[AttendanceManager alloc]init];
     }
     return self;
 }
@@ -29,26 +31,31 @@ static NSString *observeContainerKey=@"container";
     [super viewDidLoad];
     self.viewController=[[AttendanceViewController alloc]initWithRootController:self];
     [self addObserver:self forKeyPath:observeContainerKey options:NSKeyValueObservingOptionNew context:nil];
+    [self addObserver:self forKeyPath:observeManagerKey options:NSKeyValueObservingOptionNew context:nil];
     [self requestData];
 }
 
 
 -(void)didSelectedItemAtIndex:(NSInteger)index{
-    AttendanceDetailController *attendanceDetailCtrl=[[AttendanceDetailController alloc]initWithModal:[self.container modalAtIndexl:index]];
+    AttendanceDetailController *attendanceDetailCtrl=[[AttendanceDetailController alloc]initWithModal:[self.manager modalAtIndex:index]];
     [self.navigationController pushViewController:attendanceDetailCtrl animated:YES];
 }
 
 #pragma mark KVO
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
-    if([keyPath isEqualToString:observeContainerKey]){
+    if([keyPath isEqualToString:observeManagerKey]){
         [self.viewController.tableView reloadData];
+    }
+    else if([keyPath isEqualToString:observeContainerKey]){
+        self.manager=[self.manager initWithContainer:self.container];
     }
 }
 
 
 -(void)dealloc{
     [self removeObserver:self forKeyPath:observeContainerKey];
+    [self removeObserver:self forKeyPath:observeManagerKey];
 }
 
 

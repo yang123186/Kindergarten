@@ -64,4 +64,9 @@ static const    CGFloat labelHeight=25.0f;
     [self.flowerNumberLbel setText:nil];
 }
 
+-(void)setViewForImageUrl:(NSString*)url nameLabelText:(NSString*)name{
+    [self.imageView setImageWithURL:[NSURL URLWithString:url]];
+    [self.nameLabel setText:name];
+}
+
 @end

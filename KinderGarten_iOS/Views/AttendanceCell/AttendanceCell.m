@@ -24,7 +24,7 @@ static  const   CGFloat padding=10.0f;
     return self;
 }
 
--(instancetype)initWithModal:(AttendanceModal *)modal{
+-(instancetype)initWithModal:(AttendanceIndex *)modal{
     if(self=[self init]){
         [self setViewForModal:modal];
     }
@@ -47,6 +47,8 @@ static  const   CGFloat padding=10.0f;
     
     self.dateLabel=[[UILabel alloc]init];
     self.dateLabel.backgroundColor=PINK_COLOR;
+    [self.dateLabel setTextAlignment:NSTextAlignmentCenter];
+    [self.dateLabel setTextColor:WHITE_COLOR];
     self.dateLabel.translatesAutoresizingMaskIntoConstraints=NO;
     [backView addSubview:self.dateLabel];
     [self.dateLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -80,8 +82,21 @@ static  const   CGFloat padding=10.0f;
 }
 
 
--(void)setViewForModal:(AttendanceModal *)modal{
-    
+-(void)setViewForModal:(AttendanceIndex *)modal{
+    [self.dateLabel setText:modal.datePreFix];
+    if(modal.arriveTime){
+        [self.arriveLabel.textLabel setText:modal.arriveTime];
+    }
+    else{
+        [self.arriveLabel.textLabel setText:@"未知"];
+    }
+    if(modal.leaveTime){
+        [self.leaveLabel.textLabel setText:modal.leaveTime];
+    }
+    else{
+        [self.leaveLabel.textLabel setText:@"未知"];
+    }
+
 }
 
 

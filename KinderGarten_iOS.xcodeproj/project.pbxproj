@@ -44,6 +44,8 @@
 		731F082A1B1819F6004004CA /* RecipeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 731F08291B1819F6004004CA /* RecipeCell.m */; };
 		7322CDBB1B194C56001DD6A3 /* ScheduleModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7322CDBA1B194C56001DD6A3 /* ScheduleModal.m */; };
 		7322CDBF1B194EE2001DD6A3 /* ScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7322CDBE1B194EE2001DD6A3 /* ScheduleCell.m */; };
+		7322CDC21B19589F001DD6A3 /* AttendanceIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 7322CDC11B19589F001DD6A3 /* AttendanceIndex.m */; };
+		7322CDC51B196D94001DD6A3 /* StudentNameListMOdal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7322CDC41B196D94001DD6A3 /* StudentNameListMOdal.m */; };
 		7325ABF91B0EB808004D5FC3 /* UserSettingModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 7325ABF81B0EB808004D5FC3 /* UserSettingModal.m */; };
 		7325ABFD1B0EC861004D5FC3 /* SystemMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7325ABFC1B0EC861004D5FC3 /* SystemMessageController.m */; };
 		7325AC011B0ED70A004D5FC3 /* PersonalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7325AC001B0ED70A004D5FC3 /* PersonalController.m */; };
@@ -192,6 +194,10 @@
 		7322CDBA1B194C56001DD6A3 /* ScheduleModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleModal.m; path = Modals/ScheduleModal/ScheduleModal.m; sourceTree = "<group>"; };
 		7322CDBD1B194EE2001DD6A3 /* ScheduleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleCell.h; path = Views/ScheduleCell/ScheduleCell.h; sourceTree = "<group>"; };
 		7322CDBE1B194EE2001DD6A3 /* ScheduleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleCell.m; path = Views/ScheduleCell/ScheduleCell.m; sourceTree = "<group>"; };
+		7322CDC01B19589F001DD6A3 /* AttendanceIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AttendanceIndex.h; path = Controllers/Attendance/AttendanceIndex.h; sourceTree = "<group>"; };
+		7322CDC11B19589F001DD6A3 /* AttendanceIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AttendanceIndex.m; path = Controllers/Attendance/AttendanceIndex.m; sourceTree = "<group>"; };
+		7322CDC31B196D94001DD6A3 /* StudentNameListMOdal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StudentNameListMOdal.h; path = Modals/StudentNameListModal/StudentNameListMOdal.h; sourceTree = "<group>"; };
+		7322CDC41B196D94001DD6A3 /* StudentNameListMOdal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StudentNameListMOdal.m; path = Modals/StudentNameListModal/StudentNameListMOdal.m; sourceTree = "<group>"; };
 		7325ABF71B0EB808004D5FC3 /* UserSettingModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserSettingModal.h; path = Modals/UserSettingModal/UserSettingModal.h; sourceTree = "<group>"; };
 		7325ABF81B0EB808004D5FC3 /* UserSettingModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSettingModal.m; path = Modals/UserSettingModal/UserSettingModal.m; sourceTree = "<group>"; };
 		7325ABFB1B0EC861004D5FC3 /* SystemMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SystemMessageController.h; path = Controllers/SystemMessageController/SystemMessageController.h; sourceTree = "<group>"; };
@@ -505,6 +511,8 @@
 			children = (
 				731F07D01B15E2B2004004CA /* NameListController.h */,
 				731F07D11B15E2B2004004CA /* NameListController.m */,
+				7322CDC31B196D94001DD6A3 /* StudentNameListMOdal.h */,
+				7322CDC41B196D94001DD6A3 /* StudentNameListMOdal.m */,
 			);
 			name = NameListController;
 			sourceTree = "<group>";
@@ -1079,6 +1087,8 @@
 				73DB4B021B145B010038D685 /* AttendanceController.m */,
 				73DB4B051B145B5D0038D685 /* AttendanceViewController.h */,
 				73DB4B061B145B5D0038D685 /* AttendanceViewController.m */,
+				7322CDC01B19589F001DD6A3 /* AttendanceIndex.h */,
+				7322CDC11B19589F001DD6A3 /* AttendanceIndex.m */,
 			);
 			name = AttendanceListController;
 			sourceTree = "<group>";
@@ -1257,6 +1267,7 @@
 			files = (
 				7372021A1B06D35900F9EE56 /* NetWorking.m in Sources */,
 				7358C53A1B1057F5001CC5E2 /* UIView+Emotion.m in Sources */,
+				7322CDC51B196D94001DD6A3 /* StudentNameListMOdal.m in Sources */,
 				731F081D1B17F2D4004004CA /* PersonFlowerTopView.m in Sources */,
 				73B379031B0DFF4C004012B2 /* ModifyPasswordController.m in Sources */,
 				73A07E171B0C989E007CF72F /* MainGroupView.m in Sources */,
@@ -1345,6 +1356,7 @@
 				7358C52B1B0F47CB001CC5E2 /* ForgetViewController.m in Sources */,
 				731F07F31B16A6B9004004CA /* CommentLabel.m in Sources */,
 				73A07E2E1B0D6EDE007CF72F /* IconList.m in Sources */,
+				7322CDC21B19589F001DD6A3 /* AttendanceIndex.m in Sources */,
 				731F07F01B16A32F004004CA /* PraiseLabel.m in Sources */,
 				73A07E0F1B0C8F92007CF72F /* ClassLitemodal.m in Sources */,
 				7322CDBF1B194EE2001DD6A3 /* ScheduleCell.m in Sources */,

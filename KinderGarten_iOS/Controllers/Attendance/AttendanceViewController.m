@@ -49,13 +49,17 @@ static const CGFloat    tableViewPaddingHorizontal=10.0f;
 
 #pragma mark UITableViewDelegate & UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.controller.container.container.count;
+    return self.controller.manager.count;
 //    return 10;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    AttendanceCell *cell=[[AttendanceCell alloc]init];
+    AttendanceCell *cell=[tableView dequeueReusableCellWithIdentifier:attendanceCellIdentifier];
+    if(!cell){
+        cell=[[AttendanceCell alloc]init];
+    }
+    [cell setViewForModal:[self.controller.manager modalAtIndex:indexPath.row]];
 
     return cell;
 }

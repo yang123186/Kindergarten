@@ -9,6 +9,8 @@
 #import "HonorListController.h"
 #import "General.h"
 #import "PersonFlowerController.h"
+#import "NameListController.h"
+#import "SuperNavgationController.h"
 
 static const    NSUInteger  titleNumber=3;
 
@@ -78,6 +80,7 @@ static NSString *sendFlowerButtonTitle=@"立即送红花";
     [self.sendFlowerButton setTitle:sendFlowerButtonTitle forState:UIControlStateNormal];
     [self.sendFlowerButton setTitleColor:WHITE_COLOR forState:UIControlStateNormal];
     [self.sendFlowerButton setBackgroundColor:PINK_COLOR];
+    [self.sendFlowerButton addTarget:self action:@selector(presentSendFlowerController) forControlEvents:UIControlEventTouchUpInside];
     self.sendFlowerButton.translatesAutoresizingMaskIntoConstraints=NO;
     [self.view addSubview:self.sendFlowerButton];
     [self.sendFlowerButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -168,6 +171,13 @@ static NSString *sendFlowerButtonTitle=@"立即送红花";
     }
 }
 
+
+-(void)presentSendFlowerController{
+    
+    NameListController *namelistCtrl=[[NameListController alloc]init];
+    SuperNavgationController *navShellCtrl=[[SuperNavgationController alloc]initWithRootViewController:namelistCtrl];
+    [self presentViewController:navShellCtrl animated:YES completion:nil];
+}
 
 
 

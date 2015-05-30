@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StudentNameListMOdal.h"
 
 @interface NameListController : UICollectionViewController
 
+@property   (nonatomic,strong)  FlowerStudentsContainer   *container;
 
+-(instancetype)init;
 
 @end

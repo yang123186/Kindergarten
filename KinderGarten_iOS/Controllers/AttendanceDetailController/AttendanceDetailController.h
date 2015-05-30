@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AttendanceModal.h"
+#import "AttendanceIndex.h"
 
 @interface AttendanceDetailController : UIViewController
 
@@ -15,8 +15,8 @@
 @property   (nonatomic,strong)  UITableViewCell *attendanceSourceLabel;
 @property   (nonatomic,strong)  UITableViewCell *attendanceDateLabel;
 
-@property   (nonatomic,strong)  AttendanceModal *modal;
+@property   (nonatomic,strong)  AttendanceIndex *modal;
 
--(instancetype)initWithModal:(AttendanceModal*)modal;
+-(instancetype)initWithModal:(AttendanceIndex*)modal;
 
 @end

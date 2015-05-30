@@ -26,6 +26,9 @@ static const    CGFloat imageEdgeLength=100.0f;
 }
 
 -(void)viewCreate{
+    [self setBackgroundColor:GRAY_BACKGROUND];
+    
+    
     self.nameLabel=[[UILabel alloc]init];
     self.nameLabel.translatesAutoresizingMaskIntoConstraints=NO;
     [self addSubview:self.nameLabel];

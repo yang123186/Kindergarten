@@ -23,5 +23,5 @@ static NSString *FlowerCollectionCellIdentifier=@"FlowerCollectionCell";
 -(instancetype)initWithFrame:(CGRect)frame;
 
 -(void)setViewForModal:(PersonalFlowerModal*)modal;
-
+-(void)setViewForImageUrl:(NSString*)url nameLabelText:(NSString*)name;
 @end

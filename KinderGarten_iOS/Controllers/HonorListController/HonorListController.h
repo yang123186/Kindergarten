@@ -41,4 +41,6 @@ static const    CGFloat     sendFlowerButtonHeight=40.0f;
 -(void)requestThisWeekHonorList;
 -(void)requestThisMonthHonorList;
 
+-(void)presentSendFlowerController;
+
 @end

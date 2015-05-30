@@ -14,8 +14,12 @@
 @property   (nonatomic,strong)  UIImageView *imageView;
 @property   (nonatomic,strong)  UILabel     *textLabel;
 
--(instancetype)init;
+-(instancetype)initWithFrame:(CGRect)frame;
 
 -(void)setViewImageWithURL:(NSString*)url text:(NSString*)text;
 
+
++(CGFloat)height;
+
++(CGFloat)width;
 @end

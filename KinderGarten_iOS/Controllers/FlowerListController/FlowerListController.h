@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FlowerModal.h"
+
 
 @interface FlowerListController : UICollectionViewController
 
-@property   (nonatomic,copy)    NSString    *studentId;
+@property   (nonatomic,strong)  FlowerContainer *container;
 
 -(instancetype)initWithStudentId:(NSString*)studentId;
 
