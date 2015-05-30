@@ -11,12 +11,12 @@
 @interface RichLabel()
 
 @property (nonatomic, retain) NSLayoutManager *layoutManager;
-
 @property (nonatomic, retain) NSTextContainer *textContainer;
-
 @property (nonatomic, retain) NSTextStorage *textStorage;
 
+
 @property (nonatomic, strong) NSMutableArray *linkRanges;
+
 
 @property (nonatomic, assign) BOOL isTouchMoved;
 
@@ -24,14 +24,16 @@
 
 @property (nonatomic,strong)  NSMutableArray *userRanges;
 
+@property   (nonatomic,assign)  CGFloat width;
+
 @end
 
 @implementation RichLabel
 
-- (id)initWithFrame:(CGRect)frame
+- (instancetype)initWithWidth:(CGFloat)width
 {
-    self = [super initWithFrame:frame];
-    if (self){
+    if(self = [super init]){
+        self.width=width;
         self.userRanges=[[NSMutableArray alloc]initWithCapacity:0];
         [self setupTextSystem];
     }
@@ -39,22 +41,9 @@
 }
 
 
-
-- (void)setBounds:(CGRect)bounds
-{
-    [super setBounds:bounds];
-    self.textContainer.size = self.bounds.size;
-}
-
-- (void)setNumberOfLines:(NSInteger)numberOfLines
-{
-    [super setNumberOfLines:numberOfLines];
-    self.textContainer.maximumNumberOfLines = numberOfLines;
-}
-
 - (void)setText:(NSString *)text
 {
-    [super setText:text];
+//    [super setText:text];
     NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:text
                                                                          attributes:[self attributesFromProperties]];
     [self updateTextStoreWithAttributedString:attributedText];
@@ -67,20 +56,15 @@
     [mutableAttributeString addAttributes:[self attributesFromProperties] range:NSMakeRange(0, mutableAttributeString.length)];
     [self updateTextStoreWithAttributedString:mutableAttributeString];
 }
-- (void)layoutSubviews
-{
-    [super layoutSubviews];
-    self.textContainer.size = self.bounds.size;
-}
 
 
 - (void)setupTextSystem
 {
     self.textContainer = [[NSTextContainer alloc] init];
     self.textContainer.lineFragmentPadding = 0;
-    self.textContainer.maximumNumberOfLines = 0;//self.numberOfLines;
-    self.textContainer.lineBreakMode = NSLineBreakByTruncatingTail;//self.lineBreakMode;
-    self.textContainer.size = self.frame.size;
+    self.textContainer.maximumNumberOfLines = 0;//no limit
+    self.textContainer.lineBreakMode = NSLineBreakByWordWrapping;//self.lineBreakMode;
+    self.textContainer.size = CGSizeMake(self.width,MAXFLOAT);
     
     self.layoutManager = [[NSLayoutManager alloc] init];
     self.layoutManager.delegate = self;
@@ -90,19 +74,9 @@
     
     self.userInteractionEnabled = YES;
     
-//    _automaticLinkDetectionEnabled = YES;
     
-    _linkDetectionTypes = LinkDetectionTypeAll;
-    
-    self.linkBackgroundColor = [UIColor colorWithWhite:0.95 alpha:1.0];
-    self.linkColor = [UIColor blueColor];
-    self.linkHighlightColor = [UIColor redColor];
     
     [self updateTextStoreWithText];
-    
-    UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressLabel:)];
-    [self addGestureRecognizer:longPressGesture];
-    
     //默认的回调
     self.linkTapHandler = ^(RichLabelLinkType linkType, NSString *string, NSRange range) {
         if(linkType==LinkTypeUserURL){
@@ -111,9 +85,6 @@
         else{
             DLog(@"other,may be phone");
         }
-    };
-    self.linkLongPressHandler = ^(RichLabelLinkType linkType, NSString *string, NSRange range){
-        NSLog(@"Link Long Press Handler");
     };
 }
 
@@ -170,25 +141,25 @@
     return nil;
 }
 
-// Applies background colour to selected range. Used to hilight touched links
+// Applies background color to selected range. Used to hilight touched links
 - (void)setSelectedRange:(NSRange)range
 {
-    //删除之前选中的链接属性
+    //delete selected color when finger has touched up
     if (self.selectedRange.length && !NSEqualRanges(self.selectedRange, range)) {
         [self.textStorage removeAttribute:NSBackgroundColorAttributeName
                                     range:self.selectedRange];
         [self.textStorage addAttribute:NSForegroundColorAttributeName
-                                 value:self.linkColor
+                                 value:BLUE_LINK_COLOR
                                  range:self.selectedRange];
     }
     
-    //选中链接绘制新颜色
+    //draw highlight color
     if (range.length) {
         [self.textStorage addAttribute:NSBackgroundColorAttributeName
-                                 value:self.linkBackgroundColor
+                                 value:GRAY_HIGHLIGHT_LINK_BACKGROUND_COLOR
                                  range:range];
         [self.textStorage addAttribute:NSForegroundColorAttributeName
-                                 value:self.linkHighlightColor
+                                 value:BLUE_LINK_COLOR
                                  range:range];
     }
     _selectedRange = range;
@@ -220,6 +191,8 @@
 
 - (void)updateTextStoreWithAttributedString:(NSAttributedString *)attributedString
 {
+    self.textContainer.size = self.frame.size;
+
     if (attributedString.length != 0){
         attributedString = [RichLabel sanitizeAttributedString:attributedString];
     }
@@ -249,7 +222,7 @@
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithAttributedString:string];
     
     NSDictionary *attributes = @{
-                                  NSForegroundColorAttributeName : self.linkColor
+                                  NSForegroundColorAttributeName : BLUE_LINK_COLOR
                                 };
     
     for (NSDictionary *dictionary in linkRanges)
@@ -322,23 +295,16 @@
     return restyled;
 }
 
-/*
- * 可扩展部分,不同的Link类型
- */
+
 
 
 - (NSMutableArray *)getRangesForLinks:(NSAttributedString *)text
 {
     NSMutableArray *rangesForLinks = [[NSMutableArray alloc] init];
-    //电话号码
-    if (self.linkDetectionTypes & LinkDetectionTypePhoneNumber)
-    {
-        [rangesForLinks addObjectsFromArray:[self getRangesForPhoneNumbers:text.string]];
-    }
+
+    [rangesForLinks addObjectsFromArray:[self getRangesForPhoneNumbers:text.string]];//seek for phone link
     
-    if(self.linkDetectionTypes &LinkDetectionTypeUserURL){
-        [rangesForLinks addObjectsFromArray:self.userRanges];
-    }
+    [rangesForLinks addObjectsFromArray:self.userRanges];// add property of user info
     
     return rangesForLinks;
 }
@@ -487,23 +453,6 @@
 }
 #pragma mark - Layout manager delegate
 
-#pragma mark - Interactions
-- (IBAction)longPressLabel:(UILongPressGestureRecognizer *)recognizer
-{
-    if ((recognizer.view != self) || (recognizer.state != UIGestureRecognizerStateBegan)) {
-        return;
-    }
-    CGPoint location = [recognizer locationInView:self];
-    NSDictionary *link = [self getLinkAtLocation:location];
-    if (link) {
-        NSRange range = [[link objectForKey:@"range"] rangeValue];
-        NSString *linkString = [link objectForKey:@"link"];
-        RichLabelLinkType linkType = (RichLabelLinkType)[[link objectForKey:@"linkType"] intValue];
-        self.linkLongPressHandler(linkType, linkString, range);
-    } else {
-        return;
-    }
-}
 
 /*
  * 触摸事件

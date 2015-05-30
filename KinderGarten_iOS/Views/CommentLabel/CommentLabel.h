@@ -11,8 +11,12 @@
 @interface CommentLabel : RichLabel
 @property   (nonatomic,readonly,assign) BOOL constraintSetted;
 
--(instancetype)init;
+@property   (nonatomic,assign)  CGFloat width;
+
+-(instancetype)initWithWidth:(CGFloat)width;
 
 -(void)setViewForModal:(SocialCommentModal*)modal;
+
+-(CGFloat)height;
 
 @end

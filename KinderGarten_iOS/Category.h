@@ -30,6 +30,8 @@
 
 -(NSString*)UTCTime;
 
+-(CGFloat)heightWithFontSize:(CGFloat)fontSize andWidth:(CGFloat)width;
+
 @end
 
 

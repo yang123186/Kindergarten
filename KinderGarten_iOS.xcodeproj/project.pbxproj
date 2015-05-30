@@ -642,6 +642,28 @@
 			name = SubView;
 			sourceTree = "<group>";
 		};
+		7322CDC91B199628001DD6A3 /* CellSubView */ = {
+			isa = PBXGroup;
+			children = (
+				731F07EE1B16A32F004004CA /* PraiseLabel.h */,
+				731F07EF1B16A32F004004CA /* PraiseLabel.m */,
+				7358C54E1B1178AB001CC5E2 /* MediaView.h */,
+				7358C54F1B1178AB001CC5E2 /* MediaView.m */,
+				7358C5541B117B3E001CC5E2 /* commentGroupView.h */,
+				7358C5551B117B3E001CC5E2 /* commentGroupView.m */,
+				731F07F11B16A6B9004004CA /* CommentLabel.h */,
+				731F07F21B16A6B9004004CA /* CommentLabel.m */,
+			);
+			name = CellSubView;
+			sourceTree = "<group>";
+		};
+		7322CDD01B19BDE1001DD6A3 /* WXtext */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = WXtext;
+			sourceTree = "<group>";
+		};
 		7325ABF61B0EB7D6004D5FC3 /* SettingsModal */ = {
 			isa = PBXGroup;
 			children = (
@@ -720,6 +742,7 @@
 		7358C5331B105720001CC5E2 /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
+				7322CDD01B19BDE1001DD6A3 /* WXtext */,
 				731F07E71B15FD0E004004CA /* RichLabel */,
 				731F07DF1B15EEAE004004CA /* CommonCollectionCell */,
 				7358C5341B10572A001CC5E2 /* EmojiProcessor */,
@@ -759,16 +782,9 @@
 		7358C54A1B11770D001CC5E2 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				7322CDC91B199628001DD6A3 /* CellSubView */,
 				7358C54B1B117741001CC5E2 /* SocialListCell.h */,
 				7358C54C1B117741001CC5E2 /* SocialListCell.m */,
-				731F07EE1B16A32F004004CA /* PraiseLabel.h */,
-				731F07EF1B16A32F004004CA /* PraiseLabel.m */,
-				7358C54E1B1178AB001CC5E2 /* MediaView.h */,
-				7358C54F1B1178AB001CC5E2 /* MediaView.m */,
-				7358C5541B117B3E001CC5E2 /* commentGroupView.h */,
-				7358C5551B117B3E001CC5E2 /* commentGroupView.m */,
-				731F07F11B16A6B9004004CA /* CommentLabel.h */,
-				731F07F21B16A6B9004004CA /* CommentLabel.m */,
 			);
 			name = SubViews;
 			sourceTree = "<group>";
@@ -1180,6 +1196,7 @@
 				TargetAttributes = {
 					73041C091B05E4630064267C = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = AYP2G6659X;
 					};
 					73041C221B05E4630064267C = {
 						CreatedOnToolsVersion = 6.3;

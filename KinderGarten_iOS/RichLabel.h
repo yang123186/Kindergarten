@@ -34,20 +34,12 @@ typedef void (^LabelHandler)(RichLabelLinkType linkType, NSString *string, NSRan
 
 @interface RichLabel : UILabel <NSLayoutManagerDelegate>
 
-@property (nonatomic, strong) UIColor *linkColor;
-
-@property (nonatomic, strong) UIColor *linkHighlightColor;
-
-@property (nonatomic, strong) UIColor *linkBackgroundColor;
-
 @property (nonatomic, assign) RichLabelLinkDetectionTypes linkDetectionTypes;
 
 @property (nonatomic, copy) LabelHandler linkTapHandler;
 
-@property (nonatomic, copy) LabelHandler linkLongPressHandler;
 
-
-
+- (instancetype)initWithWidth:(CGFloat)width;
 //Link scheme user://
 -(void)appendUserWithName:(NSString*)name UserLink:(NSString*)link;
 

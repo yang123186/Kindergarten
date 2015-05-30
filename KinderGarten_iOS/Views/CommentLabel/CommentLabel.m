@@ -10,8 +10,9 @@
 
 @implementation CommentLabel
 
--(instancetype)init{
-    if(self=[super init]){
+-(instancetype)initWithWidth:(CGFloat)width{
+    if(self=[super initWithWidth:width]){
+        self.width=width;
         _constraintSetted=NO;
     }
     return self;
@@ -21,6 +22,12 @@
 -(void)setViewForModal:(SocialCommentModal *)modal{
     [self appendUserWithName:modal.cUserBrief.appellation UserLink:modal.cUserBrief._id];
     [self appendContent:[NSString stringWithFormat:@" : %@",modal.content]];
+}
+
+-(CGFloat)height{
+    CGFloat heigt=[self.attributedText boundingRectWithSize:CGSizeMake(self.width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin context:nil].size.height;
+//    NSLog(@"高度是 %f",heigt);
+    return heigt;
 }
 
 @end

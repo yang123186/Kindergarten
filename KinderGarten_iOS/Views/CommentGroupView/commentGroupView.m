@@ -26,10 +26,11 @@
         }
     }
     [self.comments removeAllObjects];
+    _height=0;
     
     UIView *preView=nil;
     for(SocialCommentModal *modal in container.aComments){
-        CommentLabel *commentLabel=[[CommentLabel alloc]init];
+        CommentLabel *commentLabel=[[CommentLabel alloc]initWithWidth:[Screen width]];
         [commentLabel setViewForModal:modal];
         [self.comments addObject:commentLabel];
         commentLabel.translatesAutoresizingMaskIntoConstraints=NO;
@@ -47,9 +48,10 @@
                 make.bottom.equalTo(self.mas_bottom);
             }
             else{
-                make.height.equalTo(commentLabel.mas_height);
+                make.height.equalTo([NSNumber numberWithDouble:[commentLabel height]]);
             }
         }];
+        _height+=[commentLabel height];
         preView=commentLabel;
     }
     [self setNeedsUpdateConstraints];
@@ -58,7 +60,7 @@
 }
 
 
--(instancetype)initWithCommentsContainer:(SocialCommentContainer *)container{
+-(instancetype)initWithCommentsContainer:(SocialCommentContainer *)container width:(CGFloat)width{
     if(self=[super init]){
         if(!self.comments){
             self.comments=[[NSMutableArray alloc]initWithCapacity:0];

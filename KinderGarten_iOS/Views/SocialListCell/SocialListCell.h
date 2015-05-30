@@ -28,7 +28,8 @@ static NSString *socialListCellIdentifier=@"SOCIAL_LIST_CELL";
 @property   (nonatomic,strong)  PraiseLabel   *praiseLabel;
 @property   (nonatomic,strong)  CommentGroupView    *commentGroupView;
 
-
+@property   (nonatomic,assign)  CGFloat     contentWidth;
+@property   (nonatomic,weak)    SocialListModal *modal;
 
 -(instancetype)init;
 

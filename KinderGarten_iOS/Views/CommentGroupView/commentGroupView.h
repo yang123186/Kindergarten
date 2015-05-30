@@ -20,6 +20,6 @@
 
 -(void)setViewForCommentsContainer:(SocialCommentContainer*)container;
 
--(instancetype)initWithCommentsContainer:(SocialCommentContainer*)container;
+-(instancetype)initWithCommentsContainer:(SocialCommentContainer*)container width:(CGFloat)width;
 
 @end

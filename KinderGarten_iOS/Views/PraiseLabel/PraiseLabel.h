@@ -13,4 +13,6 @@
 
 -(void)setViewForContainer:(SocialLikesContainer*)container;
 -(instancetype)init;
+
+-(CGFloat)height;
 @end

@@ -15,7 +15,7 @@
 @interface SocialListController ()
 
 @property   (nonatomic,strong)  SocialListContainer *modal;
-
+@property   (nonatomic,strong)  NSMutableArray      *cellStorage;
 @end
 
 @implementation SocialListController
@@ -23,6 +23,7 @@
 -(instancetype)init{
     if(self=[super initWithStyle:UITableViewStylePlain]){
         self.modal=[[SocialListContainer alloc]init];
+        self.cellStorage=[[NSMutableArray alloc]init];
         self.tableView.delegate=self;
         self.tableView.dataSource=self;
     }
@@ -50,6 +51,7 @@
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
     if([keyPath isEqualToString:@"modal"]){
+        [self cellReload];
         [self.tableView reloadData];
     }
     else{
@@ -57,12 +59,25 @@
     }
 }
 
+-(void)cellReload{
+    [self.cellStorage removeAllObjects];
+    for (NSInteger itr=0; itr<self.modal.aSocials.count; ++itr) {
+        SocialListModal *modal=[self.modal socialListModalAtIndex:itr];
+        SocialListCell *cell=[[SocialListCell alloc]init];
+        [cell setViewForModal:modal];
+//        [cell.contentView setNeedsLayout];
+//        [cell.contentView layoutIfNeeded];
+//        [cell setNeedsUpdateConstraints];
+//        [cell updateConstraintsIfNeeded];
+        [self.cellStorage addObject:cell];
+    }
+}
 
 -(void)requestSocialDatas{
     AFHTTPRequestOperationManager *manager=[AFHTTPRequestOperationManager manager];
 //    [manager beJsonManager];
     [manager setCommonlyUsedRequsetHeaderFiled];
-    [manager GET:@"http://1.r7test.sinaapp.com/SocialList_lite.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:@"http://1.r7test.sinaapp.com/SocialList.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
 //        DLog(@"%@",responseObject);
         self.modal=[self.modal initWithSocialsArray:[responseObject objectForKey:@"socials"]];
         
@@ -81,21 +96,21 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.modal.aSocials.count;
+    return self.cellStorage.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    SocialListCell *cell=[tableView dequeueReusableCellWithIdentifier:socialListCellIdentifier];
-    if(!cell){
-        cell=[[SocialListCell alloc]init];
-    }
-    [cell setViewForModal:[self.modal socialListModalAtIndex:indexPath.row]];
+    SocialListCell *cell=[self.cellStorage objectAtIndex:indexPath.row];
     return cell;
 }
 
-//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    return  300.0f;
-//}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    SocialListCell *cell=[self.cellStorage objectAtIndex:indexPath.row];
+//    [cell.contentView layoutIfNeeded];
+//    [cell layoutIfNeeded];
+
+    return  cell.height;
+}
 
 @end

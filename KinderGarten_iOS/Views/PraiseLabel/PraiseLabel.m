@@ -16,7 +16,7 @@
 
 @implementation PraiseLabel
 
--(instancetype)init{
+-(instancetype)initWith{
     if(self=[super init]){
         self.firstName=YES;
     }
@@ -34,6 +34,14 @@
             [self appendUserWithName:modal.name UserLink:modal._id];
         }
     }
+
+}
+
+-(CGFloat)height{
+    [self layoutIfNeeded];
+    [self updateConstraintsIfNeeded];
+    CGFloat height=[self systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+    return  height;
 }
 
 @end

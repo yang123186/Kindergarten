@@ -32,13 +32,14 @@ static const    CGFloat functionButtonWidth=50.0f;
 static const    CGFloat functionButtonHeight=24.0f;
 static const    CGFloat functionButtonBorderWidth=0.5f;
 
-
+static const CGFloat    fontSize=13.0f;
 
 static const    CGFloat commentGroupTop=10.0f;
 @implementation SocialListCell
 
 -(instancetype)init{
     if(self=[super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:socialListCellIdentifier]){
+        self.contentWidth=[Screen width]-2*viewMarginHorizontal;
         [self createBaseView];
     }
     return self;
@@ -119,6 +120,7 @@ static const    CGFloat commentGroupTop=10.0f;
 }
 
 -(void)setViewForModal:(SocialListModal*)modal{
+    self.modal=modal;
     [self destoryConstraints];
     
     [self.icon setImageWithURL:[NSURL URLWithString:modal.cUser.avatar]];
@@ -127,9 +129,10 @@ static const    CGFloat commentGroupTop=10.0f;
     UIView *preView=self.timeLabel;
     
     if(modal.pictures && modal.pictures.count>0){
-        self.mediaView=[[MediaView alloc]initWithMediaArray:modal.pictures];
-        self.mediaView.translatesAutoresizingMaskIntoConstraints=NO;
+        self.mediaView=[[MediaView alloc]init];
+        [self.mediaView setViewForArray:modal.pictures];
         [self.contentView addSubview:self.mediaView];
+        self.mediaView.translatesAutoresizingMaskIntoConstraints=NO;
         [self.mediaView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(preView.mas_bottom).with.offset(viewMarginTop);
             make.left.equalTo(self.contentView.mas_left).with.offset(viewMarginHorizontal);
@@ -139,17 +142,19 @@ static const    CGFloat commentGroupTop=10.0f;
         preView=self.mediaView;
     }
 
-    if(modal.content&& !([modal.content isEqualToString:@""])){
+    if(modal.content){
         self.describeLabel=[[UILabel alloc]init];
         self.describeLabel.translatesAutoresizingMaskIntoConstraints=NO;
         [self.describeLabel setText:modal.content];
+        [self.describeLabel setFont:[UIFont systemFontOfSize:fontSize]];
         [self.describeLabel setNumberOfLines:0];
         [self.contentView addSubview:self.describeLabel];
         [self.describeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(preView.mas_bottom).with.offset(viewMarginTop);
-            make.left.equalTo(preView.mas_left).with.offset(viewMarginHorizontal);
-            make.right.equalTo(preView.mas_right).with.offset(-viewMarginHorizontal);
-            make.height.equalTo(self.describeLabel.mas_height);
+            make.left.equalTo(self.contentView.mas_left).with.offset(viewMarginHorizontal);
+            make.right.equalTo(self.contentView.mas_right).with.offset(-viewMarginHorizontal);
+            make.height.equalTo([NSNumber numberWithDouble:[self.describeLabel.text heightWithFontSize:fontSize andWidth:self.contentWidth]]);
+//            make.height.equalTo(self.describeLabel.mas_height);
         }];
         preView=self.describeLabel;
     }
@@ -188,7 +193,7 @@ static const    CGFloat commentGroupTop=10.0f;
     
 
     if(modal.cLikes.aLikes.count>0){
-        self.praiseLabel=[[PraiseLabel alloc]init];
+        self.praiseLabel=[[PraiseLabel alloc]initWithWidth:[Screen width]];
         [self.praiseLabel setViewForContainer:modal.cLikes];
         
         self.praiseLabel.translatesAutoresizingMaskIntoConstraints=NO;
@@ -210,7 +215,7 @@ static const    CGFloat commentGroupTop=10.0f;
     }
     
     if(modal.cComments.aComments.count>0){
-        self.commentGroupView=[[CommentGroupView alloc]initWithCommentsContainer:modal.cComments];
+        self.commentGroupView=[[CommentGroupView alloc]initWithCommentsContainer:modal.cComments width:self.contentWidth];
         self.commentGroupView.translatesAutoresizingMaskIntoConstraints=NO;
         [self.contentView addSubview:self.commentGroupView];
         [self.commentGroupView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -230,6 +235,25 @@ static const    CGFloat commentGroupTop=10.0f;
         [self setViewForModal:modal];
     }
     return self;
+}
+
+-(CGFloat)height{
+    CGFloat height=iconEdgeLength+iconPaddingTop+viewMarginTop;
+    if(self.mediaView&&self.mediaView.superview){
+        height+=self.mediaView.height+viewMarginTop;
+    }
+    height+=[self.describeLabel.text heightWithFontSize:fontSize andWidth:self.contentWidth]+viewMarginTop*2+functionButtonHeight;
+    if(self.modal.cLikes&&self.modal.cLikes.aLikes.count>0){
+        CGFloat praise_height=[self.praiseLabel.attributedText boundingRectWithSize:CGSizeMake(self.contentWidth, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin context:nil].size.height;
+        DLog(@"谁谁谁觉得很赞 高度为:%f",praise_height);
+        height+=praise_height+viewMarginTop;
+    }
+    if(self.modal.cComments&&self.modal.cComments.aComments.count>0){
+        height+=viewMarginTop+self.commentGroupView.height;
+    }
+//    self.commentGroupView.height
+    DLog(@"总高度:%f",height);
+    return  height;
 }
 
 @end

@@ -14,16 +14,26 @@
          contextName = "-[LoginController loginWithAcoount:rawPassword:]:LoginController.m">
       </ContextState>
       <ContextState
-         contextName = "-[RichLabel getRangesForPhoneNumbers:]:RichLabel.m">
+         contextName = "-[SocialListController tableView:heightForRowAtIndexPath:]:SocialListController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell.height">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[CommonCollectionCell setViewImageWithURL:text:]:CommonCollectionCell.m">
       </ContextState>
       <ContextState
          contextName = "-[RichLabel updateTextStoreWithAttributedString:]:RichLabel.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.frame">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[RichLabel addLinkAttributesToAttributedString:linkRanges:]:RichLabel.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[RichLabel getRangesForLinks:]:RichLabel.m">
+         contextName = "-[RichLabel getRangesForPhoneNumbers:]:RichLabel.m">
       </ContextState>
       <ContextState
          contextName = "-[RichLabel touchesBegan:withEvent:]:RichLabel.m">
@@ -34,10 +44,24 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[RichLabel getRangesForLinks:]:RichLabel.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[RichLabel addLinkAttributesToAttributedString:linkRanges:]:RichLabel.m">
+      </ContextState>
+      <ContextState
          contextName = "-[AFHTTPRequestOperationManager(NetWorking) setCommonlyUsedRequsetHeaderFiledWithCookie]:NetWorking.m">
          <PersistentStrings>
             <PersistentString
                value = "[NSHTTPCookieStorage sharedHTTPCookieStorage]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[RichLabel setupTextSystem]:RichLabel.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.width">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

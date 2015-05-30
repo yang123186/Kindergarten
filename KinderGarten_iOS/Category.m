@@ -60,6 +60,16 @@
     return [self substringWithRange:NSMakeRange(11, 5)];
 }
 
+
+-(CGFloat)heightWithFontSize:(CGFloat)fontSize andWidth:(CGFloat)width{
+    
+    CGRect tmpRect = [self boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:nil context:nil];
+
+    CGFloat contentH = tmpRect.size.height;
+    NSLog(@"调整后的显示高度:%f",contentH);
+    return contentH;
+}
+
 @end
 
 
