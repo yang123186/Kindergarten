@@ -32,7 +32,7 @@ static const    CGFloat functionButtonWidth=50.0f;
 static const    CGFloat functionButtonHeight=24.0f;
 static const    CGFloat functionButtonBorderWidth=0.5f;
 
-static const CGFloat    fontSize=16.0f;
+static const CGFloat    fontSize=9.0f;
 
 static const    CGFloat commentGroupTop=10.0f;
 @implementation SocialListCell
@@ -146,6 +146,7 @@ static const    CGFloat commentGroupTop=10.0f;
         self.describeLabel=[[RichLabel alloc]initWithWidth:self.contentWidth];
         self.describeLabel.translatesAutoresizingMaskIntoConstraints=NO;
         [self.describeLabel setText:modal.content];
+        [self.describeLabel setAttrFont:[UIFont systemFontOfSize:fontSize]];
 //        [self.describeLabel setFont:[UIFont systemFontOfSize:fontSize]];
         [self.contentView addSubview:self.describeLabel];
         [self.describeLabel mas_makeConstraints:^(MASConstraintMaker *make) {

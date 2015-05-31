@@ -22,6 +22,7 @@
 #define MODIFY_PASSWORD_PATH                                            PUREPATH(@"/user/password")
 #define SOCIAL_LIST_PATH                                                PUREPATH(@"/social")
 #define SOCIAL_PRAISE_PATH(SOCIAL_ID)                                   [NSString stringWithFormat:@"%@/social/%@/like",BASEURL,SOCIAL_ID]
+#define COMMIT_COMMENT_PATH(SOCIAL_ID)                                  [NSString stringWithFormat:@"%@/social/%@/comment",BASEURL,SOCIAL_ID]
 #define ATTENDANCE_LIST_PATH(TIME_STAMP)                                PATH_AND_PARAMETER(@"/attendance?timestamp=",TIME_STAMP)
 #define DAYOFF_REQUEST_PATH                                             PUREPATH(@"/leave")
 //#define TODAY_HONOR_LIST_PATH(TIME_STAMP)                               PATH_AND_PARAMETER(@"/flower/today?timestamp=",TIME_STAMP)

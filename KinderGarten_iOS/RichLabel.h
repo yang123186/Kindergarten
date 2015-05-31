@@ -35,4 +35,5 @@ typedef void (^LabelHandler)(RichLabelLinkType linkType, NSString *string, NSRan
 
 -(CGFloat)height;
 
+-(void)setAttrFont:(UIFont *)font;
 @end

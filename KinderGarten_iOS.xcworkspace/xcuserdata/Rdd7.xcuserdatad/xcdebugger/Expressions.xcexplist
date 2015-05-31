@@ -3,10 +3,48 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "-[RichLabel setupTextSystem]:RichLabel.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.width">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "__36-[MainController getDatafromNetWork]_block_invoke:MainController.m">
          <PersistentStrings>
             <PersistentString
                value = "[AppDelegate sharedAppDelegate].userModal">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[RichLabel touchesBegan:withEvent:]:RichLabel.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[[touchedLink objectForKey:@&quot;range&quot;] rangeValue]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AFHTTPRequestOperationManager(NetWorking) setCommonlyUsedRequsetHeaderFiledWithCookie]:NetWorking.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[NSHTTPCookieStorage sharedHTTPCookieStorage]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[CommonCollectionCell setViewImageWithURL:text:]:CommonCollectionCell.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[RichLabel getRangesForPhoneNumbers:]:RichLabel.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PublishCommentView textViewDidChange:]:PublishCommentView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.textView.contentSize.height">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -22,9 +60,6 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[CommonCollectionCell setViewImageWithURL:text:]:CommonCollectionCell.m">
-      </ContextState>
-      <ContextState
          contextName = "-[RichLabel updateTextStoreWithAttributedString:]:RichLabel.m">
          <PersistentStrings>
             <PersistentString
@@ -33,37 +68,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[RichLabel getRangesForPhoneNumbers:]:RichLabel.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[RichLabel touchesBegan:withEvent:]:RichLabel.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "[[touchedLink objectForKey:@&quot;range&quot;] rangeValue]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "-[RichLabel getRangesForLinks:]:RichLabel.m">
       </ContextState>
       <ContextState
          contextName = "-[RichLabel addLinkAttributesToAttributedString:linkRanges:]:RichLabel.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[AFHTTPRequestOperationManager(NetWorking) setCommonlyUsedRequsetHeaderFiledWithCookie]:NetWorking.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "[NSHTTPCookieStorage sharedHTTPCookieStorage]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[RichLabel setupTextSystem]:RichLabel.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.width">
-            </PersistentString>
-         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>

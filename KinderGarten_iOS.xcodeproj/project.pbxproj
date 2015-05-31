@@ -72,6 +72,8 @@
 		7372021D1B06DCE000F9EE56 /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7372021C1B06DCE000F9EE56 /* ForgetPasswordViewController.m */; };
 		737202261B06E1A900F9EE56 /* LineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 737202251B06E1A900F9EE56 /* LineLabel.m */; };
 		737202281B06F39600F9EE56 /* TestUseXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 737202271B06F39600F9EE56 /* TestUseXib.xib */; };
+		737DEB8D1B1ABAC100384FB8 /* PublishCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 737DEB8C1B1ABAC100384FB8 /* PublishCommentView.m */; };
+		737DEB901B1AEB0000384FB8 /* SocialListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737DEB8F1B1AEB0000384FB8 /* SocialListViewController.m */; };
 		73943D701B0774BC00D41DA1 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73943D6F1B0774BC00D41DA1 /* MainController.m */; };
 		73A07DF91B0C812F007CF72F /* HomeModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07DF81B0C812F007CF72F /* HomeModal.m */; };
 		73A07DFD1B0C81A9007CF72F /* UserModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07DFC1B0C81A9007CF72F /* UserModal.m */; };
@@ -250,6 +252,10 @@
 		737202241B06E1A900F9EE56 /* LineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineLabel.h; path = Views/LineLabel/LineLabel.h; sourceTree = "<group>"; };
 		737202251B06E1A900F9EE56 /* LineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineLabel.m; path = Views/LineLabel/LineLabel.m; sourceTree = "<group>"; };
 		737202271B06F39600F9EE56 /* TestUseXib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestUseXib.xib; sourceTree = "<group>"; };
+		737DEB8B1B1ABAC100384FB8 /* PublishCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PublishCommentView.h; path = Views/PublishCommentView/PublishCommentView.h; sourceTree = "<group>"; };
+		737DEB8C1B1ABAC100384FB8 /* PublishCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PublishCommentView.m; path = Views/PublishCommentView/PublishCommentView.m; sourceTree = "<group>"; };
+		737DEB8E1B1AEB0000384FB8 /* SocialListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SocialListViewController.h; path = Controllers/SocialController/SocialListViewController.h; sourceTree = "<group>"; };
+		737DEB8F1B1AEB0000384FB8 /* SocialListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocialListViewController.m; path = Controllers/SocialController/SocialListViewController.m; sourceTree = "<group>"; };
 		73943D6E1B0774BC00D41DA1 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainController.h; path = Controllers/MainController/MainController.h; sourceTree = "<group>"; };
 		73943D6F1B0774BC00D41DA1 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainController.m; path = Controllers/MainController/MainController.m; sourceTree = "<group>"; };
 		73A07DF71B0C812F007CF72F /* HomeModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeModal.h; path = Modals/HomeModal.h; sourceTree = "<group>"; };
@@ -653,6 +659,8 @@
 				7358C5551B117B3E001CC5E2 /* commentGroupView.m */,
 				731F07F11B16A6B9004004CA /* CommentLabel.h */,
 				731F07F21B16A6B9004004CA /* CommentLabel.m */,
+				737DEB8B1B1ABAC100384FB8 /* PublishCommentView.h */,
+				737DEB8C1B1ABAC100384FB8 /* PublishCommentView.m */,
 			);
 			name = CellSubView;
 			sourceTree = "<group>";
@@ -775,6 +783,8 @@
 				7358C54A1B11770D001CC5E2 /* SubViews */,
 				7358C5461B1176E2001CC5E2 /* SocialListController.h */,
 				7358C5471B1176E2001CC5E2 /* SocialListController.m */,
+				737DEB8E1B1AEB0000384FB8 /* SocialListViewController.h */,
+				737DEB8F1B1AEB0000384FB8 /* SocialListViewController.m */,
 			);
 			name = SocialListController;
 			sourceTree = "<group>";
@@ -1351,6 +1361,7 @@
 				73A07E121B0C8FAE007CF72F /* RolesModal.m in Sources */,
 				73DB4B0B1B145B870038D685 /* AttendanceCell.m in Sources */,
 				731093151B18615E0052228E /* BottomCalendarView.m in Sources */,
+				737DEB901B1AEB0000384FB8 /* SocialListViewController.m in Sources */,
 				73041C101B05E4630064267C /* main.m in Sources */,
 				731F07E31B15F1D2004004CA /* PersonFlowerController.m in Sources */,
 				731F07C01B156F81004004CA /* FlowerCell.m in Sources */,
@@ -1377,6 +1388,7 @@
 				731F07F01B16A32F004004CA /* PraiseLabel.m in Sources */,
 				73A07E0F1B0C8F92007CF72F /* ClassLitemodal.m in Sources */,
 				7322CDBF1B194EE2001DD6A3 /* ScheduleCell.m in Sources */,
+				737DEB8D1B1ABAC100384FB8 /* PublishCommentView.m in Sources */,
 				731F08231B180C39004004CA /* RecipeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
