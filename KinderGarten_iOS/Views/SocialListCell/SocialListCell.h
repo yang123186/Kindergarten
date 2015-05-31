@@ -14,6 +14,15 @@
 
 #import "PraiseLabel.h"
 
+@class SocialListCell;
+@protocol SocialLisrCellDelegate <NSObject>
+
+-(void)praiseButtonDidTouchedInCell:(SocialListCell*)cell;
+-(void)commentButtonDidTouchedInCell:(SocialListCell*)cell;
+
+@end
+
+
 static NSString *socialListCellIdentifier=@"SOCIAL_LIST_CELL";
 
 @interface SocialListCell : UITableViewCell
@@ -22,7 +31,7 @@ static NSString *socialListCellIdentifier=@"SOCIAL_LIST_CELL";
 @property   (nonatomic,strong)  UILabel     *nameLabel;
 @property   (nonatomic,strong)  UILabel     *timeLabel;
 @property   (nonatomic,strong)  MediaView   *mediaView;
-@property   (nonatomic,strong)  UILabel     *describeLabel;
+@property   (nonatomic,strong)  RichLabel   *describeLabel;
 @property   (nonatomic,strong)  UIButton    *commentButton;
 @property   (nonatomic,strong)  UIButton    *praiseButton;
 @property   (nonatomic,strong)  PraiseLabel   *praiseLabel;
@@ -30,6 +39,8 @@ static NSString *socialListCellIdentifier=@"SOCIAL_LIST_CELL";
 
 @property   (nonatomic,assign)  CGFloat     contentWidth;
 @property   (nonatomic,weak)    SocialListModal *modal;
+
+@property   (nonatomic,weak)    id<SocialLisrCellDelegate> delegate;
 
 -(instancetype)init;
 

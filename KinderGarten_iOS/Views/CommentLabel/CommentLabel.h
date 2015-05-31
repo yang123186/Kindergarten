@@ -17,6 +17,6 @@
 
 -(void)setViewForModal:(SocialCommentModal*)modal;
 
--(CGFloat)height;
+//-(CGFloat)height;
 
 @end

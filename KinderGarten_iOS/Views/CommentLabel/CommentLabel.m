@@ -24,10 +24,5 @@
     [self appendContent:[NSString stringWithFormat:@" : %@",modal.content]];
 }
 
--(CGFloat)height{
-    CGFloat heigt=[self.attributedText boundingRectWithSize:CGSizeMake(self.width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin context:nil].size.height;
-//    NSLog(@"高度是 %f",heigt);
-    return heigt;
-}
 
 @end

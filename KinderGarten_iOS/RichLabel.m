@@ -8,21 +8,24 @@
 
 #import "RichLabel.h"
 #import "General.h"
+
+static const fontSize=13.0f;
+
 @interface RichLabel()
 
-@property (nonatomic, retain) NSLayoutManager *layoutManager;
-@property (nonatomic, retain) NSTextContainer *textContainer;
-@property (nonatomic, retain) NSTextStorage *textStorage;
+@property (nonatomic, strong) NSLayoutManager *layoutManager;
+@property (nonatomic, strong) NSTextContainer *textContainer;
+@property (nonatomic, strong) NSTextStorage *textStorage;
 
 
 @property (nonatomic, strong) NSMutableArray *linkRanges;
+@property (nonatomic,strong)  NSMutableArray *userRanges;
 
 
 @property (nonatomic, assign) BOOL isTouchMoved;
 
 @property (nonatomic, assign) NSRange selectedRange;
 
-@property (nonatomic,strong)  NSMutableArray *userRanges;
 
 @property   (nonatomic,assign)  CGFloat width;
 
@@ -35,15 +38,16 @@
     if(self = [super init]){
         self.width=width;
         self.userRanges=[[NSMutableArray alloc]initWithCapacity:0];
-        [self setupTextSystem];
+        [self textInitialize];
     }
     return self;
 }
 
 
+
 - (void)setText:(NSString *)text
 {
-//    [super setText:text];
+    [super setText:text];
     NSAttributedString *attributedText = [[NSAttributedString alloc] initWithString:text
                                                                          attributes:[self attributesFromProperties]];
     [self updateTextStoreWithAttributedString:attributedText];
@@ -57,13 +61,20 @@
     [self updateTextStoreWithAttributedString:mutableAttributeString];
 }
 
+//-(void)setFont:(UIFont *)font{
+//    [super setFont:font];
+//    [self updateTextStoreWithText];
+//}
 
-- (void)setupTextSystem
+- (void)textInitialize
 {
+    self.numberOfLines=0;
+    self.lineBreakMode=NSLineBreakByTruncatingTail;
+    
     self.textContainer = [[NSTextContainer alloc] init];
     self.textContainer.lineFragmentPadding = 0;
     self.textContainer.maximumNumberOfLines = 0;//no limit
-    self.textContainer.lineBreakMode = NSLineBreakByWordWrapping;//self.lineBreakMode;
+    self.textContainer.lineBreakMode = NSLineBreakByTruncatingTail;//self.lineBreakMode;
     self.textContainer.size = CGSizeMake(self.width,MAXFLOAT);
     
     self.layoutManager = [[NSLayoutManager alloc] init];
@@ -89,16 +100,6 @@
 }
 
 
-
-
-
-
-
-/*
- * linkType : 链接类型
- * range    : 链接区域
- * link     : 链接文本
- */
 - (NSDictionary *)getLinkAtLocation:(CGPoint)location
 {
     // Do nothing if we have no text
@@ -191,16 +192,14 @@
 
 - (void)updateTextStoreWithAttributedString:(NSAttributedString *)attributedString
 {
-    self.textContainer.size = self.frame.size;
-
+//    self.textContainer.size = CGSizeMake(self.width,MAXFLOAT);
+//    DLog(@"updateTextContainer's size:%@",NSStringFromCGSize(self.textContainer.size));
     if (attributedString.length != 0){
         attributedString = [RichLabel sanitizeAttributedString:attributedString];
     }
     
     if (attributedString.length != 0) {
-        //获取所有类型的链接
         self.linkRanges = [self getRangesForLinks:attributedString];
-        //对所有连接添加链接属性
         attributedString = [self addLinkAttributesToAttributedString:attributedString linkRanges:self.linkRanges];
     } else {
         self.linkRanges = nil;
@@ -237,16 +236,6 @@
 
 - (NSDictionary *)attributesFromProperties
 {
-    //阴影属性
-    NSShadow *shadow = [[NSShadow alloc] init];
-    if (self.shadowColor){
-        shadow.shadowColor = self.shadowColor;
-        shadow.shadowOffset = self.shadowOffset;
-    } else {
-        shadow.shadowOffset = CGSizeMake(0, -1);
-        shadow.shadowColor = nil;
-    }
-    
     //颜色属性
     UIColor *color = self.textColor;
     if (!self.isEnabled){
@@ -258,12 +247,11 @@
     //段落属性
     NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
     paragraph.alignment = self.textAlignment;
-    
     //属性字典
     NSDictionary *attributes = @{
                                  NSFontAttributeName : self.font,
                                  NSForegroundColorAttributeName : color,
-                                 NSShadowAttributeName : shadow,
+//                                 NSShadowAttributeName : shadow,
                                  NSParagraphStyleAttributeName : paragraph
                                  };
     return attributes;
@@ -310,9 +298,7 @@
 }
 
 
-/*
- * 所有电话号码
- */
+
 - (NSArray *)getRangesForPhoneNumbers:(NSString *)text
 {
     NSMutableArray *rangesForPhoneNumbers = [[NSMutableArray alloc] init];;
@@ -383,6 +369,19 @@
     [attrStr appendAttributedString:tmp_content];
     self.attributedText=attrStr;
 }
+
+
+-(CGFloat)height{
+    
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
+    paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
+    NSDictionary *attributes = @{NSFontAttributeName:self.font, NSParagraphStyleAttributeName:paragraphStyle.copy};
+    
+    CGFloat theHeight=[self.text boundingRectWithSize:CGSizeMake(self.width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading attributes:attributes context:nil].size.height;
+//    NSLog(@"att:%@ height is:%f",self.text,heigt);
+    return  theHeight;
+}
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark - Layout and Rendering

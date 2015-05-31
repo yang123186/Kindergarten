@@ -12,7 +12,7 @@
 @interface PraiseLabel : RichLabel
 
 -(void)setViewForContainer:(SocialLikesContainer*)container;
--(instancetype)init;
+-(instancetype)initWithWidth:(CGFloat)width;
 
--(CGFloat)height;
+//-(CGFloat)height;
 @end

@@ -10,14 +10,15 @@
 
 @interface PraiseLabel()
 @property   (nonatomic,assign)  BOOL    firstName;
-
+@property   (nonatomic,assign)  CGFloat width;
 @end
 
 
 @implementation PraiseLabel
 
--(instancetype)initWith{
-    if(self=[super init]){
+-(instancetype)initWithWidth:(CGFloat)width{
+    if(self=[super initWithWidth:width]){
+        self.width=width;
         self.firstName=YES;
     }
     return self;
@@ -35,13 +36,6 @@
         }
     }
 
-}
-
--(CGFloat)height{
-    [self layoutIfNeeded];
-    [self updateConstraintsIfNeeded];
-    CGFloat height=[self systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
-    return  height;
 }
 
 @end

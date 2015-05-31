@@ -61,7 +61,7 @@
 }
 
 
--(CGFloat)heightWithFontSize:(CGFloat)fontSize andWidth:(CGFloat)width{
+-(CGFloat)heightWithWidth:(CGFloat)width{
     
     CGRect tmpRect = [self boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:nil context:nil];
 

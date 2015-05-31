@@ -32,7 +32,7 @@ static const    CGFloat functionButtonWidth=50.0f;
 static const    CGFloat functionButtonHeight=24.0f;
 static const    CGFloat functionButtonBorderWidth=0.5f;
 
-static const CGFloat    fontSize=13.0f;
+static const CGFloat    fontSize=16.0f;
 
 static const    CGFloat commentGroupTop=10.0f;
 @implementation SocialListCell
@@ -143,17 +143,16 @@ static const    CGFloat commentGroupTop=10.0f;
     }
 
     if(modal.content){
-        self.describeLabel=[[UILabel alloc]init];
+        self.describeLabel=[[RichLabel alloc]initWithWidth:self.contentWidth];
         self.describeLabel.translatesAutoresizingMaskIntoConstraints=NO;
         [self.describeLabel setText:modal.content];
-        [self.describeLabel setFont:[UIFont systemFontOfSize:fontSize]];
-        [self.describeLabel setNumberOfLines:0];
+//        [self.describeLabel setFont:[UIFont systemFontOfSize:fontSize]];
         [self.contentView addSubview:self.describeLabel];
         [self.describeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(preView.mas_bottom).with.offset(viewMarginTop);
             make.left.equalTo(self.contentView.mas_left).with.offset(viewMarginHorizontal);
             make.right.equalTo(self.contentView.mas_right).with.offset(-viewMarginHorizontal);
-            make.height.equalTo([NSNumber numberWithDouble:[self.describeLabel.text heightWithFontSize:fontSize andWidth:self.contentWidth]]);
+            make.height.equalTo([NSNumber numberWithDouble:[self.describeLabel.text heightWithWidth:self.contentWidth]]);
 //            make.height.equalTo(self.describeLabel.mas_height);
         }];
         preView=self.describeLabel;
@@ -162,6 +161,7 @@ static const    CGFloat commentGroupTop=10.0f;
 
     self.commentButton=[[UIButton alloc]init];
     self.commentButton.layer.borderColor=BLACK_COLOR.CGColor;
+    [self.commentButton addTarget:self action:@selector(commentButtonDidTouched) forControlEvents:UIControlEventTouchUpInside];
     [self.commentButton setImage:[UIImage imageNamed:@"comment"] forState:UIControlStateNormal];
     self.commentButton.layer.borderWidth=functionButtonBorderWidth;
     [self.commentButton setCircleRadius:functionButtonHeight/2];
@@ -178,6 +178,7 @@ static const    CGFloat commentGroupTop=10.0f;
     
     self.praiseButton=[[UIButton alloc]init];
     self.praiseButton.layer.borderColor=BLACK_COLOR.CGColor;
+    [self.praiseButton addTarget:self action:@selector(praiseButtonDidTouched) forControlEvents:UIControlEventTouchUpInside];
     [self.praiseButton setImage:[UIImage imageNamed:@"praise"] forState:UIControlStateNormal];
     self.praiseButton.layer.borderWidth=functionButtonBorderWidth;
     [self.praiseButton setCircleRadius:functionButtonHeight/2];
@@ -193,7 +194,7 @@ static const    CGFloat commentGroupTop=10.0f;
     
 
     if(modal.cLikes.aLikes.count>0){
-        self.praiseLabel=[[PraiseLabel alloc]initWithWidth:[Screen width]];
+        self.praiseLabel=[[PraiseLabel alloc]initWithWidth:self.contentWidth];
         [self.praiseLabel setViewForContainer:modal.cLikes];
         
         self.praiseLabel.translatesAutoresizingMaskIntoConstraints=NO;
@@ -208,8 +209,8 @@ static const    CGFloat commentGroupTop=10.0f;
             make.top.equalTo(preView.mas_bottom).with.offset(functionButtonTop);
             make.left.equalTo(self.contentView.mas_left).with.offset(viewMarginHorizontal);
             make.right.equalTo(self.contentView.mas_right).with.offset(-viewMarginHorizontal);
+            make.height.equalTo([NSNumber numberWithDouble:[self.praiseLabel height]]);
 //            make.height.equalTo(self.praiseLabel.mas_height);
-            make.height.equalTo(self.praiseLabel.mas_height);
         }];
         preView=self.praiseLabel;
     }
@@ -242,11 +243,11 @@ static const    CGFloat commentGroupTop=10.0f;
     if(self.mediaView&&self.mediaView.superview){
         height+=self.mediaView.height+viewMarginTop;
     }
-    height+=[self.describeLabel.text heightWithFontSize:fontSize andWidth:self.contentWidth]+viewMarginTop*2+functionButtonHeight;
+    height+=[self.describeLabel.text heightWithWidth:self.contentWidth]+viewMarginTop*2+functionButtonHeight;
     if(self.modal.cLikes&&self.modal.cLikes.aLikes.count>0){
-        CGFloat praise_height=[self.praiseLabel.attributedText boundingRectWithSize:CGSizeMake(self.contentWidth, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin context:nil].size.height;
-        DLog(@"谁谁谁觉得很赞 高度为:%f",praise_height);
-        height+=praise_height+viewMarginTop;
+//        CGFloat praise_height=[self.praiseLabel.attributedText boundingRectWithSize:CGSizeMake(self.contentWidth, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin context:nil].size.height;
+        DLog(@"谁谁谁觉得很赞 高度为:%f",[self.praiseLabel height]);
+        height+=[self.praiseLabel height]+viewMarginTop;
     }
     if(self.modal.cComments&&self.modal.cComments.aComments.count>0){
         height+=viewMarginTop+self.commentGroupView.height;
@@ -254,6 +255,19 @@ static const    CGFloat commentGroupTop=10.0f;
 //    self.commentGroupView.height
     DLog(@"总高度:%f",height);
     return  height;
+}
+
+
+-(void)praiseButtonDidTouched{
+    if([self.delegate respondsToSelector:@selector(praiseButtonDidTouchedInCell:)]){
+        [self.delegate praiseButtonDidTouchedInCell:self];
+    }
+}
+
+-(void)commentButtonDidTouched{
+    if([self.delegate respondsToSelector:@selector(commentButtonDidTouchedInCell:)]){
+        [self.delegate commentButtonDidTouchedInCell:self];
+    }
 }
 
 @end

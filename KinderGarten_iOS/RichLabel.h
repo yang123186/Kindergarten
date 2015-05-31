@@ -15,26 +15,14 @@
 typedef NS_ENUM(NSInteger, RichLabelLinkType)
 {
     LinkTypeUserURL,     //用户昵称  eg: @abcd
-//    LinkTypeURL,            //链接地址  eg: http://xx.com
     LinkTypePhoneNumber     //电话号码  eg: 13888888888
 };
 
-// 可用于识别的链接类型
-typedef NS_OPTIONS(NSUInteger, RichLabelLinkDetectionTypes)
-{
-    LinkDetectionTypeUserURL  = (1 << 0),
-//    LinkDetectionTypeURL         = (1 << 1),
-    LinkDetectionTypePhoneNumber = (1 << 1),
-    
-    LinkDetectionTypeNone        = 0,
-    LinkDetectionTypeAll         = NSUIntegerMax
-};
 
 typedef void (^LabelHandler)(RichLabelLinkType linkType, NSString *string, NSRange range);
 
 @interface RichLabel : UILabel <NSLayoutManagerDelegate>
 
-@property (nonatomic, assign) RichLabelLinkDetectionTypes linkDetectionTypes;
 
 @property (nonatomic, copy) LabelHandler linkTapHandler;
 
@@ -44,5 +32,7 @@ typedef void (^LabelHandler)(RichLabelLinkType linkType, NSString *string, NSRan
 -(void)appendUserWithName:(NSString*)name UserLink:(NSString*)link;
 
 -(void)appendContent:(NSString*)content;
+
+-(CGFloat)height;
 
 @end
