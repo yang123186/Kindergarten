@@ -75,7 +75,13 @@ static  const   CGFloat         verticalMargin=5.0f;
         for(UIButton *iconButton in self.buttons){
             [self addSubview:iconButton];
         }
-        self.frame=CGRectMake(leftPadding, 0.0f, edgeLength, (edgeLength+verticalMargin)*self.buttons.count);
+//        self.frame=CGRectMake(leftPadding, 0.0f, edgeLength, (edgeLength+verticalMargin)*self.buttons.count);
+        self.frame=CGRectMake(leftPadding, 0.0f, [Screen width]-leftPadding, [Screen height]);
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            UITapGestureRecognizer *tapGesture=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(listShowAndDismiss)];
+            [self addGestureRecognizer:tapGesture];
+        });
         [self.parentView.rootView addSubview:self];
         
         [UIView animateWithDuration:animateDuration animations:^{

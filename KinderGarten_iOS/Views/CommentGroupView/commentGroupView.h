@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SocialCommentContainer.h"
-#import "CommentView.h"
+#import "CommentLabel.h"
 
 @interface CommentGroupView : UIView
 
@@ -20,6 +20,6 @@
 
 -(void)setViewForCommentsContainer:(SocialCommentContainer*)container;
 
--(instancetype)initWithCommentsContainer:(SocialCommentContainer*)container;
+-(instancetype)initWithCommentsContainer:(SocialCommentContainer*)container width:(CGFloat)width;
 
 @end

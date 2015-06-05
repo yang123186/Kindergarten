@@ -17,5 +17,5 @@
  *
  *  @param text the text which may contain emotion substring.
  */
--(void)setRichText:(NSString*)text;
+-(void)setAttributedStringWithRawText:(NSString*)text;
 @end
