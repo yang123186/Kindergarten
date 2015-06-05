@@ -72,8 +72,6 @@
 		7372021D1B06DCE000F9EE56 /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7372021C1B06DCE000F9EE56 /* ForgetPasswordViewController.m */; };
 		737202261B06E1A900F9EE56 /* LineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 737202251B06E1A900F9EE56 /* LineLabel.m */; };
 		737202281B06F39600F9EE56 /* TestUseXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 737202271B06F39600F9EE56 /* TestUseXib.xib */; };
-		737DEB8D1B1ABAC100384FB8 /* PublishCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 737DEB8C1B1ABAC100384FB8 /* PublishCommentView.m */; };
-		737DEB901B1AEB0000384FB8 /* SocialListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737DEB8F1B1AEB0000384FB8 /* SocialListViewController.m */; };
 		73943D701B0774BC00D41DA1 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73943D6F1B0774BC00D41DA1 /* MainController.m */; };
 		73A07DF91B0C812F007CF72F /* HomeModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07DF81B0C812F007CF72F /* HomeModal.m */; };
 		73A07DFD1B0C81A9007CF72F /* UserModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 73A07DFC1B0C81A9007CF72F /* UserModal.m */; };
@@ -111,6 +109,10 @@
 		73DB4B301B14ADAA0038D685 /* ClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB4B2D1B14ADAA0038D685 /* ClassInfo.m */; };
 		73DB4B311B14ADAA0038D685 /* DayOffModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB4B2F1B14ADAA0038D685 /* DayOffModal.m */; };
 		73DB4B341B14AE830038D685 /* DayOffContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 73DB4B331B14AE830038D685 /* DayOffContainer.m */; };
+		7760A6C21B202AE300F3C2F0 /* FeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7760A6C11B202AE300F3C2F0 /* FeedBackViewController.m */; };
+		7760A6C51B202B0800F3C2F0 /* FeedBackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7760A6C41B202B0800F3C2F0 /* FeedBackController.m */; };
+		7760A6C91B2092CA00F3C2F0 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7760A6C81B2092CA00F3C2F0 /* AboutUsViewController.m */; };
+		7760A6CC1B20930500F3C2F0 /* AboutUsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7760A6CB1B20930500F3C2F0 /* AboutUsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -252,10 +254,6 @@
 		737202241B06E1A900F9EE56 /* LineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineLabel.h; path = Views/LineLabel/LineLabel.h; sourceTree = "<group>"; };
 		737202251B06E1A900F9EE56 /* LineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineLabel.m; path = Views/LineLabel/LineLabel.m; sourceTree = "<group>"; };
 		737202271B06F39600F9EE56 /* TestUseXib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestUseXib.xib; sourceTree = "<group>"; };
-		737DEB8B1B1ABAC100384FB8 /* PublishCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PublishCommentView.h; path = Views/PublishCommentView/PublishCommentView.h; sourceTree = "<group>"; };
-		737DEB8C1B1ABAC100384FB8 /* PublishCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PublishCommentView.m; path = Views/PublishCommentView/PublishCommentView.m; sourceTree = "<group>"; };
-		737DEB8E1B1AEB0000384FB8 /* SocialListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SocialListViewController.h; path = Controllers/SocialController/SocialListViewController.h; sourceTree = "<group>"; };
-		737DEB8F1B1AEB0000384FB8 /* SocialListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocialListViewController.m; path = Controllers/SocialController/SocialListViewController.m; sourceTree = "<group>"; };
 		73943D6E1B0774BC00D41DA1 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainController.h; path = Controllers/MainController/MainController.h; sourceTree = "<group>"; };
 		73943D6F1B0774BC00D41DA1 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainController.m; path = Controllers/MainController/MainController.m; sourceTree = "<group>"; };
 		73A07DF71B0C812F007CF72F /* HomeModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeModal.h; path = Modals/HomeModal.h; sourceTree = "<group>"; };
@@ -331,6 +329,14 @@
 		73DB4B2F1B14ADAA0038D685 /* DayOffModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayOffModal.m; sourceTree = "<group>"; };
 		73DB4B321B14AE830038D685 /* DayOffContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DayOffContainer.h; path = Modals/DayOffModal/DayOffContainer.h; sourceTree = "<group>"; };
 		73DB4B331B14AE830038D685 /* DayOffContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DayOffContainer.m; path = Modals/DayOffModal/DayOffContainer.m; sourceTree = "<group>"; };
+		7760A6C01B202AE300F3C2F0 /* FeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedBackViewController.h; sourceTree = "<group>"; };
+		7760A6C11B202AE300F3C2F0 /* FeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedBackViewController.m; sourceTree = "<group>"; };
+		7760A6C31B202B0800F3C2F0 /* FeedBackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedBackController.h; sourceTree = "<group>"; };
+		7760A6C41B202B0800F3C2F0 /* FeedBackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedBackController.m; sourceTree = "<group>"; };
+		7760A6C71B2092CA00F3C2F0 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
+		7760A6C81B2092CA00F3C2F0 /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
+		7760A6CA1B20930500F3C2F0 /* AboutUsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsController.h; sourceTree = "<group>"; };
+		7760A6CB1B20930500F3C2F0 /* AboutUsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsController.m; sourceTree = "<group>"; };
 		9220AA07D54D752FC179581E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9726F1D47A571AEA326BD4CF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D6A2D55BDD0E608885BAC3A9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -659,8 +665,6 @@
 				7358C5551B117B3E001CC5E2 /* commentGroupView.m */,
 				731F07F11B16A6B9004004CA /* CommentLabel.h */,
 				731F07F21B16A6B9004004CA /* CommentLabel.m */,
-				737DEB8B1B1ABAC100384FB8 /* PublishCommentView.h */,
-				737DEB8C1B1ABAC100384FB8 /* PublishCommentView.m */,
 			);
 			name = CellSubView;
 			sourceTree = "<group>";
@@ -783,8 +787,6 @@
 				7358C54A1B11770D001CC5E2 /* SubViews */,
 				7358C5461B1176E2001CC5E2 /* SocialListController.h */,
 				7358C5471B1176E2001CC5E2 /* SocialListController.m */,
-				737DEB8E1B1AEB0000384FB8 /* SocialListViewController.h */,
-				737DEB8F1B1AEB0000384FB8 /* SocialListViewController.m */,
 			);
 			name = SocialListController;
 			sourceTree = "<group>";
@@ -1010,6 +1012,8 @@
 		73B378F81B0DD301004012B2 /* SettingController */ = {
 			isa = PBXGroup;
 			children = (
+				7760A6C61B20928D00F3C2F0 /* AboutUsController */,
+				77070F921B1C053D000A36A1 /* FeedBackController */,
 				7325ABFA1B0EC834004D5FC3 /* SystemMessageController */,
 				73B379071B0E2BB4004012B2 /* PushNotificationController */,
 				73B379001B0DFF22004012B2 /* ModifyPassword */,
@@ -1155,6 +1159,28 @@
 			name = DayOffModal;
 			sourceTree = "<group>";
 		};
+		77070F921B1C053D000A36A1 /* FeedBackController */ = {
+			isa = PBXGroup;
+			children = (
+				7760A6C01B202AE300F3C2F0 /* FeedBackViewController.h */,
+				7760A6C11B202AE300F3C2F0 /* FeedBackViewController.m */,
+				7760A6C31B202B0800F3C2F0 /* FeedBackController.h */,
+				7760A6C41B202B0800F3C2F0 /* FeedBackController.m */,
+			);
+			name = FeedBackController;
+			sourceTree = "<group>";
+		};
+		7760A6C61B20928D00F3C2F0 /* AboutUsController */ = {
+			isa = PBXGroup;
+			children = (
+				7760A6C71B2092CA00F3C2F0 /* AboutUsViewController.h */,
+				7760A6C81B2092CA00F3C2F0 /* AboutUsViewController.m */,
+				7760A6CA1B20930500F3C2F0 /* AboutUsController.h */,
+				7760A6CB1B20930500F3C2F0 /* AboutUsController.m */,
+			);
+			name = AboutUsController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1297,6 +1323,7 @@
 				7322CDC51B196D94001DD6A3 /* StudentNameListMOdal.m in Sources */,
 				731F081D1B17F2D4004004CA /* PersonFlowerTopView.m in Sources */,
 				73B379031B0DFF4C004012B2 /* ModifyPasswordController.m in Sources */,
+				7760A6CC1B20930500F3C2F0 /* AboutUsController.m in Sources */,
 				73A07E171B0C989E007CF72F /* MainGroupView.m in Sources */,
 				731F07C71B15A488004004CA /* FlowerModal.m in Sources */,
 				731F08141B17478D004004CA /* PublishMomenViewtController.m in Sources */,
@@ -1320,6 +1347,7 @@
 				731F082A1B1819F6004004CA /* RecipeCell.m in Sources */,
 				73B379061B0E0009004012B2 /* ModifyPasswordViewController.m in Sources */,
 				731092E31B184B040052228E /* MealModal.m in Sources */,
+				7760A6C51B202B0800F3C2F0 /* FeedBackController.m in Sources */,
 				73A07DFD1B0C81A9007CF72F /* UserModal.m in Sources */,
 				7322CDBB1B194C56001DD6A3 /* ScheduleModal.m in Sources */,
 				7325AC081B0ED85A004D5FC3 /* Screen.m in Sources */,
@@ -1340,6 +1368,7 @@
 				731AEC551B189BD600F68B40 /* ScheduleViewController.m in Sources */,
 				73B379111B0E2F2E004012B2 /* SwitchCell.m in Sources */,
 				731F07BD1B156510004004CA /* DayOffReasonController.m in Sources */,
+				7760A6C21B202AE300F3C2F0 /* FeedBackViewController.m in Sources */,
 				73DB4B341B14AE830038D685 /* DayOffContainer.m in Sources */,
 				737202261B06E1A900F9EE56 /* LineLabel.m in Sources */,
 				73DB4B1D1B148C2A0038D685 /* AttendanceDetailController.m in Sources */,
@@ -1352,6 +1381,7 @@
 				73DB4B151B1463940038D685 /* AttendanceContainer.m in Sources */,
 				73B378FE1B0DD49F004012B2 /* SettingViewController.m in Sources */,
 				731F07D71B15E7B4004004CA /* FlowerListController.m in Sources */,
+				7760A6C91B2092CA00F3C2F0 /* AboutUsViewController.m in Sources */,
 				73DB4B121B14611A0038D685 /* SourceBrief.m in Sources */,
 				7372020B1B05EB2C00F9EE56 /* LoginController.m in Sources */,
 				731F07EC1B15FD82004004CA /* NSAttributedString+Emotion.m in Sources */,
@@ -1361,7 +1391,6 @@
 				73A07E121B0C8FAE007CF72F /* RolesModal.m in Sources */,
 				73DB4B0B1B145B870038D685 /* AttendanceCell.m in Sources */,
 				731093151B18615E0052228E /* BottomCalendarView.m in Sources */,
-				737DEB901B1AEB0000384FB8 /* SocialListViewController.m in Sources */,
 				73041C101B05E4630064267C /* main.m in Sources */,
 				731F07E31B15F1D2004004CA /* PersonFlowerController.m in Sources */,
 				731F07C01B156F81004004CA /* FlowerCell.m in Sources */,
@@ -1388,7 +1417,6 @@
 				731F07F01B16A32F004004CA /* PraiseLabel.m in Sources */,
 				73A07E0F1B0C8F92007CF72F /* ClassLitemodal.m in Sources */,
 				7322CDBF1B194EE2001DD6A3 /* ScheduleCell.m in Sources */,
-				737DEB8D1B1ABAC100384FB8 /* PublishCommentView.m in Sources */,
 				731F08231B180C39004004CA /* RecipeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

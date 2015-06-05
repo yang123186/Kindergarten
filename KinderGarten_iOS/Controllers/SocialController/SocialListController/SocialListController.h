@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "SocialListCell.h"
-#import "SocialListViewController.h"
-
 typedef enum : NSUInteger {
     HeadData,
     AppendData,
@@ -18,12 +16,6 @@ typedef enum : NSUInteger {
 
 #define HEAD_DATA_TYPE -1
 
-@interface SocialListController : UIViewController<SocialLisrCellDelegate>
-@property   (nonatomic,assign)  BOOL                isLoading;
-@property   (nonatomic,strong)  NSMutableArray      *cellStorage;
-@property   (nonatomic,strong)  SocialListViewController    *viewController;
-
--(void)requestSocialDatasWithTimeStamp:(NSInteger)timeStampInt;
--(instancetype)init;
+@interface SocialListController : UITableViewController<SocialLisrCellDelegate>
 
 @end

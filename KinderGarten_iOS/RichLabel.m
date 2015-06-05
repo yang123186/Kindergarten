@@ -61,10 +61,10 @@ static const fontSize=13.0f;
     [self updateTextStoreWithAttributedString:mutableAttributeString];
 }
 
--(void)setAttrFont:(UIFont *)font{
-    [super setFont:font];
-    [self updateTextStoreWithText];
-}
+//-(void)setFont:(UIFont *)font{
+//    [super setFont:font];
+//    [self updateTextStoreWithText];
+//}
 
 - (void)textInitialize
 {

@@ -11,7 +11,8 @@
 #ifndef KDGT_DOMAIN
 #define KDGT_DOMAIN                                                     @"kdgtapi.hrsoft.net"
 //#define BASEURL                                                         @"http://kdgtapi.hrsoft.net"
-#define BASEURL                                                         @"http://192.168.16.60:3000"
+//#define BASEURL                                                         @"http://192.168.16.60:3000"
+#define BASEURL                                                         @"http://jasonz93.xicp.net:3000"
 
 #define PUREPATH(PATH)                                                  [NSString stringWithFormat:@"%@%@",BASEURL,PATH]
 #define PATH_AND_PARAMETER(PATH,PARAMETER)                              [NSString stringWithFormat:@"%@%@%@",BASEURL,PATH,PARAMETER]
@@ -20,9 +21,9 @@
 #define FORGET_PASSWORD_PATH                                            PUREPATH(@"/auth/forgetpassword")
 #define HOME_PATH                                                       PUREPATH(@"/user/home")
 #define MODIFY_PASSWORD_PATH                                            PUREPATH(@"/user/password")
+#define FEED_BACK_PATH                                                  PUREPATH(@"/system/advice")
 #define SOCIAL_LIST_PATH                                                PUREPATH(@"/social")
 #define SOCIAL_PRAISE_PATH(SOCIAL_ID)                                   [NSString stringWithFormat:@"%@/social/%@/like",BASEURL,SOCIAL_ID]
-#define COMMIT_COMMENT_PATH(SOCIAL_ID)                                  [NSString stringWithFormat:@"%@/social/%@/comment",BASEURL,SOCIAL_ID]
 #define ATTENDANCE_LIST_PATH(TIME_STAMP)                                PATH_AND_PARAMETER(@"/attendance?timestamp=",TIME_STAMP)
 #define DAYOFF_REQUEST_PATH                                             PUREPATH(@"/leave")
 //#define TODAY_HONOR_LIST_PATH(TIME_STAMP)                               PATH_AND_PARAMETER(@"/flower/today?timestamp=",TIME_STAMP)
