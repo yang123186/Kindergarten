@@ -7,15 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SocialListCell.h"
-typedef enum : NSUInteger {
-    HeadData,
-    AppendData,
-} DataType;
 
-
-#define HEAD_DATA_TYPE -1
-
-@interface SocialListController : UITableViewController<SocialLisrCellDelegate>
+@interface SocialListController : UITableViewController
 
 @end

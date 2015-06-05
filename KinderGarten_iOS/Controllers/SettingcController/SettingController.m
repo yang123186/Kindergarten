@@ -11,7 +11,6 @@
 
 #import "ModifyPasswordController.h"
 #import "PushNotificationController.h"
-#import "FeedBackController.h"
 
 static NSString *title=@"登陆";
 
@@ -61,8 +60,7 @@ static NSString *title=@"登陆";
 
 
 -(void)feedbackCellDidSelected{
-   FeedBackController *feedBack=[[FeedBackController alloc]init];
-   [self.navigationController pushViewController:feedBack animated:YES];
+    
 }
 
 

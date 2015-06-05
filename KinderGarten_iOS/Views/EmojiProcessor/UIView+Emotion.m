@@ -46,21 +46,22 @@ static NSDictionary *emotionDictionary;
 
 
 
-+(NSMutableAttributedString*)createEmotionStringWithText:(NSMutableAttributedString*)attributedString{
++(NSAttributedString*)createEmotionStringWithText:(NSString *)text{
     [[self class] regularExpressionInitialize];
     [[self class] emotionDictionaryInitialize];
+    NSMutableAttributedString *attributeString=[[NSMutableAttributedString alloc]initWithString:text];
     
-//    NSArray *nameResultArray=[nameRegularExpression matchesInString:attributedString.string options:0 range:NSMakeRange(0, attributedString.length)];
-//    for(NSTextCheckingResult *match in nameResultArray){
-//        [attributedString setAttributes:@{NSForegroundColorAttributeName :BLUE_NAME} range:[match range]];
-//    }
-    NSString *attStrType=attributedString.string;
-    NSArray *emotionResultArray=[emotionRegularExpression matchesInString:attStrType options:0 range:NSMakeRange(0, attStrType.length)];
+    NSArray *nameResultArray=[nameRegularExpression matchesInString:text options:0 range:NSMakeRange(0, text.length)];
+    for(NSTextCheckingResult *match in nameResultArray){
+        [attributeString setAttributes:@{NSForegroundColorAttributeName :BLUE_NAME} range:[match range]];
+    }
+    
+    NSArray *emotionResultArray=[emotionRegularExpression matchesInString:text options:0 range:NSMakeRange(0, text.length)];
     NSMutableArray *imageArray=[NSMutableArray arrayWithCapacity:emotionResultArray.count];
     
     for(NSTextCheckingResult *match in emotionResultArray){
         NSRange range=[match range];
-        NSString *subStr=[attStrType substringWithRange:range];
+        NSString *subStr=[text substringWithRange:range];
         NSTextAttachment *textAttachment = [[NSTextAttachment alloc] init];
         textAttachment.bounds = CGRectMake(textAttachment.bounds.origin.x, textAttachment.bounds.origin.y - 5, 25, 25);
         
@@ -87,34 +88,32 @@ static NSDictionary *emotionDictionary;
         NSRange range;
         [imageArray[i][@"range"] getValue:&range];
         //进行替换
-        [attributedString replaceCharactersInRange:range withAttributedString:imageArray[i][@"image"]];
+        [attributeString replaceCharactersInRange:range withAttributedString:imageArray[i][@"image"]];
         
     }
-    [attributedString addAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17.f]} range:NSMakeRange(0, attributedString.length)];
-    return attributedString;
+    [attributeString addAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17.f]} range:NSMakeRange(0, attributeString.length)];
+    return attributeString;
 }
 
--(void)setAttributedStringWithRawText:(NSString*)text{
-    NSMutableAttributedString *rawStr=[[NSMutableAttributedString alloc]initWithString:text];
-    rawStr=[[self class]createEmotionStringWithText:rawStr];
-    
+-(void)setRichText:(NSString*)text{
+    NSAttributedString *emotionStr=[[self class]createEmotionStringWithText:text];
     if([self isKindOfClass:[UILabel class]]){
-        [((UILabel*)self) setAttributedText:rawStr];
+        [((UILabel*)self) setAttributedText:emotionStr];
         return;
     }
     
     if([self isKindOfClass:[UITextField class]]){
-        [((UITextField*)self) setAttributedText:rawStr];
+        [((UITextField*)self) setAttributedText:emotionStr];
         return;
     }
     
     if([self isKindOfClass:[UIButton class]]){
-        [((UIButton*)self) setAttributedTitle:rawStr forState:UIControlStateNormal];
+        [((UIButton*)self) setAttributedTitle:emotionStr forState:UIControlStateNormal];
         return;
     }
     
     if([self isKindOfClass:[UITextView class]]){
-        [((UITextView*)self) setAttributedText:rawStr];
+        [((UITextView*)self) setAttributedText:emotionStr];
         return;
     }
     

@@ -8,23 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
-
-@class HonorListViewController;
-@protocol HonorListDelegate <NSObject>
-
--(void)honorListFromController:(HonorListViewController*)controller didSelectedItemAtIndex:(NSInteger)index;
-
-@end
+#import "NavigationTopButton.h"
 
 @class HonorListController;
-@interface HonorListViewController : NSObject<UITableViewDataSource,UITableViewDelegate>
+@interface HonorListViewController : NSObject<NavigationTopButtonDelegate>
 
 @property   (nonatomic,weak)    HonorListController *controller;
 @property   (nonatomic,weak)    UIView              *view;
-
-@property   (nonatomic,strong)  UITableView         *tableView;
-@property   (nonatomic,weak)    id<HonorListDelegate>   delegate;
 
 -(instancetype)initWithRootController:(HonorListController*)controller;
 

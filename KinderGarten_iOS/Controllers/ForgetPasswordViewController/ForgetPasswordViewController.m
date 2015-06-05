@@ -14,13 +14,7 @@
 #import "General.h"
 #import "ForgetViewController.h"
 
-static NSString *successChangePwdMsg=@"修改密码成功";
-static NSString *successUnknowStat=@"未知状态，请重新登录！";
-static NSString *errorBadRequestMsg=@"请求格式错误";
-static NSString *errorVerifyWrongMsg=@"短信验证码错误";
-static NSString *errorUserNotFoundMsg=@"用户未找到";
-static NSString *errorRemoteServerErrorMsg=@"服务器内部错误";
-static NSString *errorUnknowErrorMsg=@"未知错误!";
+
 
 @interface ForgetPasswordViewController()
 @property   (nonatomic,strong)  ForgetViewController *viewController;
@@ -72,40 +66,7 @@ static NSString *errorUnknowErrorMsg=@"未知错误!";
 
 
 -(void)commitPasswordInfo{
-    AFHTTPRequestOperationManager *manager=[AFHTTPRequestOperationManager manager];
-    [manager beJsonManager];
-    [manager setCommonlyUsedRequsetHeaderFiled];
     
-    NSDictionary *postInfo=@{@"loginType":loginTypeValue,@"phone":self.viewController.accountText.text,@"textverify":self.viewController.verifyCodeText.text,@"newpass":self.viewController.freshPasswordText.text.MD5Encrypt};
-    
-    [manager PATCH:LOGIN_PATH parameters:postInfo success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        if(operation.response.statusCode==REQUEST_SUCCESS){
-            [MBProgressHUD showHUDWithString:successChangePwdMsg showingTime:defaultTimeInterVal onView:self.view];
-            [self.navigationController popViewControllerAnimated:YES];
-        }
-        else{
-            [MBProgressHUD showHUDWithString:successUnknowStat showingTime:defaultTimeInterVal onView:self.view];
-        }
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        switch (operation.response.statusCode) {
-            case BAD_REQUEST:
-                [MBProgressHUD showHUDWithString:errorBadRequestMsg showingTime:defaultTimeInterVal onView:self.view];
-                break;
-            case VERIFYCODE_WRONG:
-                [MBProgressHUD showHUDWithString:errorVerifyWrongMsg showingTime:defaultTimeInterVal onView:self.view];
-                break;
-            case USER_UNSEARCHED:
-                [MBProgressHUD showHUDWithString:errorUserNotFoundMsg showingTime:defaultTimeInterVal onView:self.view];
-                break;
-            case REMOTE_SERVER_ERROR:
-                [MBProgressHUD showHUDWithString:errorRemoteServerErrorMsg showingTime:defaultTimeInterVal onView:self.view];
-                break;
-            default:
-                [MBProgressHUD showHUDWithString:errorUnknowErrorMsg showingTime:defaultTimeInterVal onView:self.view];
-                break;
-        }
-    }];
 }
 
 

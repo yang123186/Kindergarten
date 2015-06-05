@@ -26,12 +26,6 @@
 
 -(BOOL)checkWithRegularExpression:(NSString*)regularExpression;
 
--(NSString*)UTCPrefixDate;
-
--(NSString*)UTCTime;
-
--(CGFloat)heightWithWidth:(CGFloat)width;
-
 @end
 
 
@@ -77,23 +71,3 @@
 +(void)showHUDWithString:(NSString*)string showingTime:(NSTimeInterval)timeInterval onView:(UIView*)view;
 
 @end
-
-
-
-
-@interface NSDate(TimeFormatExt)
-
--(NSString*)to_yyyy_MM_dd_Style;
-
--(NSString*)to_yyyy_MM_dd_HH_mm_Style;
-
--(NSInteger)dayInYear:(NSDate*)date;
-
--(NSInteger)dayNumberFromNow;
-
--(NSInteger)dayInWeek;
-@end
-
-
-
-

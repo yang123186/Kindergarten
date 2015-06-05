@@ -45,8 +45,7 @@ static  NSString    *localErrorPasswordIllegal=@"新密码不合法";
             NSString *oldPassword=self.viewController.oldPasswordText.text.MD5Encrypt;
             NSString *encryptNewPassword=freshPassword.MD5Encrypt;
             
-            NSDictionary *passwordInfo=@{@"originPassword":oldPassword,
-                                         @"newPassword":encryptNewPassword};
+            NSDictionary *passwordInfo=@{@"originPassword":oldPassword,@"newPassword":encryptNewPassword};
             
             AFHTTPRequestOperationManager *manager=[AFHTTPRequestOperationManager manager];
             [manager beJsonManager];

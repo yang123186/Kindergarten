@@ -20,22 +20,20 @@
 
 
 -(void)setViewForCommentsContainer:(SocialCommentContainer*)container{
-    for (CommentLabel *commentLabel in self.comments) {
-        if(commentLabel.superview){
-            [commentLabel removeFromSuperview];
+    for (CommentView *commentView in self.comments) {
+        if(commentView.superview){
+            [commentView removeFromSuperview];
         }
     }
     [self.comments removeAllObjects];
-    _height=0;
     
     UIView *preView=nil;
     for(SocialCommentModal *modal in container.aComments){
-        CommentLabel *commentLabel=[[CommentLabel alloc]initWithWidth:[Screen width]];
-        [commentLabel setViewForModal:modal];
-        [self.comments addObject:commentLabel];
-        commentLabel.translatesAutoresizingMaskIntoConstraints=NO;
-        [self addSubview:commentLabel];
-        [commentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        CommentView *commentView=[[CommentView alloc]initWithSocialCommentModal:modal];
+        [self.comments addObject:commentView];
+        commentView.translatesAutoresizingMaskIntoConstraints=NO;
+        [self addSubview:commentView];
+        [commentView mas_makeConstraints:^(MASConstraintMaker *make) {
             if(preView){
                 make.top.equalTo(preView.mas_bottom);
             }
@@ -44,23 +42,14 @@
             }
             make.left.equalTo(self.mas_left);
             make.right.equalTo(self.mas_right);
-            if(modal ==container.aComments.lastObject){
-                make.bottom.equalTo(self.mas_bottom);
-            }
-            else{
-                make.height.equalTo([NSNumber numberWithDouble:[commentLabel height]]);
-            }
+            make.height.equalTo(commentView.mas_height);
         }];
-        _height+=[commentLabel height];
-        preView=commentLabel;
     }
-    [self setNeedsUpdateConstraints];
-    [self updateConstraintsIfNeeded];
-//    [self layoutIfNeeded];
+
 }
 
 
--(instancetype)initWithCommentsContainer:(SocialCommentContainer *)container width:(CGFloat)width{
+-(instancetype)initWithCommentsContainer:(SocialCommentContainer *)container{
     if(self=[super init]){
         if(!self.comments){
             self.comments=[[NSMutableArray alloc]initWithCapacity:0];

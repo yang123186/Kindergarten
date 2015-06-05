@@ -21,7 +21,7 @@ static const    CGFloat accessoryImageEdgeLength=24.0f;
 static const    CGFloat accessoryImagePaddingVertical=18.0f;
 static const    CGFloat accessoryImagePaddingRight=15.0f;
 
-static NSString *accessoryImageName=@"accessory";
+static NSString *accessoryImageName=@"testimg";
 static const    CGFloat topicLabelFontSize=18.0f;
 static const    CGFloat detailLabelFontSize=14.0f;
 

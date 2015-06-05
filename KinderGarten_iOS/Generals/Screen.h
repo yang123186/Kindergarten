@@ -14,7 +14,5 @@
 +(CGFloat)height;
 +(CGFloat)width;
 +(CGRect)bounds;
-+(CGFloat)topBarHeight;
-
 
 @end

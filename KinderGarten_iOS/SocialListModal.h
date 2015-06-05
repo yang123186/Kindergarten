@@ -46,6 +46,5 @@
 
 -(SocialListModal*)socialListModalAtIndex:(NSUInteger)index;
 
--(instancetype)initWithAppendArray:(NSArray*)array;
 
 @end
