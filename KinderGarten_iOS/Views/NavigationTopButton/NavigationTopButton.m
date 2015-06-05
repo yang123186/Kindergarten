@@ -35,12 +35,17 @@ static  const   CGFloat lineHeight=4.0f;
 }
 
 -(void)createSubViews{
+    self.backgroundColor=WHITE_COLOR;
+    
+    
     [self.buttons removeAllObjects];
     CGFloat buttonWidth=[Screen width]/self.buttonNumber;
     for(NSUInteger itr=0;itr<self.buttonNumber;++itr){
         UIButton *button=[[UIButton alloc]init];
+        [button setBackgroundColor:GRAY_TOPBAR];
         button.tag=itr;
         [button addTarget:self action:@selector(navigationButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+        [button setTitleColor:BLACK_COLOR forState:UIControlStateNormal];
         button.translatesAutoresizingMaskIntoConstraints=NO;
         [self addSubview:button];
         [self.buttons addObject:button];

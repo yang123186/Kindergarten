@@ -51,6 +51,25 @@
 
 }
 
+
+-(NSString*)UTCPrefixDate{
+    return [self substringWithRange:NSMakeRange(0, 10)];
+}
+
+-(NSString*)UTCTime{
+    return [self substringWithRange:NSMakeRange(11, 5)];
+}
+
+
+-(CGFloat)heightWithWidth:(CGFloat)width{
+    
+    CGRect tmpRect = [self boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:nil context:nil];
+
+    CGFloat contentH = tmpRect.size.height;
+    NSLog(@"调整后的显示高度:%f",contentH);
+    return contentH;
+}
+
 @end
 
 
@@ -102,3 +121,60 @@
 }
 
 @end
+
+
+
+@implementation NSDate(TimeFormatExt)
+
+static NSDateFormatter *dateFormatter;
+static NSInteger    AdaySec=86400;
+
+-(void)dateFormatterInitialize{
+    static dispatch_once_t dateFormatonceToken;
+    dispatch_once(&dateFormatonceToken, ^{
+        dateFormatter = [[NSDateFormatter alloc] init];
+    });
+}
+
+
+-(NSString*)to_yyyy_MM_dd_Style{
+    [self dateFormatterInitialize];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    return [dateFormatter stringFromDate:self];
+}
+
+-(NSString*)to_yyyy_MM_dd_HH_mm_Style{
+    [self dateFormatterInitialize];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    return [dateFormatter stringFromDate:self];
+}
+
+-(NSDateComponents*)daycomps{
+    static NSCalendar *calendar;
+    static NSDateComponents *comps;
+    static NSInteger unitFlags;
+    static dispatch_once_t dateNumberOnceToken;
+    dispatch_once(&dateNumberOnceToken, ^{
+        calendar= [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+        comps = [[NSDateComponents alloc] init];
+        unitFlags =NSDayCalendarUnit|NSWeekdayCalendarUnit;
+    });
+    comps = [calendar components:unitFlags fromDate:self];
+    return comps;
+}
+
+-(NSInteger)dayInWeek{
+    return [self daycomps].weekday-1;
+}
+
+-(NSInteger)dayNumberFromNow{
+    NSInteger RawSec=[self timeIntervalSinceNow];
+    NSInteger DayNum=RawSec/AdaySec;
+    if(RawSec%AdaySec>0){
+        DayNum++;
+    }
+    return DayNum;
+}
+
+@end
+

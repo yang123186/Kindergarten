@@ -22,4 +22,8 @@
     return [UIScreen mainScreen].bounds;
 }
 
++(CGFloat)topBarHeight{
+    return 64.0f;
+}
+
 @end

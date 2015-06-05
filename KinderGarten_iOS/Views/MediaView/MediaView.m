@@ -50,8 +50,8 @@ static const    CGFloat marginVertical=15.0f;
     if(restMedia>0){
         rowNumer++;
     }
-    _height=mediaEdgeLength*rowNumer+(rowNumer-1)*marginVertical;
-        
+    _height= mediaEdgeLength*rowNumer+(rowNumer-1)*marginVertical;
+    DLog(@"media view height is:%li",(long)self.height);
     for(NSInteger itr=0;itr<array.count;++itr){
         NSString *url=[array objectAtIndex:itr];
         UIImageView *mediaView=[[UIImageView alloc]init];
@@ -89,8 +89,6 @@ static const    CGFloat marginVertical=15.0f;
     }
     return self;
 }
-
-
 
 
 

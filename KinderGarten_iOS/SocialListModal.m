@@ -92,7 +92,13 @@
     return self;
 }
 
-
+-(instancetype)initWithAppendArray:(NSArray *)array{
+    for(NSDictionary *dic in array){
+        SocialListModal *modal=[[SocialListModal alloc]initWithSocialDictionary:dic];
+        [self.aSocials addObject:modal];
+    }
+    return self;
+}
 
 -(SocialListModal*)socialListModalAtIndex:(NSUInteger)index{
     return [self.aSocials objectAtIndex:index];

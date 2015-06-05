@@ -14,7 +14,6 @@
 #import "Screen.h"
 #import "UIView+Emotion.h"
 
-
 #ifdef DEBUG
 #define DLog(...) NSLog(__VA_ARGS__)
 #else
@@ -26,7 +25,6 @@
 #define  REGULAR_EXPRESSION_PASSWORD    @"\\w{6,16}"
 
 
-#warning teacher is test.should be change to parent.
 static NSString *loginTypeValue=@"parent";
 
 

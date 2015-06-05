@@ -7,7 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SocialListCell.h"
+#import "SocialListViewController.h"
 
-@interface SocialListController : UITableViewController
+typedef enum : NSUInteger {
+    HeadData,
+    AppendData,
+} DataType;
+
+
+#define HEAD_DATA_TYPE -1
+
+@interface SocialListController : UIViewController<SocialLisrCellDelegate>
+@property   (nonatomic,assign)  BOOL                isLoading;
+@property   (nonatomic,strong)  NSMutableArray      *cellStorage;
+@property   (nonatomic,strong)  SocialListViewController    *viewController;
+
+-(void)requestSocialDatasWithTimeStamp:(NSInteger)timeStampInt;
+-(instancetype)init;
 
 @end

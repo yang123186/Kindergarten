@@ -19,6 +19,11 @@
 #import "HonorListController.h"
 #import "SettingController.h"
 #import "SocialListController.h"
+#import "AttendanceController.h"
+#import "DayOffController.h"
+#import "RecipeController.h"
+#import "ScheduleController.h"
+
 
 static NSString *title=@"主页";
 
@@ -68,7 +73,7 @@ static NSString *observeTopicKey=@"cTopic";
         DLog(@"get new home info success");
         self.modal=[self.modal initWithDictioary:responseObject];
         [AppDelegate sharedAppDelegate].userModal=self.modal.cUser;
-        [self.viewController.topicView.detailLabel setRichText:@"haha[亲亲]"];
+        [self.viewController.topicView.detailLabel setAttributedStringWithRawText:@"haha[亲亲]"];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if(operation.response.statusCode==AUTHENTICATED_FAIL){
@@ -135,9 +140,25 @@ static NSString *observeTopicKey=@"cTopic";
         }
     }
     if(mainGroupView==self.viewController.functionGroupView){
-        if(button.tag==3){
+        if(button.tag==0){
+            AttendanceController *attendanceCtrl=[[AttendanceController alloc]init];
+            [self.navigationController pushViewController:attendanceCtrl animated:YES];
+        }
+        else if (button.tag==1){
+            DayOffController *dayOffCtrl=[[DayOffController alloc]init];
+            [self.navigationController pushViewController:dayOffCtrl animated:YES];
+        }
+        else if(button.tag==3){
             HonorListController *honorListCtr=[[HonorListController alloc]init];
             [self.navigationController pushViewController:honorListCtr animated:YES];
+        }
+        else if (button.tag==4){
+            ScheduleController *scheduleCtrl=[[ScheduleController alloc]init];
+            [self.navigationController pushViewController:scheduleCtrl animated:YES];
+        }
+        else if (button.tag==6){
+            RecipeController *recipeCtrl=[[RecipeController alloc]init];
+            [self.navigationController pushViewController:recipeCtrl animated:YES];
         }
     }
 }

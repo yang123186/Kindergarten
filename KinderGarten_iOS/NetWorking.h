@@ -21,6 +21,23 @@
 #define HOME_PATH                                                       PUREPATH(@"/user/home")
 #define MODIFY_PASSWORD_PATH                                            PUREPATH(@"/user/password")
 #define SOCIAL_LIST_PATH                                                PUREPATH(@"/social")
+#define SOCIAL_PRAISE_PATH(SOCIAL_ID)                                   [NSString stringWithFormat:@"%@/social/%@/like",BASEURL,SOCIAL_ID]
+#define COMMIT_COMMENT_PATH(SOCIAL_ID)                                  [NSString stringWithFormat:@"%@/social/%@/comment",BASEURL,SOCIAL_ID]
+#define ATTENDANCE_LIST_PATH(TIME_STAMP)                                PATH_AND_PARAMETER(@"/attendance?timestamp=",TIME_STAMP)
+#define DAYOFF_REQUEST_PATH                                             PUREPATH(@"/leave")
+//#define TODAY_HONOR_LIST_PATH(TIME_STAMP)                               PATH_AND_PARAMETER(@"/flower/today?timestamp=",TIME_STAMP)
+#define WEEK_HONOR_LIST_PATH(TIME_STAMP)                                PATH_AND_PARAMETER(@"/flower/week?timestamp=",TIME_STAMP)
+#define MONTH_HONOR_LIST_PATH(TIME_STAMP)                               PATH_AND_PARAMETER(@"/flower/month?timestamp=",TIME_STAMP)
+#define STUDENTS_LIST_PATH                                              @"http://1.r7test.sinaapp.com/namelist.json"
+//#define FLOWER_LIST_PATH                                                PUREPATH(@"/flower/available")
+#define FLOWER_LIST_PATH                                                @"http://1.r7test.sinaapp.com/flower.json"
+#define ASSIGN_FLOWER_PATH(FLOWER_ID,STUDENT_ID)                        [NSString stringWithFormat:@"/flower/%@/student/%@",FLOWER_ID,STUDENT_ID]
+#define RECIPRE_PATH(OFFSET)                                            PATH_AND_PARAMETER(@"/receipe/",OFFSET)
+#define SCHEDULE_PATH(OFFSET)                                           PATH_AND_PARAMETER(@"/schedule/",OFFSET)
+
+
+#define TODAY_HONOR_LIST_PATH(TIME_STAMP)                               @"http://1.r7test.sinaapp.com/coll.json"
+
 #endif
 
 
@@ -30,6 +47,7 @@
 #define AUTHENTICATED_SUCCESS  200
 #define REQUEST_SUCCESS        201
 #define AUTHENTICATED_FAIL     401 //Password or Account may be wrong.
+#define VERIFYCODE_WRONG       401
 #define BAD_REQUEST            400
 #define PASSWORD_WRONG         403
 #define USER_UNSEARCHED        404
